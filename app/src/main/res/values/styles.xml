@@ -39,6 +39,9 @@
     <style name="Title3" parent="Title1">
         <item name="android:textSize">15sp</item>
     </style>
+    <style name="menuStyle" parent="SrTheme.NoActionBar">
+        <item name="android:textColor">@color/TextMenu</item>
+    </style>
 
     <style name="SrTheme.AppCompat.Light.NoActionBar" parent="SrTheme" />
 

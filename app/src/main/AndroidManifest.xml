@@ -40,7 +40,7 @@
             android:name=".MenuLateral"
             android:label="@string/title_activity_menu_lateral"
             android:parentActivityName=".Inicio"
-            android:theme="@style/SrTheme.NoActionBar">
+            android:theme="@style/menuStyle">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fourcodes.srsra.Inicio" />
