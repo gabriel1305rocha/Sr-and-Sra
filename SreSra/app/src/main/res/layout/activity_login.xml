@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="fourcodes.srsra.Login"
+    android:background="@drawable/back_gradient"
+    android:weightSum="1"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:text="@string/e_mail"
+        android:layout_above="@+id/txtEmail" />
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_above="@+id/lblSenha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:inputType=""
+        tools:ignore="TextFields" />
+        <!--android:background="#FFFFFF"-->
+
+    <TextView
+        android:id="@+id/lblSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:text="@string/senha"
+        android:layout_above="@+id/txtSenhaNoiva"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/txtSenhaNoiva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:layout_above="@+id/btnEntra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:id="@+id/btnEntra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickEntra"
+        android:text="@string/entrar"
+        android:layout_above="@+id/btnCadastrarSe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp" />
+    <Button
+        android:id="@+id/btnCadastrarSe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickCadastra"
+        android:text="@string/cadastrar"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/logo"
+        android:layout_above="@+id/lblEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        tools:ignore="ContentDescription" />
+
+
+</RelativeLayout>

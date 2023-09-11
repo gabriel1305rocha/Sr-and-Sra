@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CadConfirmSenha">Check Password:</string>
+    <string name="cadastraTitle">Register Now</string>
+    <string name="addNoivo">Add Groom</string>
+    <string name="cadastrar">Register</string>
+    <string name="dadosNoiva">Bride\'s Details</string>
+    <string name="senha">Password:</string>
+    <string name="entrar">Login</string>
+    <string name="e_mail">Email:</string>
+    <string name="CadNome">Name:</string>
+    <string name="dadosNoivo">Groom\'s Details</string>
+    <string name="menuL_check">Checklist</string>
+    <string name="action_settings">Settings</string>
+    <string name="menuL_configu">Settings</string>
+    <string name="menuL_convidado">Convidados</string>
+    <string name="menuL_despesa">Despesas</string>
+    <string name="menuL_fornecedor">Fornecedores</string>
+    <string name="menuL_info">Info</string>
+    <string name="menuL_inicio">Home</string>
+    <string name="menuL_outro">Others</string>
+    <string name="menuL_padrinho">Padrinhos</string>
+    <string name="title_Inicio">Home</string>
+</resources>

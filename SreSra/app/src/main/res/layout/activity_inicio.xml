@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_inicio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="fourcodes.srsra.Inicio"
+    android:background="@drawable/back_gradient">
+
+    <!--android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/-->
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@mipmap/logo"/>
+
+    <TextView
+        android:id="@+id/lblNomeNoivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text="Sr. Frederico"/>
+    <TextView
+        android:id="@+id/lblNomeE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeNoivo"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text=" &amp; "/>
+    <TextView
+        android:id="@+id/lblNomeNoiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeE"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text="Sra. Francisca"/>
+
+    <TextView
+        android:id="@+id/lblDiaResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeNoiva"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Title3"
+        android:text="Faltam 300 dias"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/imgLogo"
+        android:layout_alignRight="@id/imgLogo"
+        android:layout_below="@+id/lblDiaResta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/BackColor"
+        android:foreground="#FF0000"
+        />
+
+</RelativeLayout>
