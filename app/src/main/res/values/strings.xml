@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Sr &amp; Sra</string>
+    <string name="app_name" translatable="false">Sr&amp;Sra</string>
     <string name="e_mail">E-mail</string>
     <string name="srsra" translatable="false">SrSra</string>
     <string name="senha">Senha</string>
