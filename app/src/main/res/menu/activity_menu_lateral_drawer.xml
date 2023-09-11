@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menuL_inicio" />
+        <item
+            android:id="@+id/nav_checklist"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menuL_check"
+            />
+        <item
+            android:id="@+id/nav_padrinho"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menuL_padrinho" />
+        <item
+            android:id="@+id/nav_convidado"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menuL_convidado" />
+        <item
+            android:id="@+id/nav_fornecedor"
+            android:icon="@drawable/ic_events"
+            android:title="@string/menuL_fornecedor" />
+        <item
+            android:id="@+id/nav_despesas"
+            android:icon="@drawable/ic_menu_money"
+            android:title="@string/menuL_despesa" />
+        <item
+            android:id="@+id/nav_empty"
+            android:title="" />
+    </group>
+
+    <item
+        android:title="@string/menuL_outro">
+        <menu>
+            <item
+                android:id="@+id/nav_configu"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menuL_configu" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_menu_info"
+                android:title="@string/menuL_info" />
+        </menu>
+    </item>
+
+</menu>
