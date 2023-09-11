@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="fuorcodes.srsra.Splash"
+    tools:context="fourcodes.srsra.Splash"
     android:background="#f2e7e4"
     >
 
