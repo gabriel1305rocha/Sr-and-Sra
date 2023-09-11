@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff4182</color>
-    <color name="colorPrimaryDark">#eeb21c4f</color>
+    <color name="colorPrimary">#263755</color>
+    <color name="colorPrimaryDark">#ee1B263B</color>
     <color name="colorAccent">#ff4081</color>
-    <color name="BackColor">#f5e5e1</color>
+    <color name="BackColor">#FFAE9E</color>
+    <color name="BackColor2">#FFE0E0</color>
     <color name="Statusbar">#eef4d1c9</color>
     <color name="TextPrimary">#FF000000</color>
 </resources>

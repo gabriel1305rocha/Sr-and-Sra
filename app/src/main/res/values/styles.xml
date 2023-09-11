@@ -26,10 +26,10 @@
         <item name="android:typeface">serif</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/TextPrimary</item>
     </style>
-    <style name="Title2" parent="Title1">
-        <item name="android:textSize">20sp</item>
-    </style>
+    <style name="Title2" parent="Title1"><item name="android:textSize">20sp</item></style>
+    <style name="Title3" parent="Title1"><item name="android:textSize">15sp</item></style>
 
     <style name="SrTheme.AppCompat.Light.NoActionBar" parent="SrTheme" />
 
