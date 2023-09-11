@@ -7,13 +7,30 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="SrTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="SrTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="actionBarSize">20dp</item>
-        <item name="colorPrimary">#0000FF</item>
-        <item name="colorPrimaryDark">@color/BackColor</item>
-        <item name="colorAccent">#1800a9</item>
-        <item name="textColorPrimary">#000000</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/BackColor</item>
     </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/BackColor</item>
+    </style>
+    <style name="Title1">
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+    <style name="Title2" parent="Title1">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SrTheme.AppCompat.Light.NoActionBar" parent="SrTheme" />
 
 </resources>

@@ -32,10 +32,8 @@
         android:layout_marginBottom="10dp"
         android:layout_weight="0.38"
         android:layout_below="@id/imgLogo"
-        android:textSize="20sp"
+        style="@style/Title2"
         android:textColor="#000000"
-        android:textStyle="italic"
-        android:typeface="@string/fontFace"
         android:text="@string/e_mail"/>
     <EditText
         android:id="@+id/txtEmail"
@@ -55,10 +53,8 @@
         android:layout_marginBottom="10dp"
         android:layout_weight="0.38"
         android:layout_below="@id/lblEmail"
-        android:textSize="20sp"
+        style="@style/Title2"
         android:textColor="#000000"
-        android:textStyle="italic"
-        android:typeface="@string/fontFace"
         android:text="@string/senha"/>
     <EditText
         android:id="@+id/txtSenha"
@@ -69,23 +65,25 @@
         android:layout_alignLeft="@id/txtEmail"
         android:background="#FFFFFF"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnEntra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtSenha"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:text="Entrar"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickEntra"
+        android:text="@string/entrar"/>
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:text="Cadastrar"/>
+        android:onClick="onClickCadastra"
+        android:text="@string/cadastrar"/>
 
 
 </RelativeLayout>

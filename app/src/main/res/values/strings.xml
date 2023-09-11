@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name" >Sr &amp; Sra</string>
-    <string name="e_mail"   >E-mail      </string>
-    <string name="srsra"    >SrSra       </string>
-    <string name="senha"    >Senha       </string>
-    <string name="fontFace" >serif       </string>
+    <string name="app_name" translatable="false">Sr &amp; Sra</string>
+    <string name="e_mail">E-mail</string>
+    <string name="srsra" translatable="false">SrSra</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+
 </resources>

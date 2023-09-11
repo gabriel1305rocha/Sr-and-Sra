@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="BackColor">#F2E7E4</color>
+    <color name="colorPrimary">#ff4182</color>
+    <color name="colorPrimaryDark">#eeb21c4f</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="BackColor">#f5e5e1</color>
+    <color name="Statusbar">#eef4d1c9</color>
+    <color name="TextPrimary">#FF000000</color>
 </resources>
