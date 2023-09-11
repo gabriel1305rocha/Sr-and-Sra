@@ -14,23 +14,21 @@
     <string name="dadosNoivo">Dados do Noivo</string>
     <string name="dadosNoiva">Dados do Noiva</string>
     <!-- Fim Login e Cadastro -->
+    <!-- Menu Lateral -->
+    <string name="title_activity_menu_lateral">Inicio</string>
+    <string name="menuL_inicio">Inicio</string>
+    <string name="menuL_check">Checklist</string>
+    <string name="menuL_padrinho">Padrinhos</string>
+    <string name="menuL_convidado">Convidados</string>
+    <string name="menuL_fornecedor">Fornecedores</string>
+    <string name="menuL_despesa">Despesas</string>
+    <string name="menuL_outro">Outros</string>
+    <string name="menuL_configu">Configurações</string>
+    <string name="menuL_info">Sobre</string>
 
-    <string-array name="nav_drawer_items">
-        <item>Home</item>
-        <item>Cardápio</item>
-        <item>Notícias</item>
-        <item>Eventos</item>
-        <item>Locais</item>
-        <item>Anúncios</item>
-    </string-array>
-    <array name="nav_drawer_icons">
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_menu</item>
-        <item>@drawable/ic_news</item>
-        <item>@drawable/ic_events</item>
-        <item>@drawable/ic_places</item>
-        <item>@drawable/ic_ads</item>
-    </array>
-
+    <string name="action_settings">Configurações</string>
+    <!-- Não Mudar !!!! -->
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
 </resources>
