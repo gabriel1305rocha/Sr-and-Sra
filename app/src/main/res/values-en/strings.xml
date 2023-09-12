@@ -40,4 +40,15 @@
     <string name="nome_do_noivo">Groom\'s Name</string>
     <string name="title_configura">Settings</string>
     <string name="versao">Version</string>
+    <string name="desenvolvedor">Developers</string>
+    <string name="manualUser">User Manual</string>
+    <string name="termoUso">Terms of use</string>
+    <string name="title_manual">Users Manual</string>
+    <string name="title_termo">Terms of Use</string>
+    <string name="title_despesas">Expenses</string>
+    <string name="meuorcamento">My budget</string>
+    <string name="pago">Paid out</string>
+    <string name="previsto">Foreseen</string>
+    <string name="restante">Remaining</string>
+    <string name="sifrao">$</string>
 </resources>

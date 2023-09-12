@@ -3,7 +3,6 @@ package fourcodes.srsra;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 
@@ -14,7 +13,7 @@ public class Cadastro_Cont extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro__cont);
+        setContentView(R.layout.activity_cadastro_cont);
     }
 
     public void onClickContinua(View view){

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fourcodes.srsra.Despesas">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/SrTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/SrTheme.PopupOverlay" />
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_tabmenu_despesas"
+            app:tabSelectedTextColor="@color/BackColor"
+            app:tabIndicatorColor="@color/BackColor"
+            app:tabIndicatorHeight="5dp">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/desTabGeral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geral" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/desTabMensal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mensal" />
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_despesas" />
+
+</android.support.design.widget.CoordinatorLayout>

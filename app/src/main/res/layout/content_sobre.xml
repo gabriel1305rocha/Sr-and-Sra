@@ -79,6 +79,7 @@
                 android:layout_below="@id/termo"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
+                android:onClick="ManualDoUsuario"
                 android:text="@string/manualUser"
                 style="@style/BottomTrans" />
         </RelativeLayout>

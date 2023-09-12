@@ -92,7 +92,8 @@ public class Configura extends AppCompatActivity
         } else if (id == R.id.nav_convidado) {
 
         } else if (id == R.id.nav_despesas) {
-
+            startActivity(new Intent(this, Despesas.class));
+            finish();
         } else if (id == R.id.nav_fornecedor) {
 
         } else if (id == R.id.nav_configu) {

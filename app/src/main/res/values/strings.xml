@@ -6,6 +6,9 @@
     <string name="title_Inicio">Inicio</string>
     <string name="title_sobre">Sobre</string>
     <string name="title_termo">Termos de Uso</string>
+    <string name="title_manual">Manual do Usuário</string>
+    <string name="title_despesas">Despesas</string>
+    <string name="title_activity_configu">Configurações</string>
 
     <!-- Login -->
     <string name="entrar">Entrar</string>
@@ -51,14 +54,21 @@
     <string name="title_configura">Configurações</string>
     <!-- Fim Tela Configurações-->
 
-    <!-- Tela Sopbre -->
+    <!-- Tela Sobre -->
     <string name="versao">Versão</string>
     <string name="versaoNum" translatable="false">1.0</string>
     <string name="desenvolvedor">Desenvolvedor</string>
     <string name="termoUso">Termos de Uso</string>
     <string name="manualUser">Manual do Usuário</string>
-    <!-- Fim Tela Sopbre -->
-    <string name="title_activity_configu">Configurações</string>
+    <!-- Fim Tela Sobre -->
+
+    <!-- Tela Despesas -->
+    <string name="meuorcamento">Meu Orçamento R$</string>
+    <string name="pago">Pago</string>
+    <string name="previsto">Previsto</string>
+    <string name="sifrao">R$</string>
+    <string name="restante">Restante</string>
+    <!-- Fim Tela Despesas -->
 
     <!-- Tela de Contagem -->
     <string name="senhor">Sr. </string>
@@ -72,5 +82,6 @@
     <string name="facebook_app_id" translatable="false">1254906311271314</string>
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
+    <!--Fim Não Mudar-->
 
 </resources>

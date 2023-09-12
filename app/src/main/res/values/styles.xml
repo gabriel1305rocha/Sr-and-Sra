@@ -54,6 +54,10 @@
     <style name="menuStyle" parent="SrTheme.NoActionBar">
         <item name="android:textColor">@color/TextMenu</item>
     </style>
+    <style name="ProBarOrcament" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint"> #FFF</item>
+        <item name="android:progressBackgroundTint">#000</item>
+    </style>
 
     <style name="SrTheme.AppCompat.Light.NoActionBar" parent="SrTheme" />
 

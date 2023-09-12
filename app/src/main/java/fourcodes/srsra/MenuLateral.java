@@ -89,11 +89,7 @@ public class MenuLateral extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
-            /*ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-            stub.setLayoutResource(R.layout.activity_contagem);
-            View inflated = stub.inflate();
-            this.setTitle("Contagem");*/
-            // Handle the inicio action
+
         } else if (id == R.id.nav_checklist) {
 
         } else if (id == R.id.nav_padrinho) {
@@ -101,13 +97,16 @@ public class MenuLateral extends AppCompatActivity
         } else if (id == R.id.nav_convidado) {
 
         } else if (id == R.id.nav_despesas) {
-
+            startActivity(new Intent(this, Despesas.class));
+            finish();
         } else if (id == R.id.nav_fornecedor) {
 
         } else if (id == R.id.nav_configu) {
             startActivity(new Intent(this, Configura.class));
+            finish();
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this, Sobre.class));
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
