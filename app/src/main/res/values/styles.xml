@@ -41,6 +41,10 @@
     <style name="Body" parent="Title1">
         <item name="android:textSize">10sp</item>
     </style>
+    <style name="Bottom">
+        <item name="android:background">@color/MenuLateral</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 
     <style name="menuStyle" parent="SrTheme.NoActionBar">
         <item name="android:textColor">@color/TextMenu</item>

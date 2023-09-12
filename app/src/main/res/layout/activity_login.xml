@@ -14,116 +14,48 @@
     android:weightSum="1"
     android:orientation="horizontal">
 
-    <ScrollView
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/logo" />
+
+    <EditText
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        style="@style/Title2"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        tools:ignore="TextFields" />
 
-            <!--ImageView
-                android:id="@+id/imgLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/logo"
-                android:layout_centerHorizontal="true"
-                /-->
-            <ImageView
-                android:id="@+id/imgLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:src="@mipmap/logo" />
+    <EditText
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        style="@style/Title2"
+        android:inputType="textPassword"
+        android:hint="@string/senha"
+        />
 
-            <!--TextView
-                android:id="@+id/lblEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Title2"
-                android:text="@string/e_mail"
-                android:layout_above="@+id/txtEmail" /-->
-            <EditText
-                android:id="@+id/txtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Title2"
-                android:hint="@string/e_mail"
-                android:layout_below="@+id/imgLogo"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="16dp"
-                android:inputType="textEmailAddress"
-                tools:ignore="TextFields" />
-            <!--android:background="#FFFFFF"-->
-
-            <!--TextView
-                android:id="@+id/lblSenha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Title2"
-                android:text="@string/senha"
-                android:layout_above="@+id/txtSenha"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" /-->
-            <EditText
-                android:id="@+id/txtSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Title2"
-                android:inputType="textPassword"
-                android:layout_below="@id/txtEmail"
-                android:hint="@string/senha"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                />
-
-            <Button
-                android:id="@+id/btnEntra"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtSenha"
-                android:layout_alignStart="@id/txtSenha"
-                android:layout_alignLeft="@id/txtSenha"
-                android:onClick="onClickEntra"
-                android:text="@string/entrar"
-                />
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/btnLoginFace"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/txtSenha"
-                android:layout_alignRight="@id/txtSenha"
-                android:layout_alignEnd="@id/txtSenha"
-                android:layout_centerHorizontal="true"
-                />
-
-            <Button
-                android:id="@+id/btnCadastrarSe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onClickCadastra"
-                android:text="@string/cadastrar"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@id/btnEntra"
-                android:layout_alignStart="@id/btnEntra"
-                android:layout_below="@id/btnLoginFace"
-                android:layout_centerHorizontal="true" />
-
-            <Button
-                android:id="@+id/btnEntraOff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onClickEntra"
-                android:text="@string/EntrarOff"
-                android:layout_marginTop="30dp"
-                android:layout_alignRight="@id/txtSenha"
-                android:layout_alignEnd="@id/txtSenha"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/btnEntra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSenha"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickEntra"
+        android:text="@string/entrar"
+        style="@style/Bottom" />
 
 </RelativeLayout>

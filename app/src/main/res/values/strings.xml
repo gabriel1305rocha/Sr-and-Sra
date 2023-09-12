@@ -4,8 +4,9 @@
 
     <!-- Login e Cadastro -->
     <string name="entrar">Entrar</string>
-    <string name="cadastrar">Cadastrar</string>
-    <string name="EntrarOff">Começar offline</string>
+    <string name="entraEmail">Iniciar sessão</string>
+    <string name="cadastrar">Cadastre-se</string>
+    <string name="EntrarOff"> Iniciar offline </string>
     <string name="cadastraTitle">Cadastre-se</string>
     <string name="e_mail">E-mail:</string>
     <string name="senha">Senha:</string>
@@ -31,12 +32,12 @@
     <string name="action_settings">Configurações</string>
     <string name="title_activity_configu">Configurações</string>
 
-    <!-- Tela de Inicio -->
-        <string name="senhor">Sr. </string>
-        <string name="senhora">Sra. </string>
-        <string name="Ecomercial"> &amp; </string>
-        <string name="faltam">Faltam </string>
-        <string name="dias"> dias</string>
+    <!-- Tela de Contagem -->
+    <string name="senhor">Sr. </string>
+    <string name="senhora">Sra. </string>
+    <string name="Ecomercial" translatable="false"> &amp; </string>
+    <string name="faltam">Faltam </string>
+    <string name="dias"> dias</string>
     <!-- Não Mudar !!!! -->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>

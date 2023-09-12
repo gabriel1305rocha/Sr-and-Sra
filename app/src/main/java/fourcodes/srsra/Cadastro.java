@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import static fourcodes.srsra.Splash.StatusLogin;
+
 public class Cadastro extends AppCompatActivity {
 
     @Override
@@ -14,7 +16,8 @@ public class Cadastro extends AppCompatActivity {
     }
 
     public void onClickCadastra(View view){
-        startActivity(new Intent(this, MenuLateral.class));
+        StatusLogin = 3;
+        startActivity(new Intent(this, Splash.class));
         finishActivity(Login.CONTEXT_INCLUDE_CODE);
         finish();
     }

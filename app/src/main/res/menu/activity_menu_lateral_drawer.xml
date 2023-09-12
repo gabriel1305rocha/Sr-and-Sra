@@ -38,9 +38,7 @@
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_menu_info2"
             android:title="@string/menuL_info" />
-        <item
-            android:id="@+id/nav_sair"
-            android:title="@string/sair" />
+
     </group>
 
 

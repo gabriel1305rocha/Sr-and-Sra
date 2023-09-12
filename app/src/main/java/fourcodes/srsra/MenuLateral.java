@@ -2,8 +2,6 @@ package fourcodes.srsra;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,8 +17,7 @@ import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
-import static fourcodes.srsra.Login.NomeUser;
-import static fourcodes.srsra.Login.SexoUser;
+import static fourcodes.srsra.Splash.*;
 
 public class MenuLateral extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +39,7 @@ public class MenuLateral extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-        stub.setLayoutResource(R.layout.activity_inicio);
+        stub.setLayoutResource(R.layout.activity_contagem);
         View inflated = stub.inflate();
         this.setTitle(R.string.title_Inicio);
 
@@ -76,6 +73,10 @@ public class MenuLateral extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }  else if (id == R.id.nav_sair) {
+            LoginManager.getInstance().logOut();
+            startActivity(new Intent(this, Inicio.class));
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -89,9 +90,9 @@ public class MenuLateral extends AppCompatActivity
 
         if (id == R.id.nav_inicio) {
             /*ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-            stub.setLayoutResource(R.layout.activity_inicio);
+            stub.setLayoutResource(R.layout.activity_contagem);
             View inflated = stub.inflate();
-            this.setTitle("Inicio");*/
+            this.setTitle("Contagem");*/
             // Handle the inicio action
         } else if (id == R.id.nav_checklist) {
 
@@ -107,10 +108,6 @@ public class MenuLateral extends AppCompatActivity
 
         } else if (id == R.id.nav_info) {
 
-        } else if (id == R.id.nav_sair) {
-            LoginManager.getInstance().logOut();
-            startActivity(new Intent(this, Login.class));
-            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

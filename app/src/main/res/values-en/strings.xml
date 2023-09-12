@@ -23,4 +23,10 @@
     <string name="title_Inicio">Home</string>
     <string name="EntrarOff">Begin Offline</string>
     <string name="title_activity_configu">Settings</string>
+    <string name="dias">days</string>
+    <string name="entraEmail">Start</string>
+    <string name="faltam">Missing</string>
+    <string name="sair">Exit</string>
+    <string name="senhor">Mr.</string>
+    <string name="senhora">Mra.</string>
 </resources>

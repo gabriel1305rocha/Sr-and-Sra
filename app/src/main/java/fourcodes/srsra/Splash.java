@@ -7,7 +7,19 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.facebook.AccessToken;
+import com.facebook.Profile;
+
 public class Splash extends AppCompatActivity implements Runnable {
+
+    static public String NomeUser = "";
+    static public String SexoUser = "male";
+    static public int StatusLogin = 0;
+    /* StatusLogin == 1, Offline
+    *  StatusLogin == 2, Facebook
+    *  StatusLogin == 3, Email Local
+    *  StatusLogin == 4, Logado
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +32,41 @@ public class Splash extends AppCompatActivity implements Runnable {
     }
     @Override
     public void run() {
-        startActivity(new Intent (this, Login.class));
-        finish();
+
+        ProximaTela(StatusLogin);
+    }
+
+    public void ProximaTela(int status){
+        switch (status){
+            case 1:
+                NomeUser = "";
+                startActivity(new Intent (this, MenuLateral.class));
+                finish();
+                break;
+            case 2:
+                try {
+                    if (AccessToken.getCurrentAccessToken().getUserId() != null){
+                        Profile profile = Profile.getCurrentProfile();
+                        NomeUser = profile.getName();
+                    }
+                }catch(Exception ex){
+                    NomeUser = "";
+                }
+                startActivity(new Intent (this, MenuLateral.class));
+                finish();
+                break;
+            case 3:
+                startActivity(new Intent (this, MenuLateral.class));
+                finish();
+                break;
+            case 4:
+                startActivity(new Intent (this, MenuLateral.class));
+                finish();
+                break;
+            default:
+                startActivity(new Intent (this, Inicio.class));
+                finish();
+                break;
+        }
     }
 }

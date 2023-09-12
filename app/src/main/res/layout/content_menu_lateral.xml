@@ -11,7 +11,7 @@
     >
 
     <!--include android:id="@+id/include"
-        layout="@layout/activity_inicio"/-->
+        layout="@layout/activity_contagem"/-->
     <ViewStub
         android:id="@+id/view_stub"
         android:inflatedId="@+id/activity_inicio"
