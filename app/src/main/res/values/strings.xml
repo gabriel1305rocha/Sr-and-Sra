@@ -5,6 +5,7 @@
     <!-- Login e Cadastro -->
     <string name="entrar">Entrar</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="EntrarOff">Começar offline</string>
     <string name="cadastraTitle">Cadastre-se</string>
     <string name="e_mail">E-mail:</string>
     <string name="senha">Senha:</string>
@@ -25,12 +26,22 @@
     <string name="menuL_outro">Outros</string>
     <string name="menuL_configu">Configurações</string>
     <string name="menuL_info">Sobre</string>
+    <string name="sair">Sair</string>
 
     <string name="action_settings">Configurações</string>
+    <string name="title_activity_configu">Configurações</string>
+
+    <!-- Tela de Inicio -->
+        <string name="senhor">Sr. </string>
+        <string name="senhora">Sra. </string>
+        <string name="Ecomercial"> &amp; </string>
+        <string name="faltam">Faltam </string>
+        <string name="dias"> dias</string>
     <!-- Não Mudar !!!! -->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="facebook_app_id" translatable="false">1254906311271314</string>
-    <string name="title_activity_configu">Configurações</string>
+    <!-- if your App ID is 1234567, you should use fb1234567-->
+    <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
 
 </resources>

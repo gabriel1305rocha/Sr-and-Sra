@@ -21,4 +21,6 @@
     <string name="menuL_outro">Others</string>
     <string name="menuL_padrinho">Padrinhos</string>
     <string name="title_Inicio">Home</string>
+    <string name="EntrarOff">Begin Offline</string>
+    <string name="title_activity_configu">Settings</string>
 </resources>

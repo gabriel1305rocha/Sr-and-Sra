@@ -28,9 +28,8 @@
             android:icon="@drawable/ic_menu_money"
             android:title="@string/menuL_despesa" />
         <item
-            android:id="@+id/nav_empty"
             android:title=""
-            android:enabled="false"/>
+            android:enabled="false" />
         <item
             android:id="@+id/nav_configu"
             android:icon="@drawable/ic_menu_config"
@@ -39,6 +38,9 @@
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_menu_info2"
             android:title="@string/menuL_info" />
+        <item
+            android:id="@+id/nav_sair"
+            android:title="@string/sair" />
     </group>
 
 

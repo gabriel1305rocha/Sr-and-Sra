@@ -1,5 +1,6 @@
 package fourcodes.srsra;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewStub;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.facebook.login.LoginManager;
+
+import static fourcodes.srsra.Login.NomeUser;
+import static fourcodes.srsra.Login.SexoUser;
 
 public class MenuLateral extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,6 +45,8 @@ public class MenuLateral extends AppCompatActivity
         stub.setLayoutResource(R.layout.activity_inicio);
         View inflated = stub.inflate();
         this.setTitle(R.string.title_Inicio);
+
+        Atualiza();
     }
 
     @Override
@@ -97,10 +107,33 @@ public class MenuLateral extends AppCompatActivity
 
         } else if (id == R.id.nav_info) {
 
+        } else if (id == R.id.nav_sair) {
+            LoginManager.getInstance().logOut();
+            startActivity(new Intent(this, Login.class));
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void Atualiza(){
+        String NomeParceiro = "Lucinda";
+        Integer dia = 350;
+
+        TextView nomeSr = (TextView) findViewById(R.id.lblNomeNoivo);
+        TextView nomeSra = (TextView) findViewById(R.id.lblNomeNoiva);
+        TextView diaResta = (TextView) findViewById(R.id.lblDiaRestaNum);
+        ProgressBar barraDia = (ProgressBar) findViewById(R.id.progressBar);
+
+        if(SexoUser == "male") {
+            nomeSr.setText("Sr. " + NomeUser);
+            nomeSra.setText("Sra. " + NomeParceiro);
+        }else{
+            nomeSra.setText("Sra. " + NomeUser);
+            nomeSr.setText("Sr. " + NomeParceiro);
+        }
+        diaResta.setText(" "+dia+" ");
     }
 }

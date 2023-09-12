@@ -25,7 +25,8 @@
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:srcCompat="@mipmap/logo"/>
+        app:srcCompat="@mipmap/logo"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/lblNomeNoivo"
@@ -34,7 +35,7 @@
         android:layout_below="@id/imgLogo"
         android:layout_centerHorizontal="true"
         style="@style/Title2"
-        android:text="Sr. Frederico"/>
+        android:text="@string/senhor"/>
     <TextView
         android:id="@+id/lblNomeE"
         android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
         android:layout_below="@id/lblNomeNoivo"
         android:layout_centerHorizontal="true"
         style="@style/Title2"
-        android:text=" &amp; "/>
+        android:text="@string/Ecomercial"/>
     <TextView
         android:id="@+id/lblNomeNoiva"
         android:layout_width="wrap_content"
@@ -50,17 +51,35 @@
         android:layout_below="@id/lblNomeE"
         android:layout_centerHorizontal="true"
         style="@style/Title2"
-        android:text="Sra. Francisca"/>
+        android:text="@string/senhora"/>
 
-    <TextView
-        android:id="@+id/lblDiaResta"
+    <LinearLayout
+        android:id="@+id/DiaResta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblNomeNoiva"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        style="@style/Title3"
-        android:text="Faltam 300 dias"/>
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/lblDiaResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title3"
+            android:text="@string/faltam"/>
+        <TextView
+            android:id="@+id/lblDiaRestaNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title3"
+            android:text=" 300 "/>
+        <TextView
+            android:id="@+id/lblDiaRestaD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title3"
+            android:text="@string/dias"/>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -68,8 +87,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/imgLogo"
+        android:layout_alignStart="@+id/imgLogo"
         android:layout_alignRight="@id/imgLogo"
-        android:layout_below="@+id/lblDiaResta"
+        android:layout_alignEnd="@id/imgLogo"
+        android:layout_below="@+id/DiaResta"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"

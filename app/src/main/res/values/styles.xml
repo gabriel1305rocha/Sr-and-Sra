@@ -35,10 +35,13 @@
     <style name="Title2" parent="Title1">
         <item name="android:textSize">20sp</item>
     </style>
-
     <style name="Title3" parent="Title1">
         <item name="android:textSize">15sp</item>
     </style>
+    <style name="Body" parent="Title1">
+        <item name="android:textSize">10sp</item>
+    </style>
+
     <style name="menuStyle" parent="SrTheme.NoActionBar">
         <item name="android:textColor">@color/TextMenu</item>
     </style>
