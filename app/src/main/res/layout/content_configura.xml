@@ -21,12 +21,114 @@
             android:layout_marginTop="16dp"
             android:text="Configurações" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/lblNotificacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/title_Configura"
-        android:layout_marginTop="29dp" />
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        style="@style/Title2"
+        android:layout_marginTop="34dp"
+        android:text="Notificações                                    " />
+
+    <Switch
+        android:id="@+id/swtNotificacao"
+        style="@style/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblNotificacao"
+        android:layout_alignBottom="@+id/lblNotificacao"
+        android:layout_alignLeft="@+id/swtWifi"
+        android:layout_alignStart="@+id/swtWifi" />
+
+    <TextView
+        android:id="@+id/lblSubNotificacao"
+        style="@style/Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNotificacao"
+        android:layout_alignStart="@+id/lblNotificacao"
+        android:layout_below="@+id/lblNotificacao"
+        android:text="Você não recebera notificações sobre suas tarefas." />
+
+    <TextView
+        android:id="@+id/lblWifi"
+        style="@style/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNotificacao"
+        android:layout_alignStart="@+id/lblNotificacao"
+        android:layout_below="@+id/lblNotificacao"
+        android:layout_marginTop="31dp"
+        android:text="Sicronizar somente via Wifi" />
+
+    <Switch
+        android:id="@+id/swtWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:layout_above="@+id/lblSubWifi"
+        android:layout_toRightOf="@+id/lblNotificacao"
+        android:layout_toEndOf="@+id/lblNotificacao"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:id="@+id/lblSubWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNotificacao"
+        android:layout_alignStart="@+id/lblNotificacao"
+        android:layout_below="@+id/lblWifi"
+        style="@style/Body2"
+        android:text="Seus dados serão sicronizados ao se conectar a qualquer rede." />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogin"
+        android:layout_alignStart="@+id/lblLogin"
+        android:layout_below="@+id/lblLogin"
+        android:text="Sair de sua conta atual e entrar em outra conta." />
+
+    <TextView
+        android:id="@+id/lblAlSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:text="Alterar senha"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/lblLogin"
+        style="@style/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblSubWifi"
+        android:layout_alignStart="@+id/lblSubWifi"
+        android:layout_below="@+id/lblSubWifi"
+        android:layout_marginTop="15dp"
+        android:text="Fazer login com outra conta." />
+
+    <TextView
+        android:id="@+id/lblSair"
+        style="@style/Title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/lblAlSenha"
+        android:layout_alignLeft="@+id/lblAlSenha"
+        android:layout_alignStart="@+id/lblAlSenha" />
+
+
 
 </RelativeLayout>
