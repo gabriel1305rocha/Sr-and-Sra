@@ -25,7 +25,6 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
             </intent-filter>
         </activity>
         <activity
@@ -37,15 +36,13 @@
         </activity>
         <activity
             android:name=".Contagem"
-            android:label="@string/dadosNoivo">
-        </activity>
+            android:label="@string/dadosNoivo"></activity>
         <activity
             android:name=".Cadastro"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".MenuLateral"
-            android:label="@string/title_Inicio">
-        </activity>
+            android:label="@string/title_Inicio"></activity>
         <!-- android:label="@string/title_activity_menu_lateral" -->
 
         <activity
@@ -65,10 +62,10 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.HOME" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CadastroFacebook"></activity>
     </application>
 
 </manifest>

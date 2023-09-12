@@ -44,5 +44,12 @@
     <string name="facebook_app_id" translatable="false">1254906311271314</string>
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
+    <string name="data_do_casamento">Data do Casamento</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="confirme_a_senha">Confirme a Senha</string>
+    <string name="continuar">Continuar</string>
+    <string name="email">E-mail</string>
+    <string name="nome_da_noiva">Nome da Noiva</string>
+    <string name="nome_do_noivo">Nome do Noivo</string>
 
 </resources>
