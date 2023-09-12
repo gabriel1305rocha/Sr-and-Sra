@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.facebook.login.LoginManager;
 
 public class Convidados extends AppCompatActivity
@@ -34,9 +33,7 @@ public class Convidados extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         this.setTitle(R.string.title_convidados);
-
     }
-
 
     @Override
     public void onBackPressed() {
@@ -44,7 +41,6 @@ public class Convidados extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            //super.onBackPressed();
             startActivity(new Intent(this, MenuLateral.class));
             finish();
         }
@@ -97,7 +93,8 @@ public class Convidados extends AppCompatActivity
         } else if (id == R.id.nav_fornecedor) {
 
         } else if (id == R.id.nav_configu) {
-
+            startActivity(new Intent(this, Configura.class));
+            finish();
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this, Sobre.class));
             finish();

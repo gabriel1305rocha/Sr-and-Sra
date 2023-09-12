@@ -2,7 +2,9 @@ package fourcodes.srsra;
 
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +32,34 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Geral));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Mensal));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Item));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final DesPageAdapter adapter = new DesPageAdapter
+                (getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         this.setTitle(R.string.title_despesas);
     }
@@ -77,7 +107,8 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         } else if (id == R.id.nav_padrinho) {
 
         } else if (id == R.id.nav_convidado) {
-
+            startActivity(new Intent(this, Convidados.class));
+            finish();
         } else if (id == R.id.nav_despesas) {
 
         } else if (id == R.id.nav_fornecedor) {

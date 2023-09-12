@@ -9,6 +9,7 @@
     <string name="title_manual">Manual do Usuário</string>
     <string name="title_despesas">Despesas</string>
     <string name="title_activity_configu">Configurações</string>
+    <string name="title_convidados">Convidados</string>
 
     <!-- Login -->
     <string name="entrar">Entrar</string>
@@ -68,6 +69,9 @@
     <string name="previsto">Previsto</string>
     <string name="sifrao">R$</string>
     <string name="restante">Restante</string>
+    <string name="tab_Geral">Geral</string>
+    <string name="tab_Mensal">Mensal</string>
+    <string name="tab_Item">Por item</string>
     <!-- Fim Tela Despesas -->
 
     <!-- Tela de Contagem -->
@@ -82,7 +86,6 @@
     <string name="facebook_app_id" translatable="false">1254906311271314</string>
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
-    <string name="title_convidados" />
-    <!--Fim Não Mudar-->
+    <string name="we" translatable="false">We</string>
 
 </resources>

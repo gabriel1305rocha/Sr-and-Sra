@@ -85,7 +85,8 @@ public class Sobre extends AppCompatActivity
         } else if (id == R.id.nav_padrinho) {
 
         } else if (id == R.id.nav_convidado) {
-
+            startActivity(new Intent(this, Convidados.class));
+            finish();
         } else if (id == R.id.nav_despesas) {
             startActivity(new Intent(this, Despesas.class));
             finish();

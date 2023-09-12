@@ -51,4 +51,7 @@
     <string name="previsto">Foreseen</string>
     <string name="restante">Remaining</string>
     <string name="sifrao">$</string>
+    <string name="tab_Geral">General</string>
+    <string name="tab_Mensal">Monthly</string>
+    <string name="tab_Item">Per item</string>
 </resources>

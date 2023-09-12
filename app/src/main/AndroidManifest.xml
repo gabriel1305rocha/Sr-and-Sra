@@ -68,7 +68,8 @@
         <activity android:name=".Configura" />
         <activity android:name=".Termo_Uso" />
         <activity android:name=".Manual_Usuario" />
-        <activity android:name=".Despesas"></activity>
+        <activity android:name=".Despesas"/>
+        <activity android:name=".Convidados"/>
     </application>
 
 </manifest>
