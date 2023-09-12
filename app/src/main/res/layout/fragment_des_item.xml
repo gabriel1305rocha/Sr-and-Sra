@@ -4,12 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/LinPesquisa"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Tab 2"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        >
+        <EditText
+            android:id="@+id/txtPesquisa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_weight="3"/>
+        <Button
+            android:id="@+id/btnPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesquisar"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/campoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LinPesquisa">
+        <ListView
+            android:id="@+id/lista_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </RelativeLayout>
 
 </RelativeLayout>

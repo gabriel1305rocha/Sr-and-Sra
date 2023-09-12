@@ -70,7 +70,8 @@
         <activity android:name=".Manual_Usuario" />
         <activity android:name=".Despesas" />
         <activity android:name=".Convidados" />
-        <activity android:name=".AddValor"></activity>
+        <activity android:name=".AddValor" />
+        <activity android:name=".Checklist"></activity>
     </application>
 
 </manifest>

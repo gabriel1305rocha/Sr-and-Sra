@@ -66,96 +66,160 @@
         android:layout_below="@id/topo">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
             <LinearLayout
-                android:id="@+id/ItemParcela"
+                android:id="@+id/ItemParcelas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
-                <TextView
-                    android:id="@+id/lblItemParcela"
+                android:orientation="horizontal">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Title2"
-                    android:text="@string/numero_de_parcelas"/>
-                <EditText
-                    android:id="@+id/txtItemParcela"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/lblItemParcela"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Title2"
+                        android:text="@string/numero_de_parcelas"/>
+                    <Button
+                        android:id="@+id/txtItemParcela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        style="@style/editAdd" />
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:minEms="3"
-                    android:maxLines="1"
-                    android:text="1"
-                    android:textAlignment="center" />
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/lblItemParcelaPaga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Title2"
+                        android:text="@string/numero_de_parcelas_pagas"/>
+                    <Button
+                        android:id="@+id/txtItemParcelaPaga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/editAdd"
+                        android:text="0" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ItemDiaPagar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ItemParcela"
-                android:layout_marginTop="10dp"
+                android:layout_below="@id/ItemParcelas"
+                android:layout_marginTop="15dp"
                 android:gravity="center_vertical">
                 <TextView
                     android:id="@+id/lblItemDiaPagar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     style="@style/Title2"
-                    android:text="@string/vencimento_por_mes"/>
-
+                    android:text="@string/vencimento_por_mes" />
                 <Spinner
                     android:id="@+id/spinner2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:popupBackground="@color/BackColor"
-                    android:spinnerMode="dialog"
+                    android:spinnerMode="dropdown"
                     android:prompt="@string/vencimento_por_mes"/>
             </LinearLayout>
-            <TextView
+            <RelativeLayout
                 android:id="@+id/ItemDataInicio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/ItemDiaPagar"
-                style="@style/Title2"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:text="@string/data_inicial"/>
-            <LinearLayout
-                android:id="@+id/ItemMesInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/ItemTitleDataInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Title2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/data_inicial"/>
+                <LinearLayout
+                    android:id="@+id/ItemMesInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ItemTitleDataInicio"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+                    <Spinner
+                        android:id="@+id/spinnerMes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/BackColor"
+                        android:prompt="@string/mes_inicial"
+                        android:spinnerMode="dropdown"
+                        android:layout_weight="1"/>
+                    <Spinner
+                        android:id="@+id/spinnerAno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/BackColor"
+                        android:prompt="@string/ano_inicial"
+                        android:spinnerMode="dropdown"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ItemDataTermi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ItemDataInicio"
                 android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
-                <!--TextView
-                    android:id="@+id/lblItemMesInicio"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/ItemTitleDataTermi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Title2"
-                    android:text="@string/mes_inicial"/-->
-                <Spinner
-                    android:id="@+id/spinnerMes"
-                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/data_termino"
+                    />
+                <LinearLayout
+                    android:id="@+id/ItemMesTermi"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:popupBackground="@color/BackColor"
-                    android:prompt="@string/mes_inicial"
-                    android:spinnerMode="dropdown"
-                    android:layout_weight="1"/>
-                <Spinner
-                    android:id="@+id/spinnerAno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:popupBackground="@color/BackColor"
-                    android:prompt="@string/ano_inicial"
-                    android:spinnerMode="dropdown"
-                    android:layout_weight="1"/>
-            </LinearLayout>
+                    android:layout_below="@id/ItemTitleDataTermi"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+                    <Spinner
+                        android:id="@+id/spinnerMesTermi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/BackColor"
+                        android:prompt="@string/mes_inicial"
+                        android:spinnerMode="dropdown"
+                        android:layout_weight="1"/>
+                    <Spinner
+                        android:id="@+id/spinnerAnoTermi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/BackColor"
+                        android:prompt="@string/ano_inicial"
+                        android:spinnerMode="dropdown"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </RelativeLayout>
             <LinearLayout
                 android:id="@+id/ItemAnotacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ItemMesInicio"
-                android:layout_marginTop="10dp"
+                android:layout_below="@id/ItemDataTermi"
+                android:layout_marginTop="15dp"
                 android:gravity="center_vertical">
                 <TextView
                     android:id="@+id/lblItemAnotacao"
@@ -169,6 +233,25 @@
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:minEms="10" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ItemPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ItemAnotacao"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+                <Switch
+                    android:id="@+id/swtItemPago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    style="@style/Title2"
+                    android:text="@string/pago"
+                    android:textColor="@color/hintColor"
+                    android:textAlignment="textStart"
+                    android:gravity="start"/>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>

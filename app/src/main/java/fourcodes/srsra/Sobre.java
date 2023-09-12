@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
+
 public class Sobre extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -59,14 +62,10 @@ public class Sobre extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }  else if (id == R.id.nav_sair) {
-            LoginManager.getInstance().logOut();
-            startActivity(new Intent(this, Inicio.class));
+        if (ClickMenuOpt(item, this)){
             finish();
+        } else {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,28 +74,8 @@ public class Sobre extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.nav_inicio) {
-            startActivity(new Intent(this, MenuLateral.class));
+        if(ClickMenuNav(item, this)){
             finish();
-        } else if (id == R.id.nav_checklist) {
-
-        } else if (id == R.id.nav_padrinho) {
-
-        } else if (id == R.id.nav_convidado) {
-            startActivity(new Intent(this, Convidados.class));
-            finish();
-        } else if (id == R.id.nav_despesas) {
-            startActivity(new Intent(this, Despesas.class));
-            finish();
-        } else if (id == R.id.nav_fornecedor) {
-
-        } else if (id == R.id.nav_configu) {
-            startActivity(new Intent(this, Configura.class));
-            finish();
-        } else if (id == R.id.nav_info) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_sobre);

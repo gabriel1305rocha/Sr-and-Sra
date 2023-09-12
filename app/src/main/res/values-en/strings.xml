@@ -68,5 +68,19 @@
     <string name="outubro">October</string>
     <string name="novembro">November</string>
     <string name="dezembro">December</string>
+    <string name="ano_inicial">Initial Year</string>
+    <string name="anotacoes">Annotations</string>
+    <string name="cancelar">Cancel</string>
+    <string name="data_inicial">Initial Date</string>
+    <string name="data_termino">Date Ends</string>
+    <string name="mes_inicial">Initial Month</string>
+    <string name="nome_do_item">Name of Item</string>
+    <string name="numero_de_parcelas">Nº of Plots</string>
+    <string name="salvar">Save</string>
+    <string name="ok">OK</string>
+    <string name="numero_de_parcelas_pagas">Plots Paid</string>
+    <string name="title_checklist">Checklist</string>
+    <string name="valor_da_parcela">Plot amount</string>
+    <string name="vencimento_por_mes">Maturity per month</string>
 
 </resources>

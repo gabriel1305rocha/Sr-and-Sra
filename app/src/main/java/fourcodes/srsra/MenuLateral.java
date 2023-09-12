@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
 import static fourcodes.srsra.Splash.*;
 
 public class MenuLateral extends AppCompatActivity
@@ -65,18 +67,10 @@ public class MenuLateral extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }  else if (id == R.id.nav_sair) {
-            LoginManager.getInstance().logOut();
-            startActivity(new Intent(this, Inicio.class));
+        if (ClickMenuOpt(item, this)){
             finish();
+        } else {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -86,27 +80,7 @@ public class MenuLateral extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_inicio) {
-
-        } else if (id == R.id.nav_checklist) {
-
-        } else if (id == R.id.nav_padrinho) {
-
-        } else if (id == R.id.nav_convidado) {
-            startActivity(new Intent(this, Convidados.class));
-            finish();
-        } else if (id == R.id.nav_despesas) {
-            startActivity(new Intent(this, Despesas.class));
-            finish();
-        } else if (id == R.id.nav_fornecedor) {
-
-        } else if (id == R.id.nav_configu) {
-            startActivity(new Intent(this, Configura.class));
-            finish();
-        } else if (id == R.id.nav_info) {
-            startActivity(new Intent(this, Sobre.class));
+        if(ClickMenuNav(item, this)){
             finish();
         }
 

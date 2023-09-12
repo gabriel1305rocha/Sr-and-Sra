@@ -2,9 +2,7 @@ package fourcodes.srsra;
 
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,25 +10,29 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
+import com.facebook.login.LoginManager;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 
-public class Despesas extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-    ArrayList<ItemDataModel> dataModels;
-    private static CustomListItemsAdapter adapterItens;
+public class Checklist extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_despesas);
+        setContentView(R.layout.activity_checklist);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_despesas);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_checklist);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -39,41 +41,17 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Geral));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Mensal));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Item));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        this.setTitle(R.string.title_checklist);
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        final DesPageAdapter adapter = new DesPageAdapter
-                (getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-        this.setTitle(R.string.title_despesas);
-
+        ListView lstChek = (ListView) findViewById(R.id.lstChek);
+        ArrayList<String> Menus = preencherdados();
+        ArrayAdapter<String> ArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Menus);
+        lstChek.setAdapter(ArrayAdapter);
     }
-
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_despesas);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_checklist);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -85,7 +63,7 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_item, menu);
+        getMenuInflater().inflate(R.menu.menu_lateral, menu);
         return true;
     }
 
@@ -96,7 +74,6 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         } else {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -106,9 +83,26 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         if(ClickMenuNav(item, this)){
             finish();
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_despesas);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_checklist);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private ArrayList<String> preencherdados() {
+        ArrayList<String> dados = new ArrayList<String>();
+        dados.add("Um ano antes");
+        dados.add("Des meses ates");
+        dados.add("oito meses antes");
+        dados.add("seis meses antes");
+        dados.add("tres meses antes");
+        dados.add("dois meses antes");
+        dados.add("Um mes antes");
+        dados.add("quinze dias antes");
+        dados.add("uma semana antes");
+        dados.add("dois dias antes");
+        dados.add("Um dia antes");
+        dados.add("o grande dia");
+        dados.add("na volta da lua de meu");
+        return dados;
     }
 }
