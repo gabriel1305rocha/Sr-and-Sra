@@ -1,125 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    android:layout_width="350dp"
-    android:layout_height="500dp"
-    tools:context="fourcodes.srsra.Cadastro">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:text="Nome:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/lblDNoiva"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:text="Cadastre-se"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblCadastrese"
+        style="@style/Title1"
+        android:layout_marginTop="22dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtTelNoiva"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtEmailNoiva" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtSobrenomeNoiva"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNomeNoiva"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/txtEmailNoiva"
+        android:layout_alignStart="@+id/txtEmailNoiva" />
+
+    <TextView
+        android:text="Nome:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/lblDNoivo"
+        android:layout_alignLeft="@+id/Email:"
+        android:layout_alignStart="@+id/Email:" />
+
+    <EditText
+        android:id="@+id/txtNomeNoivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/txtEmailNoiva"
+        android:layout_alignStart="@+id/txtEmailNoiva" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtSobrenomeNoivo"
+        android:layout_alignBaseline="@+id/textView10"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtTelNoivo"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmailNoivo"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:text="Sobrenome:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/textView7"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_below="@+id/txtNomeNoiva"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp">
+        android:layout_alignParentStart="true" />
 
-        <RelativeLayout
-            android:id="@+id/src"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:text="Telefone:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/txtSobrenomeNoiva"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
 
-            <TextView
-                android:id="@+id/textView9"
-                style="@style/Title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="Cadastre-se" />
+    <TextView
+        android:text="Email:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/Email:"
+        android:layout_below="@+id/txtTelNoiva"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
 
-            <EditText
-                android:id="@+id/editText6"
-                style="@style/Title2"
-                android:layout_width="315dp"
-                android:layout_height="51dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText7"
-                android:drawableLeft="@drawable/ic_menu_edit"
-                android:ems="10"
-                android:hint="Nome do Noivo"
-                android:inputType="textPersonName" />
+    <TextView
+        android:text="Sobrenome:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/txtNomeNoivo"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
 
-            <EditText
-                android:id="@+id/editText7"
-                style="@style/Title2"
-                android:layout_width="315dp"
-                android:layout_height="51dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="75dp"
-                android:drawableLeft="@drawable/ic_menu_edit"
-                android:ems="10"
-                android:hint="Nome da Noiva"
-                android:inputType="textPersonName" />
+    <TextView
+        android:text="Telefone:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/txtSobrenomeNoivo"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
 
+    <TextView
+        android:text="Email:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title2"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/txtTelNoivo"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
 
-            <EditText
-                android:id="@+id/editText8"
-                style="@style/Title2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText6"
-                android:drawableLeft="@drawable/ic_menu_cc_am"
-                android:ems="10"
-                android:hint="Digite o E-mail"
-                android:inputType="textEmailAddress" />
+    <Button
+        android:text="Cadastrar-se"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnCadastrarse"
+        android:layout_below="@+id/txtEmailNoivo"
+        android:layout_centerHorizontal="true" />
 
-            <EditText
-                android:id="@+id/editText10"
-                style="@style/Title2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText8"
-                android:drawableLeft="@drawable/ic_menu_login"
-                android:ems="10"
-                android:hint="Digite a Senha"
-                android:inputType="textPassword" />
+    <TextView
+        android:text="Dados da Noiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblDNoiva"
+        style="@style/Title2"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/lblCadastrese"
+        android:layout_alignLeft="@+id/txtSobrenomeNoiva"
+        android:layout_alignStart="@+id/txtSobrenomeNoiva" />
 
-            <EditText
-                android:id="@+id/editText9"
-                style="@style/Title2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/editText10"
-                android:drawableLeft="@drawable/ic_menu_login"
-                android:ems="10"
-                android:hint="Confirme Sua Senha"
-                android:inputType="textPassword" />
-
-
-            <Button
-                android:id="@+id/btnCadastrarSe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_below="@id/editText9"
-                android:layout_centerHorizontal="true"
-                android:onClick="onClickCadastra"
-                android:text="@string/cadastrar" />
-        </RelativeLayout>
-    </ScrollView>
-
+    <TextView
+        android:text="Dados do Noivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblDNoivo"
+        style="@style/Title2"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtSobrenomeNoivo"
+        android:layout_alignStart="@+id/txtSobrenomeNoivo" />
 
 </RelativeLayout>

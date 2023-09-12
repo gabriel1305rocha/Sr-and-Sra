@@ -22,9 +22,11 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/MenuLateral"
+        android:background="@drawable/back_menu"
         app:menu="@menu/activity_menu_lateral_drawer"
         app:itemIconTint="@color/TextMenu"
+        app:itemBackground="@drawable/back_menu"
+        android:layout_marginTop="-7dp"
         app:itemTextAppearance="@style/menuStyle"
         />
     <!--app:headerLayout="@layout/nav_header_menu_lateral"-->

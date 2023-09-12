@@ -27,5 +27,54 @@
         android:layout_height="250dp"
         app:srcCompat="@mipmap/logo"/>
 
+    <TextView
+        android:id="@+id/lblNomeNoivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text="Sr. Frederico"/>
+    <TextView
+        android:id="@+id/lblNomeE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeNoivo"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text=" &amp; "/>
+    <TextView
+        android:id="@+id/lblNomeNoiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeE"
+        android:layout_centerHorizontal="true"
+        style="@style/Title2"
+        android:text="Sra. Francisca"/>
+
+    <TextView
+        android:id="@+id/lblDiaResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblNomeNoiva"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Title3"
+        android:text="Faltam 300 dias"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/imgLogo"
+        android:layout_alignRight="@id/imgLogo"
+        android:layout_below="@+id/lblDiaResta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/BackColor"
+        android:foreground="#FF0000"
+        />
 
 </RelativeLayout>

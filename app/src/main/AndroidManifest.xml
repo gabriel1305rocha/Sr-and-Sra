@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fourcodes.srsra">
-
+    package="fourcodes.srsra"
+    >
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!--
         Usar seguinte código para não mostrar Menu de Cima na respectiva Activity
         android:theme="@style/SplashTheme"
@@ -14,6 +15,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".Splash"
             android:theme="@style/SplashTheme">
@@ -32,20 +34,23 @@
         </activity>
         <activity
             android:name=".Inicio"
-            android:label="@string/dadosNoivo" />
+            android:label="@string/dadosNoivo">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".Dados"
+            android:name=".Cadastro"
             android:theme="@style/SplashTheme" />
         <activity
             android:name=".MenuLateral"
-            android:label="@string/title_activity_menu_lateral"
-            android:parentActivityName=".Inicio"
-            android:theme="@style/menuStyle">
+            android:label="@string/title_Inicio"
+            android:parentActivityName=".Inicio">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fourcodes.srsra.Inicio" />
         </activity>
-        <activity android:name=".Cadastro" />
+        <!-- android:label="@string/title_activity_menu_lateral" -->
     </application>
 
 </manifest>

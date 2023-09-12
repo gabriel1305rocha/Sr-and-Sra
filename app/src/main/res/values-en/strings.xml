@@ -20,5 +20,5 @@
     <string name="menuL_inicio">Home</string>
     <string name="menuL_outro">Others</string>
     <string name="menuL_padrinho">Padrinhos</string>
-    <string name="title_activity_menu_lateral">Menu</string>
+    <string name="title_Inicio">Home</string>
 </resources>

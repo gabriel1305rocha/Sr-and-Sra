@@ -8,20 +8,20 @@
             android:title="@string/menuL_inicio" />
         <item
             android:id="@+id/nav_checklist"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_check"
             android:title="@string/menuL_check"
             />
         <item
             android:id="@+id/nav_padrinho"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_padrinho"
             android:title="@string/menuL_padrinho" />
         <item
             android:id="@+id/nav_convidado"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_convidado"
             android:title="@string/menuL_convidado" />
         <item
             android:id="@+id/nav_fornecedor"
-            android:icon="@drawable/ic_events"
+            android:icon="@drawable/ic_menu_fornecedor"
             android:title="@string/menuL_fornecedor" />
         <item
             android:id="@+id/nav_despesas"
@@ -29,21 +29,26 @@
             android:title="@string/menuL_despesa" />
         <item
             android:id="@+id/nav_empty"
-            android:title="" />
+            android:title=""
+            android:enabled="false"/>
+        <item
+            android:id="@+id/nav_configu"
+            android:icon="@drawable/ic_menu_config"
+            android:title="@string/menuL_configu" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_menu_info2"
+            android:title="@string/menuL_info" />
     </group>
 
+
     <item
-        android:title="@string/menuL_outro">
+        android:title="Outros"
+        android:visible="false">
         <menu>
-            <item
-                android:id="@+id/nav_configu"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menuL_configu" />
-            <item
-                android:id="@+id/nav_info"
-                android:icon="@drawable/ic_menu_info"
-                android:title="@string/menuL_info" />
+
         </menu>
     </item>
+
 
 </menu>

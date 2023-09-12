@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewStub;
 
 public class MenuLateral extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,6 +32,11 @@ public class MenuLateral extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
+        stub.setLayoutResource(R.layout.activity_inicio);
+        View inflated = stub.inflate();
+        this.setTitle(R.string.title_Inicio);
     }
 
     @Override
@@ -72,6 +78,10 @@ public class MenuLateral extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
+            /*ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
+            stub.setLayoutResource(R.layout.activity_inicio);
+            View inflated = stub.inflate();
+            this.setTitle("Inicio");*/
             // Handle the inicio action
         } else if (id == R.id.nav_checklist) {
 
