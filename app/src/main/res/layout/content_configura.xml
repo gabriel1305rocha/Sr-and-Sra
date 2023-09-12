@@ -10,8 +10,7 @@
     tools:showIn="@layout/app_bar_configura">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -23,7 +22,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
-                android:text="@string/configura_es" />
+                android:text="Configurações" />
             <RelativeLayout
                 android:id="@+id/LatNotificacao"
                 android:layout_width="match_parent"
@@ -41,8 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Title2"
-                    android:text="@string/notifica_es"
-                    tools:ignore="RelativeOverlap" />
+                    android:text="Notificações" />
                 <Switch
                     android:id="@+id/swtNotificacao"
                     style="@style/Title2"
@@ -60,7 +58,7 @@
                     android:layout_alignLeft="@id/lblNotificacao"
                     android:layout_alignStart="@id/lblNotificacao"
                     android:layout_below="@id/lblNotificacao"
-                    android:text="@string/voc_n_o_recebera_notifica_es_sobre_suas_tarefas" />
+                    android:text="Você não recebera notificações sobre suas tarefas." />
             </RelativeLayout>
 
             <RelativeLayout
@@ -78,8 +76,7 @@
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sicronizar_somente_via_wifi"
-                    tools:ignore="RelativeOverlap" />
+                    android:text="Sicronizar somente via Wifi" />
                 <Switch
                     android:id="@+id/swtWifi"
                     android:layout_width="wrap_content"
@@ -96,7 +93,7 @@
                     android:layout_alignStart="@id/lblWifi"
                     android:layout_below="@+id/lblWifi"
                     style="@style/Body2"
-                    android:text="@string/seus_dados_ser_o_sicronizados_ao_se_conectar_a_qualquer_rede" />
+                    android:text="Seus dados serão sicronizados ao se conectar a qualquer rede." />
             </RelativeLayout>
 
             <RelativeLayout
@@ -115,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="@string/fazer_login_com_outra_conta" />
+                    android:text="Fazer login com outra conta." />
                 <TextView
                     android:id="@+id/lblSubLogin"
                     style="@style/Body2"
@@ -124,7 +121,7 @@
                     android:layout_alignLeft="@id/lblLogin"
                     android:layout_alignStart="@id/lblLogin"
                     android:layout_below="@+id/lblLogin"
-                    android:text="@string/sair_de_sua_conta_atual_e_entrar_em_outra_conta" />
+                    android:text="Sair de sua conta atual e entrar em outra conta." />
             </RelativeLayout>
 
             <RelativeLayout
@@ -142,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Title2"
-                    android:text="@string/alterar_senha"
+                    android:text="Alterar senha"
                     android:layout_marginTop="19dp" />
             </RelativeLayout>
 
@@ -162,8 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sair"
-                    android:layout_marginTop="22dp"
-                    tools:ignore="HardcodedText" />
+                    android:layout_marginTop="22dp" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

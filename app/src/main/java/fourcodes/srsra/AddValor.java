@@ -15,13 +15,16 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.TextView;
+
+import static fourcodes.srsra.EditarItem.*;
+import static fourcodes.srsra.EditarItem.texto;
 
 
 public class AddValor extends Activity {
 
     String textDialog = "0";
     final Context context = this;
+    static boolean edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +135,19 @@ public class AddValor extends Activity {
                 }
             }
         });
+
+        if(edit){
+            EditText itemNome = (EditText) findViewById(R.id.ItemNome);
+            EditText itemDesc = (EditText) findViewById(R.id.txtItemAnotacao);
+            EditText itemValor = (EditText) findViewById(R.id.ItemValor);
+
+            itemNome.setText(texto);
+            itemDesc.setText(desc);
+            itemValor.setText(valor);
+            parcela.setText(total);
+            parcelaPaga.setText(paga);
+
+        }
     }
 
     @Override

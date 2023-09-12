@@ -13,19 +13,17 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imgLogo"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 app:srcCompat="@mipmap/logo"
-                android:layout_centerHorizontal="true"
-                tools:ignore="ContentDescription" />
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:id="@+id/lblNomeNoivo"
@@ -71,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Title3"
-                    android:text="@string/_300"/>
+                    android:text=" 300 "/>
                 <TextView
                     android:id="@+id/lblDiaRestaD"
                     android:layout_width="wrap_content"

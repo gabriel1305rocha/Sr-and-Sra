@@ -1,5 +1,7 @@
 package fourcodes.srsra;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -10,8 +12,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -22,6 +26,9 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
 
     ArrayList<ItemDataModel> dataModels;
     private static CustomListItemsAdapter adapterItens;
+    private boolean fragItem;
+    Menu mOptionsMenu;
+    String pesquisaItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +61,12 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                if (tab.getPosition()==2) {
+                    fragItem = true;
+                }else {
+                    fragItem = false;
+                }
+                onPrepareOptionsMenu(mOptionsMenu);
             }
 
             @Override
@@ -85,7 +98,18 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_item, menu);
+        getMenuInflater().inflate(R.menu.menu_pesquisa_item, menu);
+        mOptionsMenu=menu;
+        menu.getItem(0).setVisible(false);
+        return true;
+    }
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        menu.getItem(0).setVisible(fragItem);
+        //else{
+           // menu.getItem(R.id.action_pesquisa_item).setVisible(false);
+        //}
         return true;
     }
 
@@ -93,8 +117,8 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onOptionsItemSelected(MenuItem item) {
         if (ClickMenuOpt(item, this)){
             finish();
-        } else {
-            return true;
+        }else {
+            return false;
         }
 
         return super.onOptionsItemSelected(item);

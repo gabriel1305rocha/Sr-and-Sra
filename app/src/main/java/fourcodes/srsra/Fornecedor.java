@@ -17,12 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.support.v7.widget.Toolbar;
-/**
- * Created by gabriel on 25/03/17.
- */
-public class Fornecedor extends AppCompatActivity {
 
-    private WebView webView;
+public class Fornecedor extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

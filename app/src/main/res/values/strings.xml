@@ -12,6 +12,7 @@
     <string name="title_convidados">Convidados</string>
     <string name="title_additems">Adicionar novo Item</string>
     <string name="title_checklist">Checklist</string>
+    <string name="title_tarefas">Tarefas</string>
 
     <!-- Login -->
     <string name="entrar">Entrar</string>
@@ -74,7 +75,7 @@
     <string name="tab_Geral">Geral</string>
     <string name="tab_Mensal">Mensal</string>
     <string name="tab_Item">Por item</string>
-    <string-array name="filtro">
+    <string-array name="filtro" translatable="false">
         <item>Todos</item>
         <item>A pagar</item>
         <item>Pagos</item>
@@ -82,7 +83,7 @@
 
     <!-- Fim Tela Despesas -->
     <!-- Adicionar novo Item-->
-    <string-array name="meses">
+    <string-array name="meses" translatable="false">
         <item>@string/janeiro</item>
         <item>@string/fervereiro</item>
         <item>@string/marco</item>
@@ -96,7 +97,7 @@
         <item>@string/novembro</item>
         <item>@string/dezembro</item>
     </string-array>
-    <string-array name="dias_mes">
+    <string-array name="dias_mes" translatable="false">
         <item>01</item>
         <item>02</item>
         <item>03</item>
@@ -129,7 +130,7 @@
         <item>30</item>
         <item>31</item>
     </string-array>
-    <string-array name="anos">
+    <string-array name="anos" translatable="false">
         <item>2001</item>
         <item>2002</item>
         <item>2003</item>
@@ -173,7 +174,8 @@
     <string name="salvar">Salvar</string>
     <string name="valor_da_parcela">Valor da parcela</string>
     <string name="vencimento_por_mes">Vencimento por Mês</string>
-    <string name="ok">Continuar</string>
+    <string name="ok">Confirmar</string>
+    <string name="data_termino">Data Termina</string>
 
     <!-- Tela de Contagem -->
     <string name="senhor">Sr. </string>
@@ -202,36 +204,6 @@
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
     <string name="we" translatable="false">We</string>
-    <string name="data_termino">Data Termina</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_300" translatable="false">300</string>
-    <string name="tarefas">Tarefas</string>
-    <string name="alterar_senha">Alterar senha</string>
-    <string name="configura_es">Configurações</string>
-    <string name="fazer_login_com_outra_conta">Fazer login com outra conta.</string>
-    <string name="notifica_es">Notificações</string>
-    <string name="sair_de_sua_conta_atual_e_entrar_em_outra_conta">Sair de sua conta atual e entrar em outra conta.</string>
-    <string name="seus_dados_ser_o_sicronizados_ao_se_conectar_a_qualquer_rede">Seus  serão sicronizados ao se conectar a qualquer rede.</string>
-    <string name="sicronizar_somente_via_wifi">Sicronizar somente via Wifi</string>
-    <string name="voc_n_o_recebera_notifica_es_sobre_suas_tarefas">Você não recebera notificações sobre suas tarefas.</string>
-    <string name="confirmados">Confirmados</string>
-    <string name="convidados">Convidados</string>
-    <string name="da_noiva">Da Noiva</string>
-    <string name="do_casal">Do Casal</string>
-    <string name="do_noivo">Do Noivo</string>
-    <string name="incluir_acompanhantes">Incluir acompanhantes</string>
-    <string name="total">Total</string>
-    <string name="_15_000_00" translatable="false">15.000,00</string>
-    <string name="_20_000" translatable="false">20.000</string>
-    <string name="_20_000_00" translatable="false">20.000,00</string>
-    <string name="_2017" translatable="false">2017</string>
-    <string name="_5_000_00" translatable="false">5.000,00</string>
-    <string name="_20" translatable="false">20</string>
-    <string name="pesquisar">Pesquisar</string>
-    <string name="tab_1" translatable="false">Tab 1</string>
-    <string name="textotextotextotextotextotextotexto" translatable="false">TextoTextoTextoTextoTextoTextoTexto</string>
-    <string name="fourcodes_com" translatable="false">fourcodes.com</string>
-    <string name="dados">Dados</string>
+
 
 </resources>

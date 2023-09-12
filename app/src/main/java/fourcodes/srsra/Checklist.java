@@ -1,5 +1,6 @@
 package fourcodes.srsra;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,19 +11,20 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.facebook.login.LoginManager;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
+import static fourcodes.srsra.ListTarefas.ClickListTarefa;
 
 public class Checklist extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,19 @@ public class Checklist extends AppCompatActivity implements NavigationView.OnNav
         ArrayList<String> Menus = preencherdados();
         ArrayAdapter<String> ArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Menus);
         lstChek.setAdapter(ArrayAdapter);
+        lstChek.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ClickListTarefa(position, context);
+                finish();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                /*startActivity(new Intent(Checklist.this, Tarefas.class));
+                finish();*/
+            }
+        });
     }
 
     @Override

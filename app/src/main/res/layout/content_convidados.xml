@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="UselessParent">
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -43,15 +42,14 @@
                 android:layout_centerHorizontal="true"
                 style="@style/Title1"
                 android:layout_marginTop="15dp"
-                android:text="@string/convidados"
-                tools:ignore="RelativeOverlap" />
+                android:text="Convidados" />
 
             <CheckBox
                 android:id="@+id/chkAcaompanhante"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Title2"
-                android:text="@string/incluir_acompanhantes"
+                android:text="Incluir acompanhantes"
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/textView2"
                 android:layout_alignLeft="@+id/txtDaNoiva"
@@ -64,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:hint="@string/da_noiva"
+                android:hint="Da Noiva"
                 android:inputType="number"
                 android:layout_below="@+id/chkAcaompanhante"
                 android:layout_alignLeft="@+id/relativeLayout"
@@ -85,14 +83,13 @@
                 android:ems="10"
                 android:inputType="number"
                 android:layout_alignRight="@+id/relativeLayout"
-                android:layout_alignEnd="@+id/relativeLayout"
-                tools:ignore="HardcodedText" />
+                android:layout_alignEnd="@+id/relativeLayout" />
 
             <EditText
                 android:id="@+id/TxtDoCasal"
                 style="@style/Title2"
                 android:layout_width="wrap_content"
-                android:hint="@string/do_casal"
+                android:hint="Do Casal"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/relativeLayout"
                 android:layout_alignStart="@+id/relativeLayout"
@@ -112,8 +109,7 @@
                 android:layout_below="@+id/TxtDoCasal"
                 android:layout_marginTop="17dp"
                 style="@style/Title2"
-                android:text="Total:"
-                tools:ignore="HardcodedText" />
+                android:text="Total:" />
 
             <TextView
                 android:id="@+id/lblSoma"
@@ -123,15 +119,14 @@
                 android:layout_alignBottom="@+id/lblTotal"
                 android:layout_alignEnd="@+id/relativeLayout"
                 android:layout_alignRight="@+id/relativeLayout"
-                android:text="0"
-                tools:ignore="HardcodedText" />
+                android:text="0" />
 
             <TextView
                 android:id="@+id/lblConfirmados"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Title2"
-                android:text="@string/confirmados"
+                android:text="Confirmados"
                 android:layout_below="@+id/lblTotal"
                 android:layout_centerHorizontal="true" />
 
@@ -144,8 +139,7 @@
                 android:text="Da Noiva"
                 android:layout_below="@+id/lblConfirmados"
                 android:layout_alignLeft="@+id/relativeLayout"
-                android:layout_alignStart="@+id/relativeLayout"
-                tools:ignore="HardcodedText" />
+                android:layout_alignStart="@+id/relativeLayout" />
 
             <TextView
                 android:id="@+id/lblCDaNoiva"
@@ -155,8 +149,7 @@
                 android:layout_alignBottom="@+id/lblDaNoiva"
                 android:layout_alignEnd="@+id/relativeLayout"
                 android:layout_alignRight="@+id/relativeLayout"
-                android:text="0"
-                tools:ignore="HardcodedText" />
+                android:text="0" />
 
             <TextView
                 android:id="@+id/lblDoNoivo"
@@ -167,7 +160,7 @@
                 android:layout_alignStart="@+id/relativeLayout"
                 android:layout_below="@+id/lblDaNoiva"
                 android:layout_marginTop="22dp"
-                android:text="@string/do_noivo" />
+                android:text="Do Noivo" />
 
             <TextView
                 android:id="@+id/lblCDoNoivo"
@@ -177,8 +170,7 @@
                 android:layout_alignBottom="@+id/lblDoNoivo"
                 android:layout_alignEnd="@+id/relativeLayout"
                 android:layout_alignRight="@+id/relativeLayout"
-                android:text="0"
-                tools:ignore="HardcodedText" />
+                android:text="0" />
 
             <TextView
                 android:id="@+id/lblDoCasal"
@@ -189,8 +181,7 @@
                 android:layout_alignStart="@+id/relativeLayout"
                 android:layout_below="@+id/lblDoNoivo"
                 android:layout_marginTop="19dp"
-                android:text="Do Casal"
-                tools:ignore="HardcodedText" />
+                android:text="Do Casal" />
 
             <TextView
                 android:id="@+id/lblCDoCasal"
@@ -200,8 +191,7 @@
                 android:layout_alignBottom="@+id/lblDoCasal"
                 android:layout_alignLeft="@+id/lblCDoNoivo"
                 android:layout_alignStart="@+id/lblCDoNoivo"
-                android:text="0"
-                tools:ignore="HardcodedText" />
+                android:text="0" />
 
             <TextView
                 android:id="@+id/lblSubTotaç"
@@ -209,7 +199,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="42dp"
-                android:text="@string/total"
+                android:text="Total"
                 android:layout_below="@+id/lblDoCasal"
                 android:layout_centerHorizontal="true" />
 
@@ -221,8 +211,7 @@
                 android:layout_below="@+id/lblSubTotaç"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="0"
-                tools:ignore="HardcodedText" />
+                android:text="0" />
 
         </RelativeLayout>
     </ScrollView>

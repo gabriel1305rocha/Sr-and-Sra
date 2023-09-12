@@ -76,6 +76,16 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="FiltroCancel">
+        <item name="android:background">#aa585858</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">#bb323232</item>
+        <item name="android:drawableRight">@drawable/ic_cancel_black</item>
+        <item name="android:drawableEnd">@drawable/ic_cancel_black</item>
+    </style>
     <style name="ProBarOrcament" parent="Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressTint"> #FFF</item>
         <item name="android:progressBackgroundTint">#000</item>

@@ -3,7 +3,7 @@
     package="fourcodes.srsra">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.VIBRATE" />
     <!--
         Usar seguinte código para não mostrar Menu de Cima na respectiva Activity
         android:theme="@style/SplashTheme"
@@ -41,8 +41,6 @@
         <activity
             android:name=".MenuLateral"
             android:label="@string/title_Inicio" />
-        <!-- android:label="@string/title_activity_menu_lateral" -->
-
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -68,11 +66,20 @@
         <activity android:name=".Configura" />
         <activity android:name=".Termo_Uso" />
         <activity android:name=".Manual_Usuario" />
-        <activity android:name=".Despesas" />
+        <activity android:name=".Despesas">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Convidados" />
         <activity android:name=".AddValor" />
-        <activity android:name=".Fornecedor"/>
-        <activity android:name=".Checklist"></activity>
+        <activity android:name=".Checklist" />
+        <activity android:name=".Tarefas">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Fornecedor" />
     </application>
 
 </manifest>
