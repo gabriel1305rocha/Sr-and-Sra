@@ -83,5 +83,26 @@
     <string name="valor_da_parcela">Plot amount</string>
     <string name="vencimento_por_mes">Due Date</string>
     <string name="title_tarefas">Tasks</string>
+    <string name="title_padrinhos">Godfathers</string>
+    <string name="menuL_daminhas">Bridesmaids</string>
+    <string name="pesquisar_item">Search Item</string>
+    <string name="title_daminha">Bridesmaids</string>
+    <string name="deletar">Delete</string>
+    <string name="dez_meses_antes">Ten months before</string>
+    <string name="dois_dias_antes">Two days before</string>
+    <string name="dois_meses_antes">Two months before</string>
+    <string name="editar">Edit</string>
+    <string name="lembrar_senha">Remember password</string>
+    <string name="na_volta">On the return of the honeymoon</string>
+    <string name="o_grande_dia">The big day</string>
+    <string name="oito_meses_antes">Eight months before</string>
+    <string name="quinze_dias_antes">Fifteen days before</string>
+    <string name="seis_meses_antes">Six months before</string>
+    <string name="title_fornecedor">Provider</string>
+    <string name="tres_meses_antes">Three months before</string>
+    <string name="um_ano_antes">A year before</string>
+    <string name="um_dia_antes">A day before</string>
+    <string name="um_mes_antes">A months before</string>
+    <string name="uma_semana_antes">A week before</string>
 
 </resources>

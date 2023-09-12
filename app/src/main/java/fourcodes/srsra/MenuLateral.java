@@ -1,6 +1,5 @@
 package fourcodes.srsra;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,7 +14,6 @@ import android.view.ViewStub;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.facebook.login.LoginManager;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;

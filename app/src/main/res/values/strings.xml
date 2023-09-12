@@ -13,6 +13,11 @@
     <string name="title_additems">Adicionar novo Item</string>
     <string name="title_checklist">Checklist</string>
     <string name="title_tarefas">Tarefas</string>
+    <string name="title_padrinhos">Padrinhos</string>
+    <string name="title_daminha">Daminhas e Pajens</string>
+    <string name="title_fornecedor">Fornecedor</string>
+    <!-- Caixa Dialogo-->
+    <string name="pesquisar_item">Pesquisar Item</string>
 
     <!-- Login -->
     <string name="entrar">Entrar</string>
@@ -20,6 +25,7 @@
     <string name="Cadastra_se">Cadastre-se</string>
     <string name="faceLogin">Entre com o Facebook</string>
     <string name="faceSair">Sair do Facebook</string>
+    <string name="lembrar_senha">Lembrar Senha</string>
 
     <!-- Fim Login -->
     <!-- Cadastro -->
@@ -45,6 +51,7 @@
     <string name="menuL_check">Checklist</string>
     <string name="menuL_padrinho">Padrinhos</string>
     <string name="menuL_convidado">Convidados</string>
+    <string name="menuL_daminhas">Daminhas e Pajens</string>
     <string name="menuL_fornecedor">Fornecedores</string>
     <string name="menuL_despesa">Despesas</string>
     <string name="menuL_outro">Outros</string>
@@ -183,6 +190,27 @@
     <string name="Ecomercial" translatable="false"> &amp; </string>
     <string name="faltam">Faltam </string>
     <string name="dias"> dias</string>
+    <!-- Lista de Tarefas -->
+    <string name="um_ano_antes">Um ano antes</string>
+    <string name="dez_meses_antes">Dez meses antes</string>
+    <string name="oito_meses_antes">Oito meses antes</string>
+    <string name="seis_meses_antes">Seis meses antes</string>
+    <string name="tres_meses_antes">Três meses antes</string>
+    <string name="dois_meses_antes">Dois meses antes</string>
+    <string name="um_mes_antes">Um mês antes</string>
+    <string name="quinze_dias_antes">Quinze dias antes</string>
+    <string name="uma_semana_antes">Uma semana antes</string>
+    <string name="dois_dias_antes">Dois dias antes</string>
+    <string name="um_dia_antes">Um dia antes</string>
+    <string name="o_grande_dia">O grande dia</string>
+    <string name="na_volta">Na volta da lua de mel</string>
+    <!-- Fragmento Item-->
+    <string name="deletar">Deletar</string>
+    <string name="editar">Editar</string>
+
+    <!-- Links -->
+    <string name="link_manualuser" translatable="false">https://www.google.com.br</string>
+    <string name="link_termouso" translatable="false">https://www.google.com.br</string>
 
     <!-- Meses -->
     <string name="janeiro">Janeiro</string>
@@ -204,7 +232,5 @@
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
     <string name="we" translatable="false">We</string>
-    <string name="title_Fornecedor">Fornecedor</string>
-
 
 </resources>

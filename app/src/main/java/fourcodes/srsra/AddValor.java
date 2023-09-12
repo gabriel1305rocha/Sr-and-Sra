@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -105,6 +106,13 @@ public class AddValor extends Activity {
                 });
 
                 builder.show();
+                input.requestFocus();
+                input.postDelayed(new Runnable(){
+                                      @Override public void run(){
+                                          InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                                          keyboard.showSoftInput(input,0);
+                                      }
+                                  },200);
             }
         });
 
@@ -139,6 +147,13 @@ public class AddValor extends Activity {
                 });
 
                 builder.show();
+                input.requestFocus();
+                input.postDelayed(new Runnable(){
+                                      @Override public void run(){
+                                          InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                                          keyboard.showSoftInput(input,0);
+                                      }
+                                  },200);
             }
         });
         final Switch swtPago = (Switch) findViewById(R.id.swtItemPago);
@@ -166,12 +181,6 @@ public class AddValor extends Activity {
 
     public void ConfirmNewItem(View view) {
 
-        /*Spinner spinnerMesI = (Spinner) findViewById(R.id.spinnerMes);
-        Spinner spinnerAnoI = (Spinner) findViewById(R.id.spinnerAno);
-        Spinner spinnerMesT = (Spinner) findViewById(R.id.spinnerMesTermi);
-        Spinner spinnerAnoT = (Spinner) findViewById(R.id.spinnerAnoTermi);
-        int anoIni = Integer.parseInt(spinnerAnoI.getAdapter().getItem(spinnerAnoI.getSelectedItemPosition()).toString());
-        int mesIni = Integer.parseInt(spinnerAnoI.getAdapter().getItem(spinnerAnoI.getSelectedItemPosition()).toString());*/
         if(edit)
             Editou(posi);
         else

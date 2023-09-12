@@ -1,6 +1,6 @@
 package fourcodes.srsra;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,12 +9,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 import static fourcodes.srsra.ListTarefas.pos;
 import static fourcodes.srsra.TarefaCriaLista.CriaLista;
+import static fourcodes.srsra.TarefaCriaLista.titulo;
 
 public class Tarefas extends AppCompatActivity {
 
@@ -42,15 +44,10 @@ public class Tarefas extends AppCompatActivity {
 
         ListView listTarefas = (ListView) findViewById(R.id.list_tarefas);
         listTarefas.setAdapter(CriaLista(pos, this));
-        /*if(pos==0){
-            dataModels= new ArrayList<>();
-            dataModels.add(new TarefasDataModel("Escolha a data do casamento", false));
-            dataModels.add(new TarefasDataModel("Defina Orçamento", true));
-            adapter=new CustomListTarefasAdapter(dataModels, this);
-            listTarefas.setAdapter(adapter);
-        }else if (pos==1){
 
-        }*/
+
+        TextView Titulo = (TextView) findViewById(R.id.tituloTarefa);
+        Titulo.setText(titulo);
     }
 
     @Override

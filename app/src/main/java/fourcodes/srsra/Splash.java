@@ -14,7 +14,7 @@ public class Splash extends AppCompatActivity implements Runnable {
 
     static public String NomeUser = "";
     static public String SexoUser = "male";
-    static public String NomeParceiro = "Indisponivel";
+    static public String NomeParceiro = "";
     static public int StatusLogin = 0;
     /* StatusLogin == 1, Offline
     *  StatusLogin == 2, Facebook

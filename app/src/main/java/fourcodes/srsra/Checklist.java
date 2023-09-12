@@ -98,19 +98,19 @@ public class Checklist extends AppCompatActivity implements NavigationView.OnNav
 
     private ArrayList<String> preencherdados() {
         ArrayList<String> dados = new ArrayList<String>();
-        dados.add("Um ano antes");
-        dados.add("Des meses ates");
-        dados.add("oito meses antes");
-        dados.add("seis meses antes");
-        dados.add("tres meses antes");
-        dados.add("dois meses antes");
-        dados.add("Um mes antes");
-        dados.add("quinze dias antes");
-        dados.add("uma semana antes");
-        dados.add("dois dias antes");
-        dados.add("Um dia antes");
-        dados.add("o grande dia");
-        dados.add("na volta da lua de meu");
+        dados.add(getString(R.string.um_ano_antes));
+        dados.add(getString(R.string.dez_meses_antes));
+        dados.add(getString(R.string.oito_meses_antes));
+        dados.add(getString(R.string.seis_meses_antes));
+        dados.add(getString(R.string.tres_meses_antes));
+        dados.add(getString(R.string.dois_meses_antes));
+        dados.add(getString(R.string.um_mes_antes));
+        dados.add(getString(R.string.quinze_dias_antes));
+        dados.add(getString(R.string.uma_semana_antes));
+        dados.add(getString(R.string.dois_dias_antes));
+        dados.add(getString(R.string.um_dia_antes));
+        dados.add(getString(R.string.o_grande_dia));
+        dados.add(getString(R.string.na_volta));
         return dados;
     }
 }

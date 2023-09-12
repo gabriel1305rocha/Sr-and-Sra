@@ -29,7 +29,7 @@ public class Manual_Usuario extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webViewManual);
         //webView.setWebViewClient(new Callback);
         //webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.google.com.br");
+        webView.loadUrl(getString(R.string.link_manualuser));
 
         this.setTitle(R.string.title_manual);
     }

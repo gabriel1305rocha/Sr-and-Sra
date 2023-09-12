@@ -31,16 +31,10 @@ public class Termo_Uso extends AppCompatActivity {
             }
         });
 
-        /*DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_sobre);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();*/
-
         webView = (WebView) findViewById(R.id.webViewTermo);
         //webView.setWebViewClient(new Callback);
         //webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.google.com.br");
+        webView.loadUrl(getString(R.string.link_termouso));
 
         this.setTitle(R.string.title_termo);
     }

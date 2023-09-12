@@ -19,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
         android:src="@mipmap/logo" />
 
     <EditText
@@ -56,5 +57,16 @@
         android:onClick="onClickEntra"
         android:text="@string/entrar"
         style="@style/Bottom" />
+    <TextView
+        android:id="@+id/lembraSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEntra"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:linksClickable="true"
+        android:clickable="true"
+        android:text="@string/lembrar_senha"/>
+
 
 </RelativeLayout>

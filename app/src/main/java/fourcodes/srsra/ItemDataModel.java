@@ -9,7 +9,6 @@ public class ItemDataModel {
     String name;
     String desc;
     String preco;
-    String categoria;
     String paga;
     String total;
     String MesI;
@@ -21,7 +20,6 @@ public class ItemDataModel {
         this.name=name;
         this.desc=desc;
         this.preco=preco;
-        this.categoria=categoria;
         this.paga=paga;
         this.total=total;
 
@@ -38,10 +36,6 @@ public class ItemDataModel {
 
     public String getPreco() {
         return preco;
-    }
-
-    public String getCategoria() {
-        return categoria;
     }
 
     public String getPaga() {

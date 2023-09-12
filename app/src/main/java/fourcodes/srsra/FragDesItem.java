@@ -87,8 +87,8 @@ public class FragDesItem extends Fragment {
         listView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-                contextMenu.add(Menu.NONE,1,Menu.NONE,"Editar");
-                contextMenu.add(Menu.NONE,2,Menu.NONE,"Deletar");
+                contextMenu.add(Menu.NONE,1,Menu.NONE,getString(R.string.editar));
+                contextMenu.add(Menu.NONE,2,Menu.NONE,getString(R.string.deletar));
             }
         });
     }

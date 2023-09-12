@@ -13,24 +13,25 @@
             android:title="@string/menuL_check"
             />
         <item
-            android:id="@+id/nav_padrinho"
-            android:icon="@drawable/ic_menu_padrinho"
-            android:title="@string/menuL_padrinho" />
+            android:id="@+id/nav_despesas"
+            android:icon="@drawable/ic_menu_money"
+            android:title="@string/menuL_despesa" />
         <item
             android:id="@+id/nav_convidado"
             android:icon="@drawable/ic_menu_convidado"
             android:title="@string/menuL_convidado" />
         <item
+            android:id="@+id/nav_padrinho"
+            android:icon="@drawable/ic_menu_padrinho"
+            android:title="@string/menuL_padrinho" />
+        <item
+            android:id="@+id/nav_daminhas"
+            android:icon="@drawable/ic_menu_daminha"
+            android:title="@string/menuL_daminhas" />
+        <item
             android:id="@+id/nav_fornecedor"
             android:icon="@drawable/ic_menu_fornecedor"
             android:title="@string/menuL_fornecedor" />
-        <item
-            android:id="@+id/nav_despesas"
-            android:icon="@drawable/ic_menu_money"
-            android:title="@string/menuL_despesa" />
-        <!--item
-            android:title=""
-            android:enabled="false" /-->
         <item
             android:id="@+id/nav_configu"
             android:icon="@drawable/ic_menu_config"

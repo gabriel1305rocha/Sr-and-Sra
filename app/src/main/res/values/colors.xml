@@ -11,6 +11,7 @@
     <color name="MenuLateral">#FF324970</color>
     <color name="ButtonColor">#FF324970</color>
     <color name="hintColor">#DD9F9F9F</color>
+    <color name="TextMark">#9F9F9F</color>
     <color name="black">#000</color>
     <color name="white">#FFF</color>
 </resources>
