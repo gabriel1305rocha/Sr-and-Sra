@@ -88,7 +88,7 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         int id = item.getItemId();
 
         if (id == R.id.action_add) {
-            return true;
+            startActivity(new Intent(this, AddValor.class));
         }
 
         return super.onOptionsItemSelected(item);
