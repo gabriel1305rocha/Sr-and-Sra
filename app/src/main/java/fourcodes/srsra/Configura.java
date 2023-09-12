@@ -1,35 +1,30 @@
 package fourcodes.srsra;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewStub;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
-import static fourcodes.srsra.Splash.*;
-
-public class MenuLateral extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Configura extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_lateral);
+        setContentView(R.layout.activity_configura);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_configura);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -38,17 +33,14 @@ public class MenuLateral extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-        stub.setLayoutResource(R.layout.activity_contagem);
-        View inflated = stub.inflate();
-        this.setTitle(R.string.title_Inicio);
+        this.setTitle(R.string.title_configura);
 
-        Atualiza();
     }
+
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_configura);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -89,11 +81,7 @@ public class MenuLateral extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
-            /*ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-            stub.setLayoutResource(R.layout.activity_contagem);
-            View inflated = stub.inflate();
-            this.setTitle("Contagem");*/
-            // Handle the inicio action
+            startActivity(new Intent(this, MenuLateral.class));
         } else if (id == R.id.nav_checklist) {
 
         } else if (id == R.id.nav_padrinho) {
@@ -105,31 +93,13 @@ public class MenuLateral extends AppCompatActivity
         } else if (id == R.id.nav_fornecedor) {
 
         } else if (id == R.id.nav_configu) {
-            startActivity(new Intent(this, Configura.class));
+
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this, Sobre.class));
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_configura);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void Atualiza(){
-        Integer dia = 350;
-
-        TextView nomeSr = (TextView) findViewById(R.id.lblNomeNoivo);
-        TextView nomeSra = (TextView) findViewById(R.id.lblNomeNoiva);
-        TextView diaResta = (TextView) findViewById(R.id.lblDiaRestaNum);
-        ProgressBar barraDia = (ProgressBar) findViewById(R.id.progressBar);
-
-        if(SexoUser == "male") {
-            nomeSr.setText("Sr."+" " + NomeUser);
-            nomeSra.setText("Sra."+" " + NomeParceiro);
-        }else{
-            nomeSr.setText("Sr."+" " + NomeParceiro);
-            nomeSra.setText("Sra."+" " + NomeUser);
-        }
-        diaResta.setText(" "+dia+" ");
     }
 }

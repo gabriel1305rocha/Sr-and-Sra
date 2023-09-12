@@ -27,9 +27,9 @@
             android:id="@+id/nav_despesas"
             android:icon="@drawable/ic_menu_money"
             android:title="@string/menuL_despesa" />
-        <item
+        <!--item
             android:title=""
-            android:enabled="false" />
+            android:enabled="false" /-->
         <item
             android:id="@+id/nav_configu"
             android:icon="@drawable/ic_menu_config"

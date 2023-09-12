@@ -15,9 +15,9 @@ public class Cadastro extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
     }
 
-    public void onClickCadastra(View view){
+    public void onClickContinua(View view){
         StatusLogin = 3;
-        startActivity(new Intent(this, Splash.class));
+        startActivity(new Intent(this, Cadastro_Cont.class));
         finishActivity(Login.CONTEXT_INCLUDE_CODE);
         finish();
     }

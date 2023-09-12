@@ -35,7 +35,7 @@ public class Inicio extends Activity {
         try {
             if (AccessToken.getCurrentAccessToken().getUserId() != null){
                 Profile profile = Profile.getCurrentProfile();
-                NomeUser = profile.getName();
+                NomeUser = profile.getFirstName();
                 faceBook();
             }
         }catch(Exception ex){
@@ -66,8 +66,7 @@ public class Inicio extends Activity {
     }
 
     public void onClickEntra(View view){
-        StatusLogin = 3;
-        Iniciar();
+        startActivity(new Intent (this, Login.class));
     }
 
     public void onClickCadastra(View view){

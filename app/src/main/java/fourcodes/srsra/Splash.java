@@ -14,6 +14,7 @@ public class Splash extends AppCompatActivity implements Runnable {
 
     static public String NomeUser = "";
     static public String SexoUser = "male";
+    static public String NomeParceiro = "Indisponivel";
     static public int StatusLogin = 0;
     /* StatusLogin == 1, Offline
     *  StatusLogin == 2, Facebook
@@ -32,7 +33,6 @@ public class Splash extends AppCompatActivity implements Runnable {
     }
     @Override
     public void run() {
-
         ProximaTela(StatusLogin);
     }
 
@@ -47,7 +47,7 @@ public class Splash extends AppCompatActivity implements Runnable {
                 try {
                     if (AccessToken.getCurrentAccessToken().getUserId() != null){
                         Profile profile = Profile.getCurrentProfile();
-                        NomeUser = profile.getName();
+                        NomeUser = profile.getFirstName();
                     }
                 }catch(Exception ex){
                     NomeUser = "";
@@ -56,6 +56,7 @@ public class Splash extends AppCompatActivity implements Runnable {
                 finish();
                 break;
             case 3:
+
                 startActivity(new Intent (this, MenuLateral.class));
                 finish();
                 break;
