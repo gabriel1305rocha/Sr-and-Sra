@@ -1,24 +1,23 @@
 package fourcodes.srsra;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.webkit.WebView;
-import android.content.Intent;
-import android.app.Activity;
-import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.webkit.WebView;
-import android.support.v7.widget.Toolbar;
 
-public class Fornecedor extends AppCompatActivity {
+import com.facebook.login.LoginManager;
+
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
+import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
+
+public class Fornecedor extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +26,52 @@ public class Fornecedor extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.canShowOverflowMenu();
-        toolbar.setNavigationIcon(R.drawable.ic_back_arrow);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(fourcodes.srsra.Fornecedor.this, Fornecedor.class));
-                finish();
-            }
-        });
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_fornecedor);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        this.setTitle(R.string.title_Fornecedor);
 
     }
+
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Fornecedor.class));
+        finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_add_fornecedor, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (ClickMenuOpt(item, this)){
+            finish();
+        } else {
+            return false;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        if(ClickMenuNav(item, this)){
+            finish();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_fornecedor);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }
+

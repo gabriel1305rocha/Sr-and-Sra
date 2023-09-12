@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fourcodes.srsra.FragConvites">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginEnd="50dp"
+                android:id="@+id/relativeLayout">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                style="@style/Title1"
+                android:layout_marginTop="15dp"
+                android:text="Convidados" />
+
+            <CheckBox
+                android:id="@+id/chkAcaompanhante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title2"
+                android:text="Incluir acompanhantes"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/lblNcDaNoiva"
+                android:layout_alignStart="@+id/lblNcDaNoiva" />
+
+            <TextView
+                android:id="@+id/lblNcDaNoiva"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Da Noiva"
+                android:layout_below="@+id/chkAcaompanhante"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout" />
+
+            <TextView
+                android:id="@+id/lblNcDaNoivan"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblNcDaNoiva"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:text="0" />
+            <TextView
+                android:id="@+id/lblNcDoNoivo"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/lblNcDaNoiva"
+                android:layout_marginTop="22dp"
+                android:text="Do Noivo" />
+
+            <TextView
+                android:id="@+id/lblNcDoNoivon"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblNcDoNoivo"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblNcDoCasal"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/lblNcDoNoivo"
+                android:layout_marginTop="19dp"
+                android:text="Do Casal" />
+
+            <TextView
+                android:id="@+id/lblNcDoCasaln"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblNcDoCasal"
+                android:layout_alignLeft="@+id/lblCDoNoivo"
+                android:layout_alignStart="@+id/lblCDoNoivo"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/lblNcDoCasal"
+                android:layout_marginTop="17dp"
+                style="@style/Title2"
+                android:text="Total:" />
+
+            <TextView
+                android:id="@+id/lblSoma"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblTotal"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblConfirmados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title2"
+                android:layout_marginTop="20dp"
+                android:text="Confirmados"
+                android:layout_below="@+id/lblTotal"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/lblDaNoiva"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Da Noiva"
+                android:layout_below="@+id/lblConfirmados"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout" />
+
+            <TextView
+                android:id="@+id/lblCDaNoiva"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblDaNoiva"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblDoNoivo"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/lblDaNoiva"
+                android:layout_marginTop="22dp"
+                android:text="Do Noivo" />
+
+            <TextView
+                android:id="@+id/lblCDoNoivo"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblDoNoivo"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblDoCasal"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/lblDoNoivo"
+                android:layout_marginTop="19dp"
+                android:text="Do Casal" />
+
+            <TextView
+                android:id="@+id/lblCDoCasal"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/lblDoCasal"
+                android:layout_alignLeft="@+id/lblCDoNoivo"
+                android:layout_alignStart="@+id/lblCDoNoivo"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/lblSubTotaç"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Total"
+                android:layout_below="@+id/lblDoCasal"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/lblCSubTotal"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblSubTotaç"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="0" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

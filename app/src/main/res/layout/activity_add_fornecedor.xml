@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:id="@+id/relativeLayout2">
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtFornecedor"
+                style="@style/Title2"
+                android:hint="Nome do fornecedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <EditText
+                android:id="@+id/txtContato"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/relativeLayout2"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_below="@+id/txtFornecedor"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="Nome do Contato"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtEndereco"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Rua Z, Nº 0- Sala 101 - São Paulo - SP"
+                android:inputType="textMultiLine"
+                android:layout_below="@+id/txtContato"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_marginTop="24dp"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <EditText
+                android:id="@+id/txtTel"
+                style="@style/Title2"
+                android:hint="(xx)xxxx-xxxx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:layout_below="@+id/txtEndereco"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_marginTop="19dp"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <EditText
+                android:id="@+id/txtCel"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="(xx)xxxxx-xxxx"
+                android:inputType="phone"
+                android:layout_below="@+id/txtTel"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_marginTop="26dp"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                style="@style/Title2"
+                android:hint="Nome@dominio.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/txtCel"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_marginTop="18dp"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <EditText
+                android:id="@+id/txtSite"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/relativeLayout2"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_below="@+id/txtNotas"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="www.fornecedor.com.br"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/txtNotas"
+                style="@style/Title2"
+                android:hint="Anotoções"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/txtEmail"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+            <Button
+                android:id="@+id/btnAdicionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickOffLine"
+                android:layout_below="@id/txtSite"
+                android:text="Adicionar"
+                style="@style/Bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

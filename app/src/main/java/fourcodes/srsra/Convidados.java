@@ -1,6 +1,8 @@
 package fourcodes.srsra;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +21,9 @@ import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 public class Convidados extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
+    private boolean fragItem;
+    Menu mOptionsMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,40 @@ public class Convidados extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout_Convidados);
+        tabLayout.addTab(tabLayout.newTab().setText("Resumo"));
+        tabLayout.addTab(tabLayout.newTab().setText("Todos"));
+        tabLayout.addTab(tabLayout.newTab().setText("Convites"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pagerConv);
+        final ConvPageAdapter adapter = new ConvPageAdapter
+                (getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                if (tab.getPosition()==2) {
+                    fragItem = true;
+                }else {
+                    fragItem = false;
+                }
+                onPrepareOptionsMenu(mOptionsMenu);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         this.setTitle(R.string.title_convidados);
     }

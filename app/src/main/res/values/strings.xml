@@ -204,6 +204,7 @@
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
     <string name="we" translatable="false">We</string>
+    <string name="title_Fornecedor">Fornecedor</string>
 
 
 </resources>
