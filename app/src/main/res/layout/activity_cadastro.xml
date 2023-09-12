@@ -40,36 +40,17 @@
                     android:text="@string/cadastre_se" />
 
                 <EditText
-                    android:id="@+id/txtNomeNoiva"
+                    android:id="@+id/txtNome"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/lblCadastrese"
-                    android:layout_marginTop="23dp"
+                    android:layout_marginTop="47dp"
                     android:drawableLeft="@drawable/ic_menu_edit"
                     android:ems="10"
-                    android:hint="@string/nome_da_noiva"
-                    android:inputType="textPersonName"
-                    tools:ignore="RtlHardcoded" />
-
-                <EditText
-                    android:id="@+id/txtNomeNoivo"
-                    style="@style/Title2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/txtNomeNoiva"
-                    android:layout_marginTop="12dp"
-                    android:drawableLeft="@drawable/ic_menu_edit"
-                    android:ems="10"
-                    android:hint="@string/nome_do_noivo"
+                    android:hint="Digite seu nome:"
                     android:inputType="textPersonName"
                     tools:ignore="RtlHardcoded" />
 
@@ -78,77 +59,59 @@
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/txtNomeNoivo"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="26dp"
                     android:drawableLeft="@drawable/ic_menu_compose"
                     android:ems="10"
                     android:hint="@string/e_mail"
                     android:inputType="textEmailAddress"
-                    tools:ignore="RtlHardcoded" />
+                    tools:ignore="RtlHardcoded"
+                    android:layout_below="@+id/txtNome"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
                 <EditText
                     android:id="@+id/txtSenha"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/txtEmail"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="24dp"
                     android:drawableLeft="@drawable/ic_menu_login"
                     android:ems="10"
                     android:hint="Senha"
                     android:inputType="textPassword"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    android:layout_below="@+id/txtEmail"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
                 <EditText
                     android:id="@+id/txtCSenha"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/txtSenha"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="30dp"
                     android:drawableLeft="@drawable/ic_menu_login"
                     android:ems="10"
                     android:hint="@string/confirme_a_senha"
                     android:inputType="textPassword"
-                    tools:ignore="RtlHardcoded" />
-                <EditText
-                    android:id="@+id/txtData"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="date"
-                    android:layout_below="@+id/txtCSenha"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_below="@+id/txtSenha"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    style="@style/Title2"
-                    android:hint="@string/data_do_casamento"
-                    android:drawableLeft="@drawable/ic_menu_my_calendar"
-                    android:layout_marginTop="13dp"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    tools:ignore="RtlHardcoded" />
+                    android:layout_alignParentEnd="true" />
 
                 <Button
                     android:id="@+id/Continuar"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtData"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="51dp"
                     android:onClick="onClickContinua"
+                    android:layout_below="@+id/txtCSenha"
                     android:text="@string/continuar" />
             </RelativeLayout>
         </RelativeLayout>

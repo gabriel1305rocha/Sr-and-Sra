@@ -3,7 +3,6 @@ package fourcodes.srsra;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 
@@ -19,7 +18,7 @@ public class Cadastro_Cont extends AppCompatActivity {
 
     public void onClickContinua(View view){
 
-        EditText nomeNoiva = (EditText) findViewById(R.id.txtNomeNoiva);
+        EditText nomeNoiva = (EditText) findViewById(R.id.txtNome);
         EditText nomeNoivo = (EditText) findViewById(R.id.txtNomeNoivo);
 
         NomeUser = nomeNoivo.getText().toString();

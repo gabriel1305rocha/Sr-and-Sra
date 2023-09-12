@@ -66,7 +66,7 @@
                     android:layout_centerHorizontal="true" />
 
                 <EditText
-                    android:id="@+id/txtNomeNoiva"
+                    android:id="@+id/txtNome"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtNomeNoiva"
+                    android:layout_below="@+id/txtNome"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="23dp"
                     android:drawableLeft="@drawable/ic_menu_edit"
