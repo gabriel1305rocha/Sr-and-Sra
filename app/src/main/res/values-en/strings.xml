@@ -54,4 +54,19 @@
     <string name="tab_Geral">General</string>
     <string name="tab_Mensal">Monthly</string>
     <string name="tab_Item">Per item</string>
+    <string name="title_additems">Add new Item</string>
+    <string name="title_convidados">Inviteds</string>
+    <string name="janeiro">January</string>
+    <string name="fervereiro">February</string>
+    <string name="marco">March</string>
+    <string name="abril">April</string>
+    <string name="maio">May</string>
+    <string name="junho">June</string>
+    <string name="julho">July</string>
+    <string name="agosto">August</string>
+    <string name="setembro">September</string>
+    <string name="outubro">October</string>
+    <string name="novembro">November</string>
+    <string name="dezembro">December</string>
+
 </resources>

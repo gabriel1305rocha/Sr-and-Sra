@@ -51,9 +51,9 @@
     <style name="BottomTrans">
         <item name="android:background">#00000000</item>
     </style>
-    <style name="ButtomCalc">
+    <style name="ButtomAddItem">
         <item name="android:background">@drawable/button_calc</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">#FFF</item>
     </style>
     <style name="menuStyle" parent="SrTheme.NoActionBar">

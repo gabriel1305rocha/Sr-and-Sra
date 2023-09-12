@@ -8,15 +8,13 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="fourcodes.srsra.Configura"
     tools:showIn="@layout/app_bar_configura">
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextVie
+            <TextView
                 android:id="@+id/title_Configura"
                 style="@style/Title1"
                 android:layout_width="wrap_content"

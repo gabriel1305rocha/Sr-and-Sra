@@ -10,6 +10,7 @@
     <string name="title_despesas">Despesas</string>
     <string name="title_activity_configu">Configurações</string>
     <string name="title_convidados">Convidados</string>
+    <string name="title_additems">Adicionar novo Item</string>
 
     <!-- Login -->
     <string name="entrar">Entrar</string>
@@ -73,6 +74,41 @@
     <string name="tab_Mensal">Mensal</string>
     <string name="tab_Item">Por item</string>
     <!-- Fim Tela Despesas -->
+    <!-- Adicionar novo Item-->
+    <string-array name="meses">
+        <item>@string/janeiro</item><item>@string/fervereiro</item> <item>@string/marco</item>
+        <item>@string/abril</item>  <item>@string/maio</item>       <item>@string/junho</item>
+        <item>@string/julho</item>  <item>@string/agosto</item>     <item>@string/setembro</item>
+        <item>@string/outubro</item><item>@string/novembro</item>   <item>@string/dezembro</item>
+    </string-array>
+    <string-array name="dias_mes">
+        <item>01</item><item>02</item><item>03</item><item>04</item><item>05</item>
+        <item>06</item><item>07</item><item>08</item><item>09</item><item>10</item>
+        <item>11</item><item>12</item><item>13</item><item>14</item><item>15</item>
+        <item>16</item><item>17</item><item>18</item><item>19</item><item>20</item>
+        <item>21</item><item>22</item><item>23</item><item>24</item><item>25</item>
+        <item>26</item><item>27</item><item>28</item><item>29</item><item>30</item>
+        <item>31</item>
+    </string-array>
+    <string-array name="anos">
+        <item>2001</item><item>2002</item><item>2003</item><item>2004</item><item>2005</item>
+        <item>2006</item><item>2007</item><item>2008</item><item>2009</item><item>2010</item>
+        <item>2011</item><item>2012</item><item>2013</item><item>2014</item><item>2015</item>
+        <item>2016</item><item>2017</item><item>2018</item><item>2019</item><item>2020</item>
+        <item>2021</item><item>2022</item><item>2023</item><item>2024</item><item>2025</item>
+        <item>2026</item><item>2027</item><item>2028</item><item>2029</item><item>2030</item>
+        <item>2031</item>
+    </string-array>
+    <string name="ano_inicial">Ano Inicial</string>
+    <string name="anotacoes">Anotações</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="data_inicial">Data Inicial</string>
+    <string name="mes_inicial">Mês Inicial</string>
+    <string name="nome_do_item">Nome do item</string>
+    <string name="numero_de_parcelas">Numero de parcelas</string>
+    <string name="salvar">Salvar</string>
+    <string name="valor_da_parcela">Valor da parcela</string>
+    <string name="vencimento_por_mes">Vencimento por Mês</string>
 
     <!-- Tela de Contagem -->
     <string name="senhor">Sr. </string>
@@ -80,6 +116,20 @@
     <string name="Ecomercial" translatable="false"> &amp; </string>
     <string name="faltam">Faltam </string>
     <string name="dias"> dias</string>
+
+    <!-- Meses -->
+    <string name="janeiro">Janeiro</string>
+    <string name="fervereiro">Fervereiro</string>
+    <string name="marco">Março</string>
+    <string name="abril">Abril</string>
+    <string name="maio">Maio</string>
+    <string name="junho">Junho</string>
+    <string name="julho">Julho</string>
+    <string name="agosto">Agosto</string>
+    <string name="setembro">Setembro</string>
+    <string name="outubro">Outubro</string>
+    <string name="novembro">Novembro</string>
+    <string name="dezembro">Dezembro</string>
     <!-- Não Mudar !!!! -->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
