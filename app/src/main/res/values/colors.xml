@@ -9,4 +9,5 @@
     <color name="TextPrimary">#FF000000</color>
     <color name="TextMenu">#EEFFFFFF</color>
     <color name="MenuLateral">#FF324970</color>
+    <color name="ButtonColor">#FF324970</color>
 </resources>

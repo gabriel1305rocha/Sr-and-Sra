@@ -38,4 +38,6 @@
     <string name="data_do_casamento">Date of Marriage</string>
     <string name="nome_da_noiva">Bride\'s Name</string>
     <string name="nome_do_noivo">Groom\'s Name</string>
+    <string name="title_configura">Settings</string>
+    <string name="versao">Version</string>
 </resources>

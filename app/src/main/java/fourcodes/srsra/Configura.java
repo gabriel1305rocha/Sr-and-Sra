@@ -44,7 +44,9 @@ public class Configura extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
+            startActivity(new Intent(this, MenuLateral.class));
+            finish();
         }
     }
 
@@ -82,6 +84,7 @@ public class Configura extends AppCompatActivity
 
         if (id == R.id.nav_inicio) {
             startActivity(new Intent(this, MenuLateral.class));
+            finish();
         } else if (id == R.id.nav_checklist) {
 
         } else if (id == R.id.nav_padrinho) {
@@ -96,6 +99,7 @@ public class Configura extends AppCompatActivity
 
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this, Sobre.class));
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_configura);

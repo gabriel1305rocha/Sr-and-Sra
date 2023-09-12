@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
@@ -34,7 +36,6 @@ public class Sobre extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         this.setTitle(R.string.title_sobre);
-
     }
 
 
@@ -44,25 +45,22 @@ public class Sobre extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
+            startActivity(new Intent(this, MenuLateral.class));
+            finish();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_lateral, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }  else if (id == R.id.nav_sair) {
@@ -77,11 +75,11 @@ public class Sobre extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
             startActivity(new Intent(this, MenuLateral.class));
+            finish();
         } else if (id == R.id.nav_checklist) {
 
         } else if (id == R.id.nav_padrinho) {
@@ -94,6 +92,7 @@ public class Sobre extends AppCompatActivity
 
         } else if (id == R.id.nav_configu) {
             startActivity(new Intent(this, Configura.class));
+            finish();
         } else if (id == R.id.nav_info) {
 
         }
@@ -101,5 +100,12 @@ public class Sobre extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_sobre);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void TermoDeUso(View view){
+        startActivity(new Intent(this, Termo_Uso.class) );
+        finish();
+    }
+    public void ManualDoUsuario(View view){
+
     }
 }

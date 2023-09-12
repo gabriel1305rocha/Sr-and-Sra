@@ -56,7 +56,6 @@ public class Splash extends AppCompatActivity implements Runnable {
                 finish();
                 break;
             case 3:
-
                 startActivity(new Intent (this, MenuLateral.class));
                 finish();
                 break;

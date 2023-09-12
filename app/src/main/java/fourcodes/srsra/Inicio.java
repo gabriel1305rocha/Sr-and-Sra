@@ -67,10 +67,12 @@ public class Inicio extends Activity {
 
     public void onClickEntra(View view){
         startActivity(new Intent (this, Login.class));
+        finish();
     }
 
     public void onClickCadastra(View view){
         startActivity(new Intent (this, Cadastro.class));
+        finish();
     }
 
     public void onClickOffLine(View view){
@@ -80,10 +82,6 @@ public class Inicio extends Activity {
     public void faceBook(){
         StatusLogin = 2;
         Home();
-    }
-
-    public void Iniciar(){
-        startActivity(new Intent (this, Splash.class));
     }
     public void Home(){
         startActivity(new Intent(this, Splash.class));

@@ -40,5 +40,10 @@ public class Login extends Activity {
         startActivity(new Intent (this, Splash.class));
         finish();
     }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Inicio.class));
+        finish();
+    }
 
 }

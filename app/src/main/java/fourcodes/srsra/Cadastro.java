@@ -21,4 +21,10 @@ public class Cadastro extends AppCompatActivity {
         finishActivity(Login.CONTEXT_INCLUDE_CODE);
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Inicio.class));
+        finish();
+    }
 }
