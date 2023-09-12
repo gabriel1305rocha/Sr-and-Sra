@@ -82,5 +82,22 @@
     <string name="title_checklist">Checklist</string>
     <string name="valor_da_parcela">Plot amount</string>
     <string name="vencimento_por_mes">Maturity per month</string>
+    <string name="alterar_senha">Change the password</string>
+    <string name="configura_es">Settings</string>
+    <string name="confirmados">Confirmed</string>
+    <string name="convidados">Invited</string>
+    <string name="da_noiva">Of the bride</string>
+    <string name="do_casal">Of the couple</string>
+    <string name="do_noivo">From the Groom</string>
+    <string name="fazer_login_com_outra_conta">Sign in with another account.</string>
+    <string name="incluir_acompanhantes">Include escorts</string>
+    <string name="notifica_es">Notifications</string>
+    <string name="pesquisar">Search</string>
+    <string name="sair_de_sua_conta_atual_e_entrar_em_outra_conta">Sign out of your current account and sign in to another account.</string>
+    <string name="seus_dados_ser_o_sicronizados_ao_se_conectar_a_qualquer_rede">Your will be synchronized when connecting to any network.</string>
+    <string name="sicronizar_somente_via_wifi">Synchronize via Wifi only</string>
+    <string name="tarefas">Tasks</string>
+    <string name="total">Total</string>
+    <string name="voc_n_o_recebera_notifica_es_sobre_suas_tarefas">You have not received notifications about your tasks.</string>
 
 </resources>

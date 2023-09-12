@@ -71,6 +71,7 @@
         <activity android:name=".Despesas" />
         <activity android:name=".Convidados" />
         <activity android:name=".AddValor" />
+        <activity android:name=".Fornecedor"/>
         <activity android:name=".Checklist"></activity>
     </application>
 

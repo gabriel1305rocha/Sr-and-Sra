@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
         <RelativeLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -20,7 +22,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit"/>
+                    android:src="@drawable/ic_edit"
+                    android:contentDescription=""
+                    tools:ignore="ContentDescription" />
                 <TextView
                     android:id="@+id/textOrcamento"
                     android:layout_width="wrap_content"
@@ -34,7 +38,7 @@
                     android:layout_marginLeft="6dp"
                     android:layout_marginStart="6dp"
                     style="@style/Title2"
-                    android:text="20.000"/>
+                    android:text="@string/_20_000"/>
             </LinearLayout>
             <ProgressBar
                 android:id="@+id/proBarOrcamento"
@@ -69,14 +73,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Outubro"/>
+                    android:text="Outubro"
+                    tools:ignore="HardcodedText" />
                 <TextView
                     android:id="@+id/desAno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:text="2017"/>
+                    android:text="@string/_2017"
+                    tools:ignore="RelativeOverlap" />
 
                 <RelativeLayout
                     android:id="@+id/desPrevi"
@@ -98,14 +104,15 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:text="20.000,00"/>
+                        android:text="@string/_20_000_00"/>
                     <TextView
                         android:id="@+id/desPreviSimbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desPreviNum"
                         android:layout_toStartOf="@id/desPreviNum"
-                        android:text="@string/sifrao"/>
+                        android:text="@string/sifrao"
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
                 <ImageView
                     android:id="@+id/imgLinha1"
@@ -113,7 +120,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/desPrevi"
                     android:minHeight="5dp"
-                    android:src="@drawable/linha_pont"/>
+                    android:src="@drawable/linha_pont"
+                    tools:ignore="ContentDescription" />
                 <RelativeLayout
                     android:id="@+id/desPago"
                     android:layout_width="wrap_content"
@@ -134,14 +142,15 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:text="5.000,00"/>
+                        android:text="@string/_5_000_00"/>
                     <TextView
                         android:id="@+id/desPagoSimbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desPagoNum"
                         android:layout_toStartOf="@id/desPagoNum"
-                        android:text="@string/sifrao"/>
+                        android:text="@string/sifrao"
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
                 <ImageView
                     android:id="@+id/imgLinha2"
@@ -149,7 +158,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/desPago"
                     android:minHeight="5dp"
-                    android:src="@drawable/linha_pont"/>
+                    android:src="@drawable/linha_pont"
+                    android:contentDescription=""
+                    tools:ignore="ContentDescription" />
                 <RelativeLayout
                     android:id="@+id/desRest"
                     android:layout_width="wrap_content"
@@ -170,14 +181,15 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:text="15.000,00"/>
+                        android:text="@string/_15_000_00"/>
                     <TextView
                         android:id="@+id/desRestSimbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desRestNum"
                         android:layout_toStartOf="@id/desRestNum"
-                        android:text="@string/sifrao"/>
+                        android:text="@string/sifrao"
+                        tools:ignore="RelativeOverlap" />
                 </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>

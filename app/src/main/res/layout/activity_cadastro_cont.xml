@@ -13,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:id="@+id/scl"
@@ -33,7 +34,7 @@
                     style="@style/Title1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dados"
+                    android:text="@string/dados"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="13dp" />

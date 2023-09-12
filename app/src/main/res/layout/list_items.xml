@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -11,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:text="Paralelepipedo1"
         style="@style/Title2"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        tools:ignore="HardcodedText" />
 
 
     <TextView
@@ -20,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
         android:layout_marginTop="5dp"
-        android:text="TextoTextoTextoTextoTextoTextoTexto"
+        android:text="@string/textotextotextotextotextotextotexto"
         android:textColor="@android:color/black" />
 
     <CheckBox
@@ -42,7 +44,8 @@
         android:layout_marginRight="9dp"
         android:layout_marginEnd="9dp"
         android:layout_alignTop="@id/name"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="RelativeOverlap">
 
         <TextView
             android:id="@+id/preco_simbol"
@@ -55,7 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20.300,00"
-            style="@style/item_list" />
+            style="@style/item_list"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/parcelas"
@@ -73,18 +77,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/item_list"
-            android:text="1"/>
+            android:text="1"
+            tools:ignore="HardcodedText" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/item_list"
-            android:text=" / "/>
+            android:text=" / "
+            tools:ignore="HardcodedText" />
         <TextView
             android:id="@+id/parcelTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/item_list"
-            android:text="5"/>
+            android:text="5"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
