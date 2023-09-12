@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -23,6 +25,8 @@ public class FragDesItem extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view=inflater.inflate(R.layout.fragment_des_item, container, false);
+
+        // List View
         ListView listView = (ListView) view.findViewById(R.id.lista_items);
         dataModels= new ArrayList<>();
 
@@ -54,6 +58,14 @@ public class FragDesItem extends Fragment {
                         .setAction("No action", null).show();
             }
         });
+
+        // Spinner
+        Spinner spinfiltro = (Spinner) view.findViewById(R.id.spinOrgani);
+        ArrayAdapter<CharSequence> adapterFiltro = ArrayAdapter.createFromResource(view.getContext(),
+                R.array.filtro, android.R.layout.simple_spinner_item);
+        adapterFiltro.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinfiltro.setAdapter(adapterFiltro);
+
         return view;
     }
 }
