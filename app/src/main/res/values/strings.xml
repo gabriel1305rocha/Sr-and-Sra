@@ -173,7 +173,7 @@
     <string name="numero_de_parcelas_pagas">Parcelas pagas</string>
     <string name="salvar">Salvar</string>
     <string name="valor_da_parcela">Valor da parcela</string>
-    <string name="vencimento_por_mes">Vencimento por Mês</string>
+    <string name="vencimento_por_mes">Dia do Vencimento</string>
     <string name="ok">Confirmar</string>
     <string name="data_termino">Data Termina</string>
 

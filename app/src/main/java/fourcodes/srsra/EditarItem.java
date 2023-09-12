@@ -7,7 +7,7 @@ import static fourcodes.srsra.AddValor.edit;
 
 public class EditarItem {
     static String texto="", desc="", valor="", paga="", total="",venci="", DataIMes="", DataIAno="", DataTMes="", DataTAno="";
-    int posi;
+    static int posi;
 
     public EditarItem(int position, Context context, String texto, String desc, String valor, String paga, String total){
         this.posi = position;

@@ -17,7 +17,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 
 import static fourcodes.srsra.EditarItem.*;
-import static fourcodes.srsra.EditarItem.texto;
+import static fourcodes.srsra.FragDesItem.ItemsdataModels;
 
 
 public class AddValor extends Activity {
@@ -26,38 +26,56 @@ public class AddValor extends Activity {
     final Context context = this;
     static boolean edit;
 
+    Spinner spinMesI;
+    Spinner spinAnoI;
+    Spinner spinMesT;
+    Spinner spinAnoT;
+    Spinner spinDia;
+
+    EditText txtNome;
+    EditText txtValor;
+    EditText txtAnota;
+    Button txtParce;
+    Button txtParcePaga;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_valor);
 
-        Spinner spinnerDia = (Spinner) findViewById(R.id.spinner2);
+        spinMesI = (Spinner) findViewById(R.id.spinnerMes);
+        spinAnoI = (Spinner) findViewById(R.id.spinnerAno);
+        spinMesT = (Spinner) findViewById(R.id.spinnerMesTermi);
+        spinAnoT = (Spinner) findViewById(R.id.spinnerAnoTermi);
+        spinDia = (Spinner) findViewById(R.id.spinner2);
+
+        txtNome = (EditText) findViewById(R.id.ItemNome);
+        txtValor = (EditText) findViewById(R.id.ItemValor);
+        txtAnota = (EditText)findViewById(R.id.txtItemAnotacao);
+        txtParce = (Button) findViewById(R.id.txtItemParcela);
+        txtParcePaga = (Button) findViewById(R.id.txtItemParcelaPaga);
+
         ArrayAdapter<CharSequence> adapterDia = ArrayAdapter.createFromResource(this,
                 R.array.dias_mes, android.R.layout.simple_spinner_item);
         adapterDia.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerDia.setAdapter(adapterDia);
+        spinDia.setAdapter(adapterDia);
 
-        Spinner spinnerMes = (Spinner) findViewById(R.id.spinnerMes);
         ArrayAdapter<CharSequence> adapterMes = ArrayAdapter.createFromResource(this,
                 R.array.meses, android.R.layout.simple_spinner_item);
         adapterMes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerMes.setAdapter(adapterMes);
+        spinMesI.setAdapter(adapterMes);
 
-        Spinner spinnerAno = (Spinner) findViewById(R.id.spinnerAno);
         ArrayAdapter<CharSequence> adapterAno = ArrayAdapter.createFromResource(this,
                 R.array.anos, android.R.layout.simple_spinner_item);
         adapterAno.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerAno.setAdapter(adapterAno);
+        spinAnoI.setAdapter(adapterAno);
 
-        Spinner spinnerMesTermi = (Spinner) findViewById(R.id.spinnerMesTermi);
-        spinnerMesTermi.setAdapter(adapterMes);
+        spinMesT.setAdapter(adapterMes);
 
-        Spinner spinnerAnoTermi = (Spinner) findViewById(R.id.spinnerAnoTermi);
-        spinnerAnoTermi.setAdapter(adapterAno);
+        spinAnoT.setAdapter(adapterAno);
 
         // Função de clicar no campo de parcelas
-        Button parcela =(Button) findViewById(R.id.txtItemParcela);
-        parcela.setOnClickListener(new View.OnClickListener() {
+        txtParce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -91,8 +109,7 @@ public class AddValor extends Activity {
         });
 
         // Função de clicar no campo de parcelas pagas
-        Button parcelaPaga =(Button) findViewById(R.id.txtItemParcelaPaga);
-        parcelaPaga.setOnClickListener(new View.OnClickListener() {
+        txtParcePaga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -137,16 +154,7 @@ public class AddValor extends Activity {
         });
 
         if(edit){
-            EditText itemNome = (EditText) findViewById(R.id.ItemNome);
-            EditText itemDesc = (EditText) findViewById(R.id.txtItemAnotacao);
-            EditText itemValor = (EditText) findViewById(R.id.ItemValor);
-
-            itemNome.setText(texto);
-            itemDesc.setText(desc);
-            itemValor.setText(valor);
-            parcela.setText(total);
-            parcelaPaga.setText(paga);
-
+            seEditando();
         }
     }
 
@@ -164,6 +172,10 @@ public class AddValor extends Activity {
         Spinner spinnerAnoT = (Spinner) findViewById(R.id.spinnerAnoTermi);
         int anoIni = Integer.parseInt(spinnerAnoI.getAdapter().getItem(spinnerAnoI.getSelectedItemPosition()).toString());
         int mesIni = Integer.parseInt(spinnerAnoI.getAdapter().getItem(spinnerAnoI.getSelectedItemPosition()).toString());*/
+        if(edit)
+            Editou(posi);
+        else
+            Adicionou();
 
         startActivity(new Intent(this, Despesas.class));
         finish();
@@ -217,5 +229,45 @@ public class AddValor extends Activity {
                 editTextPaga.setText(""+parPaga);
             }
         }
+    }
+
+    private String[] pegarTextos(){
+
+        String nome,desc,preco,cater,paga,total,anoIni,mesIni,anoTer,mesTer,diaVen;
+
+        anoIni = (spinAnoI.getAdapter().getItem(spinAnoI.getSelectedItemPosition()).toString());
+        mesIni = (spinMesI.getAdapter().getItem(spinMesI.getSelectedItemPosition()).toString());
+        mesTer = (spinMesT.getAdapter().getItem(spinMesT.getSelectedItemPosition()).toString());
+        anoTer = (spinAnoT.getAdapter().getItem(spinAnoT.getSelectedItemPosition()).toString());
+        diaVen = (spinDia.getAdapter().getItem(spinDia.getSelectedItemPosition()).toString());
+
+        nome = txtNome.getText().toString();
+        desc = txtAnota.getText().toString();
+        preco = txtValor.getText().toString();
+        cater = "";
+        paga = txtParcePaga.getText().toString();
+        total = txtParce.getText().toString();
+
+        return new String[]{nome,desc,preco,cater,paga,total};
+    }
+
+    private void seEditando(){
+        spinMesI.setSelection(3);
+        spinAnoI.setSelection(3);
+        spinMesT.setSelection(3);
+        spinAnoT.setSelection(3);
+        spinDia.setSelection(3);
+
+        txtNome.setText(texto);
+        txtAnota.setText(desc);
+        txtValor.setText(valor);
+        txtParce.setText(total);
+        txtParcePaga.setText(paga);
+    }
+    private void Editou(int position){
+        ItemsdataModels.set(position, new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5]));
+    }
+    private void Adicionou(){
+        ItemsdataModels.add(new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5]));
     }
 }

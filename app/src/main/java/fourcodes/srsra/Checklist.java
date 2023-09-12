@@ -49,17 +49,10 @@ public class Checklist extends AppCompatActivity implements NavigationView.OnNav
         ArrayList<String> Menus = preencherdados();
         ArrayAdapter<String> ArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Menus);
         lstChek.setAdapter(ArrayAdapter);
-        lstChek.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        lstChek.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ClickListTarefa(position, context);
-                finish();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                /*startActivity(new Intent(Checklist.this, Tarefas.class));
-                finish();*/
             }
         });
     }

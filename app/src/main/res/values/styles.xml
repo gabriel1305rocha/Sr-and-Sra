@@ -86,6 +86,9 @@
         <item name="android:drawableRight">@drawable/ic_cancel_black</item>
         <item name="android:drawableEnd">@drawable/ic_cancel_black</item>
     </style>
+    <style name="DespesaMensal">
+        <item name="android:textSize">20sp</item>
+    </style>
     <style name="ProBarOrcament" parent="Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressTint"> #FFF</item>
         <item name="android:progressBackgroundTint">#000</item>

@@ -13,6 +13,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
+import static fourcodes.srsra.ListTarefas.pos;
+import static fourcodes.srsra.TarefaCriaLista.CriaLista;
 
 public class Tarefas extends AppCompatActivity {
 
@@ -39,13 +41,16 @@ public class Tarefas extends AppCompatActivity {
         this.setTitle(R.string.title_tarefas);
 
         ListView listTarefas = (ListView) findViewById(R.id.list_tarefas);
-        dataModels= new ArrayList<>();
-        dataModels.add(new TarefasDataModel("Escolha a data do casamento", false));
-        dataModels.add(new TarefasDataModel("Defina Orçamento", true));
+        listTarefas.setAdapter(CriaLista(pos, this));
+        /*if(pos==0){
+            dataModels= new ArrayList<>();
+            dataModels.add(new TarefasDataModel("Escolha a data do casamento", false));
+            dataModels.add(new TarefasDataModel("Defina Orçamento", true));
+            adapter=new CustomListTarefasAdapter(dataModels, this);
+            listTarefas.setAdapter(adapter);
+        }else if (pos==1){
 
-        adapter=new CustomListTarefasAdapter(dataModels, this);
-
-        listTarefas.setAdapter(adapter);
+        }*/
     }
 
     @Override
