@@ -107,11 +107,17 @@ public class FuncoesMenuLateral {
                         ,200);
 
                 return false;
+            case R.id.action_add_conv:
+                context.startActivity(new Intent(context, addConv.class));
+                return true;
             case R.id.action_add_for:
                 context.startActivity(new Intent(context, addFornecedor.class));
                 return true;
             default:
                 return false;
+
+
+
         }
     }
 }

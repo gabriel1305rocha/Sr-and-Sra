@@ -70,7 +70,9 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Convidados" />
+        <activity android:name=".addConv" />
         <activity android:name=".AddValor" />
         <activity android:name=".Checklist" />
         <activity android:name=".Tarefas"/>

@@ -90,8 +90,7 @@ public class Convidados extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_lateral, menu);
+        getMenuInflater().inflate(R.menu.menu_add_convidado, menu);
         return true;
     }
 
@@ -100,9 +99,8 @@ public class Convidados extends AppCompatActivity
         if (ClickMenuOpt(item, this)){
             finish();
         } else {
-            return true;
+            return false;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -118,3 +116,4 @@ public class Convidados extends AppCompatActivity
         return true;
     }
 }
+

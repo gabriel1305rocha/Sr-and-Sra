@@ -14,6 +14,8 @@
     android:orientation="horizontal">
 
 
+
+
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
@@ -52,21 +54,34 @@
         android:id="@+id/btnEntra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtSenha"
-        android:layout_centerHorizontal="true"
         android:onClick="onClickEntra"
         android:text="@string/entrar"
-        style="@style/Bottom" />
+        style="@style/Bottom"
+        android:layout_above="@+id/lembraSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp" />
     <TextView
         android:id="@+id/lembraSenha"
+        style="@style/Title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnEntra"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:linksClickable="true"
         android:clickable="true"
-        android:text="@string/lembrar_senha"/>
+        android:text="Esqueci minha senha"
+        android:layout_marginBottom="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/chklembrarSenha"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lembrar Minha Senha"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp" />
 
 
 </RelativeLayout>

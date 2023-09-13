@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Title2"
+        android:layout_marginRight="78dp"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/relativeLayout3">
+
+        <TextView
+            android:id="@+id/lblConv"
+            android:layout_width="wrap_content"
+            style="@style/Title1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Convidado"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <EditText
+            android:id="@+id/txtNomeConv"
+            android:hint="Digite o nome do convidado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title3"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/lblConv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/lblAcompanhante"
+            style="@style/Title3"
+            android:hint="Digite o numero de acompanhantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_below="@+id/txtNomeConv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <!--Spinner
+            android:id="@+id/spnAcompanhante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/lblAcompanhante"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" /-->
+
+        <TextView
+            android:id="@+id/lblQuem"
+            android:layout_width="wrap_content"
+            style="@style/Title3"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Quem Convidou"
+            android:layout_below="@+id/lblAcompanhante"
+            android:layout_alignLeft="@+id/rdbNEnviado"
+            android:layout_alignStart="@+id/rdbNEnviado" />
+
+        <RadioButton
+            android:id="@+id/chkNoiva"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="Noiva"
+            android:layout_below="@+id/lblQuem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:id="@+id/chkNoivo"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noivo"
+            android:layout_below="@+id/chkNoiva"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <RadioButton
+            android:id="@+id/chkCasal"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casal"
+            android:layout_below="@+id/chkNoivo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <!--Spinner
+            android:id="@+id/spnQuem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/lblQuem"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" /-->
+
+
+        <EditText
+            android:id="@+id/txtTel"
+            style="@style/Title3"
+            android:hint="Digite o telefone do convidado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:layout_below="@+id/chkCasal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            style="@style/Title3"
+            android:hint="Digite o E-mail do convidado"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_below="@+id/txtTel"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/lblPara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title3"
+            android:layout_marginTop="20dp"
+            android:text="Convidado Para"
+            android:layout_below="@+id/txtEmail"
+            android:layout_centerHorizontal="true" />
+
+        <CheckBox
+            android:id="@+id/chkCerimonia"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblPara"
+            android:layout_marginTop="10dp"
+            android:text="Cerimônia" />
+
+        <CheckBox
+            android:id="@+id/chkFesta"
+            style="@style/Title3"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Festa"
+            android:layout_below="@+id/chkCerimonia"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/lblStatus"
+            style="@style/Title3"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convite"
+            android:layout_below="@+id/chkFesta"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:id="@+id/rdbNEnviado"
+            style="@style/Title3"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não Eviado"
+            android:layout_below="@+id/lblStatus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:id="@+id/rdbAConf"
+            style="@style/Title3"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agardando Confirmação"
+            android:layout_below="@+id/rdbNEnviado"
+            android:layout_alignLeft="@+id/rdbNEnviado"
+            android:layout_alignStart="@+id/rdbNEnviado" />
+
+        <RadioButton
+            android:id="@+id/rdbPConf"
+            style="@style/Title3"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rdbAConf"
+            android:layout_alignStart="@+id/rdbAConf"
+            android:layout_below="@+id/rdbAConf"
+            android:text="Presença Confirmada" />
+
+        <RadioButton
+            android:id="@+id/rdbCRecusado"
+            style="@style/Title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rdbPConf"
+            android:layout_alignStart="@+id/rdbPConf"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/rdbPConf"
+            android:text="Convite Recusado" />
+
+        <TextView
+            android:id="@+id/lblOpcoes"
+            style="@style/subTitle"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ocultar Opções"
+            android:layout_below="@+id/rdbCRecusado"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickOffLine"
+            android:layout_below="@id/lblOpcoes"
+            android:text="Adicionar"
+            android:layout_marginTop="20dp"
+            style="@style/Bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

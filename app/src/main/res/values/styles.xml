@@ -25,6 +25,13 @@
         <item name="android:colorBackground">@drawable/back_gradient</item>
     </style>
 
+    <style name="subTitle">
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
     <style name="Title1">
         <item name="android:typeface">serif</item>
         <item name="android:textStyle">italic</item>
