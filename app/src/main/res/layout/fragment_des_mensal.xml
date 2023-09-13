@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/despesaTable"
@@ -38,6 +37,7 @@
                 android:layout_toRightOf="@id/btnVoltar"
                 android:layout_toEndOf="@id/btnVoltar"
                 android:layout_centerVertical="true"
+                style="@style/textStyle"
                 android:textSize="24sp"
                 android:text="@string/abril"/>
             <ImageButton
@@ -58,6 +58,7 @@
                 android:layout_toStartOf="@id/btnAvancar"
                 android:layout_centerVertical="true"
                 android:textSize="24sp"
+                style="@style/textStyle"
                 android:text="2017"/>
 
         </RelativeLayout>
@@ -178,5 +179,4 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/despesaTable"
         android:layout_marginTop="10dp"/>
-
 </RelativeLayout>

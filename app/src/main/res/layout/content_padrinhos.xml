@@ -9,9 +9,8 @@
     tools:context="fourcodes.srsra.Padrinhos"
     tools:showIn="@layout/app_bar_padrinhos">
 
-    <TextView
-        android:id="@+id/txtPadrinho"
+    <ListView
+        android:id="@+id/listPadrinho"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Padrinhos"/>
+        android:layout_height="wrap_content" />
 </RelativeLayout>

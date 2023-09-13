@@ -17,7 +17,7 @@
     <string name="menuL_info">Info</string>
     <string name="menuL_inicio">Home</string>
     <string name="menuL_outro">Others</string>
-    <string name="menuL_padrinho">Godfathers</string>
+    <string name="menuL_padrinho">Groomsmens</string>
     <string name="title_Inicio">Home</string>
     <string name="EntrarOff">Begin Offline</string>
     <string name="title_activity_configu">Settings</string>
@@ -83,8 +83,8 @@
     <string name="valor_da_parcela">Plot amount</string>
     <string name="vencimento_por_mes">Due Date</string>
     <string name="title_tarefas">Tasks</string>
-    <string name="title_padrinhos">Godfathers</string>
-    <string name="menuL_daminhas">Bridesmaids</string>
+    <string name="title_padrinhos">Groomsmen</string>
+    <string name="menuL_daminhas">Bridesmaid and Pajens</string>
     <string name="pesquisar_item">Search Item</string>
     <string name="title_daminha">Bridesmaids</string>
     <string name="deletar">Delete</string>
@@ -98,11 +98,34 @@
     <string name="oito_meses_antes">Eight months before</string>
     <string name="quinze_dias_antes">Fifteen days before</string>
     <string name="seis_meses_antes">Six months before</string>
-    <string name="title_fornecedor">Provider</string>
+    <string name="title_fornecedor">Providers</string>
     <string name="tres_meses_antes">Three months before</string>
     <string name="um_ano_antes">A year before</string>
     <string name="um_dia_antes">A day before</string>
     <string name="um_mes_antes">A months before</string>
     <string name="uma_semana_antes">A week before</string>
+    <string name="noiva">Bride</string>
+    <string name="noivo">Groom</string>
+    <string name="noivos">Bride and Groom</string>
+    <string name="nome_da_madrinha">Maid of honor\'s name</string>
+    <string name="nome_do_padrinho">Groomsmen\'s name</string>
+    <string name="telefone">Phone</string>
+    <string name="responsavel">Responsible</string>
+    <string name="pajen">Pajen</string>
+    <string name="nome_do_responsavel">Responsible Name</string>
+    <string name="nome_da_crianca">Child\'s name</string>
+    <string name="florista">Flower girl</string>
+    <string name="daminha">Bridesmaid</string>
+    <string name="daminha_pajen">Bridesmaid / Pagen</string>
+    <string name="madrinha">Maid of honor</string>
+    <string name="padrinho">Groomsmen</string>
+    <string name="quem_convidou">Who invited</string>
+    <string name="title_lista_presente">Gifts</string>
+    <string name="lista_de_presentes">Gifts list</string>
+    <string name="adicionar">Add</string>
+    <string name="compartilhar">Share</string>
+    <string name="excluir">Delete</string>
+    <string name="pesquisar">Search</string>
+    <string name="voltar">Back</string>
 
 </resources>

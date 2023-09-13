@@ -33,26 +33,14 @@
 
             </RelativeLayout>
 
-
-    <TextView
-        android:id="@+id/textView9"
-        style="@style/Title1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Convidados" />
-
-    <TextView
-        android:id="@+id/lblPFesta"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:text="Convidados Para Festa"
-        android:layout_below="@+id/textView9"
-        android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/lblPFesta"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:text="Convidados Para Festa"
+                android:layout_centerHorizontal="true" />
             <ImageView
                 android:id="@+id/lin_reta1"
                 android:layout_width="match_parent"
@@ -61,16 +49,16 @@
                 android:contentDescription="linha"
                 android:src="@drawable/lin_reta"/>
 
-    <TextView
-        android:id="@+id/lblNaoEnviado"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
-        android:text="Convites Não Enviados"
-        android:layout_below="@+id/lblPFesta"
-        android:layout_alignLeft="@+id/lblPFesta"
-        android:layout_alignStart="@+id/lblPFesta" />
+            <TextView
+                android:id="@+id/lblNaoEnviado"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="62dp"
+                android:text="Convites Não Enviados"
+                android:layout_below="@+id/lblPFesta"
+                android:layout_alignLeft="@+id/lblPFesta"
+                android:layout_alignStart="@+id/lblPFesta" />
             <ImageView
                 android:id="@+id/lin_reta2"
                 android:layout_width="match_parent"
@@ -79,15 +67,15 @@
                 android:contentDescription="linha"
                 android:src="@drawable/lin_reta"/>
 
-    <TextView
-        android:id="@+id/lblAguarde"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
-        android:text="Aguardando Confirmação"
-        android:layout_below="@+id/lblNaoEnviado"
-        android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/lblAguarde"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="78dp"
+                android:text="Aguardando Confirmação"
+                android:layout_below="@+id/lblNaoEnviado"
+                android:layout_centerHorizontal="true" />
             <ImageView
                 android:id="@+id/lin_reta3"
                 android:layout_width="match_parent"
@@ -96,15 +84,15 @@
                 android:contentDescription="linha"
                 android:src="@drawable/lin_reta"/>
 
-    <TextView
-        android:id="@+id/lblConfirmados"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="71dp"
-        android:text="Confirmados"
-        android:layout_below="@+id/lblAguarde"
-        android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/lblConfirmados"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="71dp"
+                android:text="Confirmados"
+                android:layout_below="@+id/lblAguarde"
+                android:layout_centerHorizontal="true" />
             <ImageView
                 android:id="@+id/lin_reta4"
                 android:layout_width="match_parent"

@@ -52,7 +52,7 @@ public class Daminha extends AppCompatActivity implements NavigationView.OnNavig
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_lateral, menu);
+        getMenuInflater().inflate(R.menu.menu_add_dama, menu);
         return true;
     }
     @Override

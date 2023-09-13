@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +23,6 @@ import java.util.ArrayList;
 public class FragDesItem extends Fragment {
 
     static ArrayList<ItemDataModel> ItemsdataModels = new ArrayList<>();
-    //ItemsdataModels= new ArrayList<>();
     ListView listView;
     private static CustomListItemsAdapter adapter;
     static Button filtro;
@@ -67,10 +65,6 @@ public class FragDesItem extends Fragment {
     public void AtualizaListaItem(){
         ListView listView = (ListView) Fview.findViewById(R.id.lista_items);
 
-        //***** ItemDataModel(String name, String desc, String preco, String categoria, String paga, String total) ******//
-        /*ItemsdataModels.add(new ItemDataModel("Vestido", "Branco com véu", "1000,00","Roupa","1","12"));
-        ItemsdataModels.add(new ItemDataModel("Bolo", "Bolo festa", "250,00","Comida","3","5"));*/
-
         adapter= new CustomListItemsAdapter(ItemsdataModels,Fview.getContext());
 
         listView.setAdapter(adapter);
@@ -80,8 +74,12 @@ public class FragDesItem extends Fragment {
 
                 ItemDataModel dataModel= ItemsdataModels.get(position);
 
-                Snackbar.make(view, dataModel.getName()+" - "+dataModel.getDesc()+"\n R$ "+dataModel.getPreco(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
+                Snackbar snackbar;
+                snackbar = Snackbar.make(view, getString(R.string.data_inicial)+": "+dataModel.getDataInicial()+"        -"+dataModel.getName()+"\n"
+                                +getString(R.string.data_termino)+": "+dataModel.getDataTermino()
+                        ,Snackbar.LENGTH_LONG).setAction("No action", null);
+                snackbar.setActionTextColor(getResources().getColor(R.color.white));
+                snackbar.show();
             }
         });
         listView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {

@@ -49,6 +49,7 @@
                     android:layout_below="@+id/lblCadastrese"
                     android:layout_marginTop="47dp"
                     android:drawableLeft="@drawable/ic_menu_edit"
+                    android:drawableStart="@drawable/ic_menu_edit"
                     android:ems="10"
                     android:hint="Digite seu nome:"
                     android:inputType="textPersonName"

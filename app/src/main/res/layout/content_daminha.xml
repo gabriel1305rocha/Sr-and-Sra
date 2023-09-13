@@ -9,9 +9,9 @@
     tools:context="fourcodes.srsra.Daminha"
     tools:showIn="@layout/app_bar_daminha">
 
-    <TextView
-        android:id="@+id/txtDaminha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daminhas"/>
+    <ListView
+        android:id="@+id/listDaminha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
 </RelativeLayout>

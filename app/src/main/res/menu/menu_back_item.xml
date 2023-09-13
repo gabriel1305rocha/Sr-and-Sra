@@ -9,7 +9,7 @@
     <item
         android:id="@+id/action_add"
         android:orderInCategory="200"
-        android:title="Back"
+        android:title="@string/voltar"
         android:icon="@drawable/ic_back_arrow"
         app:showAsAction="ifRoom"
         />

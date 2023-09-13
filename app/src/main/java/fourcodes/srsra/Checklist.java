@@ -53,6 +53,7 @@ public class Checklist extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ClickListTarefa(position, context);
+                finish();
             }
         });
     }

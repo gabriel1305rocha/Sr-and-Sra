@@ -18,8 +18,7 @@ import com.facebook.login.LoginManager;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 
-public class Convidados extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+public class Convidados extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private boolean fragItem;
     Menu mOptionsMenu;
@@ -90,6 +89,7 @@ public class Convidados extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_add_convidado, menu);
         return true;
     }
@@ -99,8 +99,9 @@ public class Convidados extends AppCompatActivity
         if (ClickMenuOpt(item, this)){
             finish();
         } else {
-            return false;
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -116,4 +117,3 @@ public class Convidados extends AppCompatActivity
         return true;
     }
 }
-

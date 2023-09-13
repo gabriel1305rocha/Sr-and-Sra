@@ -6,14 +6,13 @@
         android:id="@+id/action_pesquisa_item"
         android:orderInCategory="100"
         android:icon="@drawable/ic_lupa"
-        android:title="Search"
+        android:title="@string/pesquisar"
         android:visible="false"
         app:showAsAction="always"/>
     <item
         android:id="@+id/action_add"
-        android:orderInCategory="200"
-        android:title="Add"
+        android:orderInCategory="206"
+        android:title="@string/adicionar"
         android:icon="@drawable/ic_menu_add"
-        app:showAsAction="ifRoom"
-        />
+        app:showAsAction="ifRoom" />
 </menu>

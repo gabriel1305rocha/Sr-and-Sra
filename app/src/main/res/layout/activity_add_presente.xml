@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fourcodes.srsra.AddPresente">
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/ButtomAddItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_cancel_red"
+            android:drawableStart="@drawable/ic_cancel_red"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            style="@style/ButtomAddItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_check_green"
+            android:drawableStart="@drawable/ic_check_green"
+            android:text="@string/salvar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txtNome"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Nome do Item"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/lblCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNome"
+                style="@style/textStyle"
+                android:text="Categoria:"
+                android:textSize="15sp" />
+            <RelativeLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCategoria"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Categoria"
+                    android:src="@drawable/ic_menu_presente" />
+
+                <ImageView
+                    android:id="@+id/imgIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/btnCategoria"
+                    android:layout_alignTop="@id/btnCategoria"
+                    android:contentDescription="icon"
+                    android:src="@drawable/ic_menu_compartilha"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/lblIcon"
+                    style="@style/textStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/imgIcon"
+                    android:layout_toRightOf="@id/imgIcon"
+                    android:text="Exemplo"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txtDataEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableStart="@drawable/ic_calendar"
+                android:hint="Data de entrega"
+                android:inputType="none" />
+            <EditText
+                android:id="@+id/txtPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDataEntrega"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_contato"
+                android:drawableStart="@drawable/ic_contato"
+                style="@style/editTextClick"
+                android:hint="Selecionar Pessoa"
+                android:inputType="none" />
+            <EditText
+                android:id="@+id/txtEmailPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPessoa"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                style="@style/textStyle"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/lblPara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEmailPessoa"
+                style="@style/textStyle"
+                android:text="Presente para:"/>
+            <RadioGroup
+                android:id="@+id/grpPresente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/lblPara">
+                <RadioButton
+                    android:id="@+id/rdbNoivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Noivo"/>
+                <RadioButton
+                    android:id="@+id/rdbNoiva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Noiva"/>
+                <RadioButton
+                    android:id="@+id/rdbcasal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Casal"/>
+            </RadioGroup>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -38,9 +38,6 @@ public class MenuLateral extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ViewStub stub = (ViewStub) findViewById(R.id.view_stub);
-        stub.setLayoutResource(R.layout.activity_contagem);
-        View inflated = stub.inflate();
         this.setTitle(R.string.title_Inicio);
 
         Atualiza();
@@ -95,7 +92,7 @@ public class MenuLateral extends AppCompatActivity
         TextView diaResta = (TextView) findViewById(R.id.lblDiaRestaNum);
         ProgressBar barraDia = (ProgressBar) findViewById(R.id.progressBar);
 
-        if(SexoUser == "male") {
+        if(SexoUser.equals("male")) {
             nomeSr.setText("Sr."+" " + NomeUser);
             nomeSra.setText("Sra."+" " + NomeParceiro);
         }else{

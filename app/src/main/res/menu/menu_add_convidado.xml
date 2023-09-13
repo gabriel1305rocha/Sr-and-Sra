@@ -8,7 +8,7 @@
     <item
         android:id="@+id/action_add_conv"
         android:orderInCategory="200"
-        android:title="Add"
+        android:title="@string/adicionar"
         android:icon="@drawable/ic_menu_add"
         app:showAsAction="ifRoom"
         />

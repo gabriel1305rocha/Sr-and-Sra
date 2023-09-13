@@ -17,31 +17,18 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginLeft="0dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginEnd="50dp"
                 android:id="@+id/relativeLayout">
-
             </RelativeLayout>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                style="@style/Title1"
-                android:layout_marginTop="15dp"
-                android:text="Convidados" />
 
             <CheckBox
                 android:id="@+id/chkAcaompanhante"
@@ -50,7 +37,6 @@
                 style="@style/Title2"
                 android:text="Incluir acompanhantes"
                 android:layout_marginTop="25dp"
-                android:layout_below="@+id/textView2"
                 android:layout_alignLeft="@+id/lblNcDaNoiva"
                 android:layout_alignStart="@+id/lblNcDaNoiva" />
 
@@ -118,14 +104,14 @@
 
             <TextView
                 android:id="@+id/lblTotal"
-                style="@style/Title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/relativeLayout"
                 android:layout_alignStart="@+id/relativeLayout"
                 android:layout_below="@+id/lblNcDoCasal"
                 android:layout_marginTop="17dp"
-                android:text="Total" />
+                style="@style/Title2"
+                android:text="Total:" />
 
             <TextView
                 android:id="@+id/lblSoma"

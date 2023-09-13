@@ -33,27 +33,16 @@
 
             </RelativeLayout>
 
-
-    <TextView
-        android:id="@+id/textView7"
-        style="@style/Title1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Convidados" />
-
-    <TextView
-        android:id="@+id/lblDoNoivo"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="Do Noivo"
-        android:layout_below="@+id/lblDaNoiva"
-        android:layout_alignRight="@+id/lblDoCasal"
-        android:layout_alignEnd="@+id/lblDoCasal" />
+            <TextView
+                android:id="@+id/lblDoNoivo"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Do Noivo"
+                android:layout_below="@+id/lblDaNoiva"
+                android:layout_alignRight="@+id/lblDoCasal"
+                android:layout_alignEnd="@+id/lblDoCasal" />
             <ImageView
                 android:id="@+id/lin_reta1"
                 android:layout_width="match_parent"
@@ -62,16 +51,15 @@
                 android:contentDescription="linha"
                 android:src="@drawable/lin_reta"/>
 
-    <TextView
-        android:id="@+id/lblDaNoiva"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Da Noiva"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/textView7"
-        android:layout_alignLeft="@+id/lblDoNoivo"
-        android:layout_alignStart="@+id/lblDoNoivo" />
+            <TextView
+                android:id="@+id/lblDaNoiva"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Da Noiva"
+                android:layout_marginTop="42dp"
+                android:layout_alignLeft="@+id/lblDoNoivo"
+                android:layout_alignStart="@+id/lblDoNoivo" />
             <ImageView
                 android:id="@+id/lin_reta2"
                 android:layout_width="match_parent"
@@ -80,15 +68,15 @@
                 android:contentDescription="linha"
                 android:src="@drawable/lin_reta"/>
 
-    <TextView
-        android:id="@+id/lblDoCasal"
-        style="@style/Title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:text="Do Casal"
-        android:layout_below="@+id/lblDoNoivo"
-        android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/lblDoCasal"
+                style="@style/Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:text="Do Casal"
+                android:layout_below="@+id/lblDoNoivo"
+                android:layout_centerHorizontal="true" />
             <ImageView
                 android:id="@+id/lin_reta3"
                 android:layout_width="match_parent"

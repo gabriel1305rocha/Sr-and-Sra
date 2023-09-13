@@ -11,54 +11,44 @@ public class ItemDataModel {
     String preco;
     String paga;
     String total;
-    String MesI;
-    String AnoI;
-    String MesT;
-    String AnoT;
+    String dataInicial;
+    String dataTermino;
+    String diaVenci;
 
-    public ItemDataModel(String name, String desc, String preco, String categoria, String paga, String total ) {
+    public ItemDataModel(String name, String desc, String preco, String paga, String total,String dataInicial, String dataTermino, String diaVenci) {
         this.name=name;
         this.desc=desc;
         this.preco=preco;
         this.paga=paga;
         this.total=total;
-
+        this.dataInicial=dataInicial;
+        this.dataTermino=dataTermino;
+        this.diaVenci=diaVenci;
     }
 
 
     public String getName() {
         return name;
     }
-
     public String getDesc() {
         return desc;
     }
-
     public String getPreco() {
         return preco;
     }
-
     public String getPaga() {
         return paga;
     }
-
     public String getTotal() {
         return total;
     }
-
-    public String getAnoI() {
-        return AnoI;
+    public String getDataInicial() {
+        return dataInicial;
     }
-
-    public String getAnoT() {
-        return AnoT;
+    public String getDataTermino() {
+        return dataTermino;
     }
-
-    public String getMesI() {
-        return MesI;
-    }
-
-    public String getMesT() {
-        return MesT;
+    public String getDiaVenci() {
+        return diaVenci;
     }
 }

@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.InputType;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
@@ -52,6 +53,9 @@ public class FuncoesMenuLateral {
                 return true;
             case R.id.nav_daminhas:
                 context.startActivity(new Intent(context, Daminha.class));
+                return true;
+            case R.id.nav_presente:
+                context.startActivity(new Intent(context, ListaPresente.class));
                 return true;
             default:
                 return false;
@@ -107,17 +111,23 @@ public class FuncoesMenuLateral {
                         ,200);
 
                 return false;
-            case R.id.action_add_conv:
-                context.startActivity(new Intent(context, addConv.class));
-                return true;
             case R.id.action_add_for:
                 context.startActivity(new Intent(context, addFornecedor.class));
                 return true;
+            case R.id.action_add_dama:
+                context.startActivity(new Intent(context, AddDama.class));
+                return true;
+            case R.id.action_add_padrinho:
+                context.startActivity(new Intent(context, AddPadrinho.class));
+                return true;
+            case R.id.action_add_presente:
+                context.startActivity(new Intent(context, AddPresente.class));
+                return true;
+            case R.id.action_add_conv:
+                context.startActivity(new Intent(context, AddConvidado.class));
+                return true;
             default:
                 return false;
-
-
-
         }
     }
 }

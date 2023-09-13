@@ -15,7 +15,8 @@
     <string name="title_tarefas">Tarefas</string>
     <string name="title_padrinhos">Padrinhos</string>
     <string name="title_daminha">Daminhas e Pajens</string>
-    <string name="title_fornecedor">Fornecedor</string>
+    <string name="title_fornecedor">Fornecedores</string>
+    <string name="title_lista_presente">Presentes</string>
     <!-- Caixa Dialogo-->
     <string name="pesquisar_item">Pesquisar Item</string>
 
@@ -27,14 +28,13 @@
     <string name="faceSair">Sair do Facebook</string>
     <string name="lembrar_senha">Lembrar Senha</string>
 
-    <!-- Fim Login -->
     <!-- Cadastro -->
     <string name="entraEmail">Iniciar sessão</string>
     <string name="cadastrar">Cadastre-se</string>
     <string name="cadastraTitle">Cadastre-se</string>
     <string name="e_mail">E-mail</string>
     <string name="senha">Senha</string>
-    <string name="CadNome">Nome:</string>
+    <string name="CadNome">Nome</string>
     <string name="addNoivo">Adicionar Noivo</string>
     <string name="dadosNoivo">Dados do Noivo</string>
     <string name="dadosNoiva">Dados do Noiva</string>
@@ -44,7 +44,6 @@
     <string name="continuar">Continuar</string>
     <string name="nome_da_noiva">Nome da Noiva</string>
     <string name="nome_do_noivo">Nome do Noivo</string>
-    <!-- Fim Cadastro -->
 
     <!-- Menu Lateral -->
     <string name="menuL_inicio">Inicio</string>
@@ -59,11 +58,9 @@
     <string name="menuL_info">Sobre</string>
     <string name="sair">Sair</string>
     <string name="action_settings">Configurações</string>
-    <!-- Fim Menu Lateral -->
 
     <!-- Tela Configurações -->
     <string name="title_configura">Configurações</string>
-    <!-- Fim Tela Configurações-->
 
     <!-- Tela Sobre -->
     <string name="versao">Versão</string>
@@ -71,7 +68,6 @@
     <string name="desenvolvedor">Desenvolvedor</string>
     <string name="termoUso">Termos de Uso</string>
     <string name="manualUser">Manual do Usuário</string>
-    <!-- Fim Tela Sobre -->
 
     <!-- Tela Despesas -->
     <string name="meuorcamento">Meu Orçamento R$</string>
@@ -88,7 +84,6 @@
         <item>Pagos</item>
     </string-array>
 
-    <!-- Fim Tela Despesas -->
     <!-- Adicionar novo Item-->
     <string-array name="meses" translatable="false">
         <item>@string/janeiro</item>
@@ -208,6 +203,31 @@
     <string name="deletar">Deletar</string>
     <string name="editar">Editar</string>
 
+    <!-- Padrinhos -->
+    <string-array name="convidou" translatable="false">
+        <item>@string/noivo</item>
+        <item>@string/noiva</item>
+        <item>@string/noivos</item>
+    </string-array>
+    <string name="noivo">Noivo</string>
+    <string name="noiva">Noiva</string>
+    <string name="noivos">Noivos</string>
+    <string name="nome_da_madrinha">Nome da madrinha</string>
+    <string name="nome_do_padrinho">Nome do padrinho</string>
+    <string name="madrinha">Madrinha</string>
+    <string name="padrinho">Padrinho</string>
+    <string name="quem_convidou">Quem convidou</string>
+
+    <!-- Daminha -->
+    <string name="daminha">Daminha</string>
+    <string name="daminha_pajen">Daminha/Pajen</string>
+    <string name="nome_da_crianca">Nome da criança</string>
+    <string name="nome_do_responsavel">Nome do responsável</string>
+    <string name="pajen">Pajen</string>
+    <string name="responsavel">Responsável</string>
+    <string name="telefone">Telefone</string>
+    <string name="florista">Florista</string>
+
     <!-- Links -->
     <string name="link_manualuser" translatable="false">https://www.google.com.br</string>
     <string name="link_termouso" translatable="false">https://www.google.com.br</string>
@@ -232,5 +252,11 @@
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
     <string name="we" translatable="false">We</string>
+    <string name="lista_de_presentes">Lista de Presentes</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="excluir">Excluir</string>
+    <string name="voltar">Voltar</string>
 
 </resources>

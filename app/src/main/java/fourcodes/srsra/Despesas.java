@@ -1,6 +1,8 @@
 package fourcodes.srsra;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +25,7 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
     ArrayList<ItemDataModel> dataModels;
     private static CustomListItemsAdapter adapterItens;
     private boolean fragItem;
+    Context context = this;
     Menu mOptionsMenu;
     String pesquisaItem;
 
@@ -97,6 +100,7 @@ public class Despesas extends AppCompatActivity implements NavigationView.OnNavi
         getMenuInflater().inflate(R.menu.menu_pesquisa_item, menu);
         mOptionsMenu=menu;
         menu.getItem(0).setVisible(false);
+
         return true;
     }
     @Override

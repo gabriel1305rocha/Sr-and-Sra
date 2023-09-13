@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="fourcodes.srsra">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <!--
         Usar seguinte código para não mostrar Menu de Cima na respectiva Activity
         android:theme="@style/SplashTheme"
@@ -14,7 +16,7 @@
         android:logo="@mipmap/logo"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/SplashTheme">
+        android:theme="@style/SrTheme">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -24,24 +26,19 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Login"
-            android:theme="@style/SplashTheme">
+        <activity android:name=".Login"
+            android:theme="@style/SrTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Contagem"
+        <activity android:name=".Contagem"
             android:label="@string/dadosNoivo" />
-        <activity
-            android:name=".Cadastro"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".MenuLateral"
+        <activity android:name=".Cadastro"
+            android:theme="@style/SrTheme" />
+        <activity android:name=".MenuLateral"
             android:label="@string/title_Inicio" />
-        <activity
-            android:name="com.facebook.CustomTabActivity"
+        <activity android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -70,16 +67,19 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Convidados" />
-        <activity android:name=".addConv" />
         <activity android:name=".AddValor" />
         <activity android:name=".Checklist" />
-        <activity android:name=".Tarefas"/>
+        <activity android:name=".Tarefas" />
         <activity android:name=".Fornecedor" />
         <activity android:name=".Padrinhos" />
-        <activity android:name=".Daminha"/>
+        <activity android:name=".Daminha" />
         <activity android:name=".addFornecedor" />
+        <activity android:name=".AddDama" />
+        <activity android:name=".AddPadrinho" />
+        <activity android:name=".ListaPresente" />
+        <activity android:name=".AddPresente" />
+        <activity android:name=".AddConvidado"/>
     </application>
 
 </manifest>

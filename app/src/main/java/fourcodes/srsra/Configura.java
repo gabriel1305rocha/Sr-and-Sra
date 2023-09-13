@@ -1,5 +1,6 @@
 package fourcodes.srsra;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,14 +11,17 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.facebook.login.LoginManager;
 
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
 import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 
-public class Configura extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+public class Configura extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,15 @@ public class Configura extends AppCompatActivity
 
         this.setTitle(R.string.title_configura);
 
+        TextView lblSair = (TextView) findViewById(R.id.lblSair);
+        lblSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoginManager.getInstance().logOut();
+                context.startActivity(new Intent(context, Inicio.class));
+                finish();
+            }
+        });
     }
 
 

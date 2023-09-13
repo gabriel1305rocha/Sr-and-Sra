@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/ButtomAddItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_cancel_red"
+            android:drawableStart="@drawable/ic_cancel_red"
+            android:text="@string/cancelar" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            style="@style/ButtomAddItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_check_green"
+            android:drawableStart="@drawable/ic_check_green"
+            android:text="@string/salvar" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttons">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp"
-                android:id="@+id/relativeLayout2">
-
-            <TextView
-                android:id="@+id/lblFornecedor"
-                style="@style/Title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="28dp"
-                android:text="Fornecedor" />
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp">
 
             <EditText
                 android:id="@+id/txtFornecedor"
                 style="@style/Title2"
-                android:hint="Nome do fornecedor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:layout_below="@+id/lblFornecedor"
-                android:layout_alignLeft="@+id/txtContato"
-                android:layout_alignStart="@+id/txtContato"
-                android:layout_marginTop="14dp"
-                android:layout_alignRight="@+id/txtContato"
-                android:layout_alignEnd="@+id/txtContato" />
+                android:hint="Nome do fornecedor"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/txtContato"
@@ -64,44 +71,44 @@
                 style="@style/Title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/txtContato"
+                android:layout_marginTop="24dp"
                 android:ems="10"
                 android:hint="Rua Z, Nº 0- Sala 101 - São Paulo - SP"
-                android:inputType="textMultiLine"
-                android:layout_below="@+id/txtContato"
-                android:layout_marginTop="24dp" />
+                android:inputType="textMultiLine" />
 
             <EditText
                 android:id="@+id/txtTel"
                 style="@style/Title2"
-                android:hint="(xx)xxxx-xxxx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="phone"
                 android:layout_below="@+id/txtEndereco"
-                android:layout_marginTop="19dp" />
+                android:layout_marginTop="19dp"
+                android:ems="10"
+                android:hint="(xx)xxxx-xxxx"
+                android:inputType="phone" />
 
             <EditText
                 android:id="@+id/txtCel"
                 style="@style/Title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTel"
+                android:layout_marginTop="26dp"
                 android:ems="10"
                 android:hint="(xx)xxxxx-xxxx"
-                android:inputType="phone"
-                android:layout_below="@+id/txtTel"
-                android:layout_marginTop="26dp" />
+                android:inputType="phone" />
 
             <EditText
                 android:id="@+id/txtEmail"
                 style="@style/Title2"
-                android:hint="Nome@dominio.com"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textEmailAddress"
                 android:layout_below="@+id/txtCel"
-                android:layout_marginTop="18dp" />
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="Nome@dominio.com"
+                android:inputType="textEmailAddress" />
 
             <EditText
                 android:id="@+id/txtSite"
@@ -117,28 +124,14 @@
             <EditText
                 android:id="@+id/txtNotas"
                 style="@style/Title2"
-                android:hint="Anotoções"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textEmailAddress"
+                android:layout_below="@+id/txtEmail"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/txtEmail" />
-            <Button
-                android:id="@+id/btnAdicionar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onClickOffLine"
-                android:layout_below="@id/txtSite"
-                android:text="Adicionar"
-                android:layout_marginTop="25dp"
-                style="@style/Bottom"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:ems="10"
+                android:hint="Anotoções"
+                android:inputType="textEmailAddress" />
 
-        </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
-
-
 </RelativeLayout>

@@ -53,7 +53,7 @@ public class Padrinhos extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_lateral, menu);
+        getMenuInflater().inflate(R.menu.menu_add_padrinho, menu);
         return true;
     }
     @Override

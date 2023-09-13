@@ -2,6 +2,7 @@ package fourcodes.srsra;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,10 +13,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 import static fourcodes.srsra.EditarItem.*;
 import static fourcodes.srsra.FragDesItem.ItemsdataModels;
@@ -27,10 +34,6 @@ public class AddValor extends Activity {
     final Context context = this;
     static boolean edit;
 
-    Spinner spinMesI;
-    Spinner spinAnoI;
-    Spinner spinMesT;
-    Spinner spinAnoT;
     Spinner spinDia;
 
     EditText txtNome;
@@ -38,16 +41,77 @@ public class AddValor extends Activity {
     EditText txtAnota;
     Button txtParce;
     Button txtParcePaga;
+    Button btnData;
+    EditText txtDataInicio;
+    EditText txtDataTermi;
+
+    RelativeLayout dataTermi;
+    Switch swtPago;
+
+    DatePickerDialog inicioDatePickerDialog;
+    DatePickerDialog termiDatePickerDialog;
+
+    SimpleDateFormat dateFormatter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_valor);
+        FindViews();
+        SpinnersAdapters();
+        ButtonsParcelas();
 
-        spinMesI = (Spinner) findViewById(R.id.spinnerMes);
-        spinAnoI = (Spinner) findViewById(R.id.spinnerAno);
-        spinMesT = (Spinner) findViewById(R.id.spinnerMesTermi);
-        spinAnoT = (Spinner) findViewById(R.id.spinnerAnoTermi);
+        swtPago.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    swtPago.setTextColor(getResources().getColor(R.color.TextPrimary));
+                }else{
+                    swtPago.setTextColor(getResources().getColor(R.color.hintColor));
+                }
+            }
+        });
+
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+        setDateTimeField();
+
+        if(edit){
+            seEditando();
+        }
+    }
+    private void setDateTimeField() {
+        txtDataInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                inicioDatePickerDialog.show();}
+        });
+        txtDataTermi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                termiDatePickerDialog.show();}
+        });
+
+        Calendar newCalendar = Calendar.getInstance();
+        inicioDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int ano, int mes, int dia) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(ano, mes, dia);
+                txtDataInicio.setText(dateFormatter.format(newDate.getTime()));
+            }
+
+        },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        termiDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int ano, int mes, int dia) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(ano,mes,dia);
+                txtDataTermi.setText(dateFormatter.format(newDate.getTime()));
+            }
+        },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+    }
+    private void FindViews(){
         spinDia = (Spinner) findViewById(R.id.spinner2);
 
         txtNome = (EditText) findViewById(R.id.ItemNome);
@@ -55,26 +119,21 @@ public class AddValor extends Activity {
         txtAnota = (EditText)findViewById(R.id.txtItemAnotacao);
         txtParce = (Button) findViewById(R.id.txtItemParcela);
         txtParcePaga = (Button) findViewById(R.id.txtItemParcelaPaga);
+        swtPago = (Switch) findViewById(R.id.swtItemPago);
 
+        dataTermi = (RelativeLayout) findViewById(R.id.ItemDataTermi);
+        txtDataInicio = (EditText) findViewById(R.id.txtDataInicio);
+        txtDataInicio.setInputType(InputType.TYPE_NULL);
+        txtDataTermi = (EditText) findViewById(R.id.txtDataTermi);
+        txtDataTermi.setInputType(InputType.TYPE_NULL);
+    }
+    private void SpinnersAdapters(){
         ArrayAdapter<CharSequence> adapterDia = ArrayAdapter.createFromResource(this,
                 R.array.dias_mes, android.R.layout.simple_spinner_item);
         adapterDia.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinDia.setAdapter(adapterDia);
-
-        ArrayAdapter<CharSequence> adapterMes = ArrayAdapter.createFromResource(this,
-                R.array.meses, android.R.layout.simple_spinner_item);
-        adapterMes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinMesI.setAdapter(adapterMes);
-
-        ArrayAdapter<CharSequence> adapterAno = ArrayAdapter.createFromResource(this,
-                R.array.anos, android.R.layout.simple_spinner_item);
-        adapterAno.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinAnoI.setAdapter(adapterAno);
-
-        spinMesT.setAdapter(adapterMes);
-
-        spinAnoT.setAdapter(adapterAno);
-
+    }
+    private void ButtonsParcelas(){
         // Função de clicar no campo de parcelas
         txtParce.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,11 +167,11 @@ public class AddValor extends Activity {
                 builder.show();
                 input.requestFocus();
                 input.postDelayed(new Runnable(){
-                                      @Override public void run(){
-                                          InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
-                                          keyboard.showSoftInput(input,0);
-                                      }
-                                  },200);
+                    @Override public void run(){
+                        InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                        keyboard.showSoftInput(input,0);
+                    }
+                },200);
             }
         });
 
@@ -149,28 +208,13 @@ public class AddValor extends Activity {
                 builder.show();
                 input.requestFocus();
                 input.postDelayed(new Runnable(){
-                                      @Override public void run(){
-                                          InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
-                                          keyboard.showSoftInput(input,0);
-                                      }
-                                  },200);
+                    @Override public void run(){
+                        InputMethodManager keyboard=(InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                        keyboard.showSoftInput(input,0);
+                    }
+                },200);
             }
         });
-        final Switch swtPago = (Switch) findViewById(R.id.swtItemPago);
-        swtPago.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
-                    swtPago.setTextColor(getResources().getColor(R.color.TextPrimary));
-                }else{
-                    swtPago.setTextColor(getResources().getColor(R.color.hintColor));
-                }
-            }
-        });
-
-        if(edit){
-            seEditando();
-        }
     }
 
     @Override
@@ -193,27 +237,22 @@ public class AddValor extends Activity {
         startActivity(new Intent(this, Despesas.class));
         finish();
     }
-
     // Define Numero nos campos das Parcelas
     public void InsertDialogText(boolean paga){
-        Button editText = (Button) findViewById(R.id.txtItemParcela);
-        Button editTextPaga = (Button) findViewById(R.id.txtItemParcelaPaga);
-        RelativeLayout dataTermi = (RelativeLayout) findViewById(R.id.ItemDataTermi);
-        Switch swtPago = (Switch) findViewById(R.id.swtItemPago);
-        int parPaga = Integer.parseInt(editTextPaga.getText().toString()), par = Integer.parseInt(editText.getText().toString());
+        int parPaga = Integer.parseInt(txtParcePaga.getText().toString()), par = Integer.parseInt(txtParce.getText().toString());
         swtPago.setChecked(false);
         swtPago.setEnabled(false);
         if(!paga){
             if(Integer.parseInt(textDialog) <= 1){
-                editText.setText("1");
+                txtParce.setText("1");
                 dataTermi.setVisibility(View.GONE);
             }else{
-                editText.setText(textDialog);
+                txtParce.setText(textDialog);
                 dataTermi.setVisibility(View.VISIBLE);
             }
             if(parPaga >= Integer.parseInt(textDialog)){
                 parPaga = Integer.parseInt(textDialog);
-                editTextPaga.setText(""+parPaga);
+                txtParcePaga.setText(""+parPaga);
                 dataTermi.setVisibility(View.GONE);
                 swtPago.setEnabled(true);
                 swtPago.setChecked(true);
@@ -223,48 +262,41 @@ public class AddValor extends Activity {
         }else{
             parPaga = Integer.parseInt(textDialog);
             if(parPaga <= 0){
-                editTextPaga.setText("0");
+                txtParcePaga.setText("0");
                 dataTermi.setVisibility(View.VISIBLE);
             }else {
                 if(parPaga >= par){
                     parPaga = par;
-                    editTextPaga.setText(""+parPaga);
+                    txtParcePaga.setText(""+parPaga);
                     dataTermi.setVisibility(View.GONE);
                     swtPago.setEnabled(true);
                     swtPago.setChecked(true);
                 }else {
                     dataTermi.setVisibility(View.VISIBLE);
                 }
-                editTextPaga.setText(""+parPaga);
+                txtParcePaga.setText(""+parPaga);
             }
         }
     }
-
     private String[] pegarTextos(){
 
-        String nome,desc,preco,cater,paga,total,anoIni,mesIni,anoTer,mesTer,diaVen;
+        String nome,desc,preco,paga,total,dataInicio,dataTermino,diaVen;
 
-        anoIni = (spinAnoI.getAdapter().getItem(spinAnoI.getSelectedItemPosition()).toString());
-        mesIni = (spinMesI.getAdapter().getItem(spinMesI.getSelectedItemPosition()).toString());
-        mesTer = (spinMesT.getAdapter().getItem(spinMesT.getSelectedItemPosition()).toString());
-        anoTer = (spinAnoT.getAdapter().getItem(spinAnoT.getSelectedItemPosition()).toString());
+        dataInicio = txtDataInicio.getText().toString();
+        dataTermino = txtDataTermi.getText().toString();
         diaVen = (spinDia.getAdapter().getItem(spinDia.getSelectedItemPosition()).toString());
 
         nome = txtNome.getText().toString();
         desc = txtAnota.getText().toString();
         preco = txtValor.getText().toString();
-        cater = "";
         paga = txtParcePaga.getText().toString();
         total = txtParce.getText().toString();
 
-        return new String[]{nome,desc,preco,cater,paga,total};
+        return new String[]{nome,desc,preco,paga,total,dataInicio,dataTermino,diaVen};
     }
-
     private void seEditando(){
-        spinMesI.setSelection(3);
-        spinAnoI.setSelection(3);
-        spinMesT.setSelection(3);
-        spinAnoT.setSelection(3);
+        txtDataInicio.setText(dateFormatter.format(DateFormat.DATE_FIELD));
+        txtDataTermi.setText(dateFormatter.format(DateFormat.DATE_FIELD));
         spinDia.setSelection(3);
 
         txtNome.setText(texto);
@@ -274,9 +306,9 @@ public class AddValor extends Activity {
         txtParcePaga.setText(paga);
     }
     private void Editou(int position){
-        ItemsdataModels.set(position, new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5]));
+        ItemsdataModels.set(position, new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
     }
     private void Adicionou(){
-        ItemsdataModels.add(new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5]));
+        ItemsdataModels.add(new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
     }
 }

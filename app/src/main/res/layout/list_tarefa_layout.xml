@@ -14,7 +14,7 @@
             android:id="@+id/caixa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"/>
+            />
         <TextView
             android:id="@+id/nome"
             android:layout_width="match_parent"

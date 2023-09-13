@@ -56,11 +56,8 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
                 android:padding="20dp"
-                android:layout_alignLeft="@id/proBarOrcamento"
-                android:layout_alignStart="@id/proBarOrcamento"
-                android:layout_alignRight="@id/proBarOrcamento"
-                android:layout_alignEnd="@id/proBarOrcamento"
                 android:layout_below="@id/proBarOrcamento"
                 android:background="@drawable/back_despesas">
 
@@ -69,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
+                    style="@style/DespesaMensal"
                     android:text="Outubro"/>
                 <TextView
                     android:id="@+id/desAno"
@@ -76,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    style="@style/DespesaMensal"
                     android:text="2017"/>
 
                 <RelativeLayout
@@ -91,6 +90,7 @@
                         android:id="@+id/desPreviText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/DespesaMensal"
                         android:text="@string/previsto"/>
                     <TextView
                         android:id="@+id/desPreviNum"
@@ -98,6 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        style="@style/DespesaMensal"
                         android:text="20.000,00"/>
                     <TextView
                         android:id="@+id/desPreviSimbol"
@@ -105,6 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desPreviNum"
                         android:layout_toStartOf="@id/desPreviNum"
+                        style="@style/DespesaMensal"
                         android:text="@string/sifrao"/>
                 </RelativeLayout>
                 <ImageView
@@ -127,6 +129,7 @@
                         android:id="@+id/desPagoTexto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/DespesaMensal"
                         android:text="@string/pago"/>
                     <TextView
                         android:id="@+id/desPagoNum"
@@ -134,6 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        style="@style/DespesaMensal"
                         android:text="5.000,00"/>
                     <TextView
                         android:id="@+id/desPagoSimbol"
@@ -141,6 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desPagoNum"
                         android:layout_toStartOf="@id/desPagoNum"
+                        style="@style/DespesaMensal"
                         android:text="@string/sifrao"/>
                 </RelativeLayout>
                 <ImageView
@@ -163,6 +168,7 @@
                         android:id="@+id/desRestTexto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/DespesaMensal"
                         android:text="@string/restante"/>
                     <TextView
                         android:id="@+id/desRestNum"
@@ -170,6 +176,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        style="@style/DespesaMensal"
                         android:text="15.000,00"/>
                     <TextView
                         android:id="@+id/desRestSimbol"
@@ -177,6 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@id/desRestNum"
                         android:layout_toStartOf="@id/desRestNum"
+                        style="@style/DespesaMensal"
                         android:text="@string/sifrao"/>
                 </RelativeLayout>
             </RelativeLayout>

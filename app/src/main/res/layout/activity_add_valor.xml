@@ -12,7 +12,7 @@
         <LinearLayout
             android:id="@+id/buttonTop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="?attr/actionBarSize"
             android:orientation="horizontal">
             <Button
                 android:id="@+id/btnCancel"
@@ -131,6 +131,7 @@
                     android:id="@+id/spinner2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/textStyle"
                     android:popupBackground="@color/BackColor"
                     android:spinnerMode="dropdown"
                     android:prompt="@string/vencimento_por_mes"/>
@@ -156,22 +157,13 @@
                     android:layout_below="@id/ItemTitleDataInicio"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical">
-                    <Spinner
-                        android:id="@+id/spinnerMes"
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/txtDataInicio"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:popupBackground="@color/BackColor"
-                        android:prompt="@string/mes_inicial"
-                        android:spinnerMode="dropdown"
-                        android:layout_weight="1"/>
-                    <Spinner
-                        android:id="@+id/spinnerAno"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:popupBackground="@color/BackColor"
-                        android:prompt="@string/ano_inicial"
-                        android:spinnerMode="dropdown"
-                        android:layout_weight="1"/>
+                        style="@style/textStyle"
+                        android:hint="@string/data_inicial"
+                        android:inputType="none"/>
                 </LinearLayout>
             </RelativeLayout>
             <RelativeLayout
@@ -196,22 +188,13 @@
                     android:layout_below="@id/ItemTitleDataTermi"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical">
-                    <Spinner
-                        android:id="@+id/spinnerMesTermi"
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/txtDataTermi"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:popupBackground="@color/BackColor"
-                        android:prompt="@string/mes_inicial"
-                        android:spinnerMode="dropdown"
-                        android:layout_weight="1"/>
-                    <Spinner
-                        android:id="@+id/spinnerAnoTermi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:popupBackground="@color/BackColor"
-                        android:prompt="@string/ano_inicial"
-                        android:spinnerMode="dropdown"
-                        android:layout_weight="1"/>
+                        style="@style/textStyle"
+                        android:hint="@string/data_inicial"
+                        android:inputType="none"/>
                 </LinearLayout>
             </RelativeLayout>
             <LinearLayout
@@ -231,6 +214,7 @@
                     android:id="@+id/txtItemAnotacao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/textStyle"
                     android:inputType="textMultiLine"
                     android:minEms="10" />
             </LinearLayout>
