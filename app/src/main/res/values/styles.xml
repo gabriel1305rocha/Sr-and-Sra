@@ -16,7 +16,7 @@
         <item name="android:layout_marginTop">0dp</item>
     </style>
     <style name="Toolbar">
-        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_height">0dp</item>
         <item name="android:background">?attr/colorPrimary</item>
     </style>
     <style name="TabLayout">
@@ -63,6 +63,16 @@
         <item name="android:background">@drawable/button_calc</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#FFF</item>
+    </style>
+    <style name="ButtomCancel" parent="ButtomAddItem">
+        <item name="android:drawableLeft">@drawable/ic_cancel_red</item>
+        <item name="android:drawableStart">@drawable/ic_cancel_red</item>
+        <item name="android:text">@string/cancelar</item>
+    </style>
+    <style name="ButtomSalvar" parent="ButtomAddItem">
+        <item name="android:drawableLeft">@drawable/ic_check_green</item>
+        <item name="android:drawableStart">@drawable/ic_check_green</item>
+        <item name="android:text">@string/salvar</item>
     </style>
     <style name="menuStyle" parent="SrTheme.NoActionBar">
         <item name="android:textColor">@color/TextMenu</item>

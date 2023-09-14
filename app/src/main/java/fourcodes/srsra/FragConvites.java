@@ -12,7 +12,7 @@ public class FragConvites extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Fview=inflater.inflate(R.layout.fragment_frag_convites, container, false);
+        Fview = inflater.inflate(R.layout.fragment_frag_convites, container, false);
         return Fview;
     }
 }

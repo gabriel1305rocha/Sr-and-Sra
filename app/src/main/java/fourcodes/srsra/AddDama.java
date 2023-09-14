@@ -7,39 +7,50 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import static fourcodes.srsra.Volta.VoltaTela;
+
 public class AddDama extends AppCompatActivity {
+
+    Context context = this;
+    Button btnSalvar;
+    Button btnCancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_dama);
 
-        Button btnCancel = (Button) findViewById(R.id.btnCancel);
-        Button btnSalvar = (Button) findViewById(R.id.btnSalvar);
-
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                VoltaActivity();
-            }
-        });
+        FindViews();
+        setOnClicks();
+    }
+    private void FindViews() {
+        btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        btnCancelar = (Button) findViewById(R.id.btnCancel);
+    }
+    private void setOnClicks(){
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Salva();
-                VoltaActivity();
+                Salvar();Voltar();
+            }
+        });
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Voltar();
             }
         });
     }
     @Override
     public void onBackPressed() {
-        VoltaActivity();
+        Voltar();
     }
-    private void Salva(){
+    private void Salvar(){
 
     }
-    private void VoltaActivity(){
-        startActivity(new Intent(this, Daminha.class));
-        finish();
+    private void Voltar(){
+        if(VoltaTela(context, 6)){
+            finish();
+        }
     }
 }

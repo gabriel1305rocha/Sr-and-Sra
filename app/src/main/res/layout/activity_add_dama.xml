@@ -11,97 +11,103 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnCancel"
+            style="@style/ButtomCancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ButtomAddItem"
-            android:drawableLeft="@drawable/ic_cancel_red"
-            android:drawableStart="@drawable/ic_cancel_red"
-            android:text="@string/cancelar"/>
+            android:layout_weight="1" />
+
         <Button
             android:id="@+id/btnSalvar"
+            style="@style/ButtomSalvar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            style="@style/ButtomAddItem"
-            android:drawableLeft="@drawable/ic_check_green"
-            android:drawableStart="@drawable/ic_check_green"
-            android:text="@string/salvar"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <ScrollView
-        android:layout_below="@id/buttons"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="20dp"
-        android:layout_height="wrap_content">
+        android:paddingTop="20dp">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/lblDaminha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/TextPrimary"
-                android:text="@string/daminha_pajen"/>
+                android:text="@string/daminha_pajen"
+                android:textColor="@color/TextPrimary" />
+
             <EditText
                 android:id="@+id/txtNomeDama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lblDaminha"
-                android:textColor="@color/TextPrimary"
-                android:hint="@string/nome_da_crianca"/>
+                android:hint="@string/nome_da_crianca"
+                android:textColor="@color/TextPrimary" />
+
             <CheckBox
                 android:id="@+id/chk_daminha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtNomeDama"
-                android:text="@string/daminha"/>
+                android:text="@string/daminha" />
+
             <CheckBox
                 android:id="@+id/chk_florista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/chk_daminha"
-                android:text="@string/florista"/>
+                android:text="@string/florista" />
+
             <CheckBox
                 android:id="@+id/chk_pajens"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/chk_florista"
-                android:text="@string/pajen"/>
+                android:text="@string/pajen" />
+
             <TextView
                 android:id="@+id/lblRespon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_below="@id/chk_pajens"
-                android:textColor="@color/TextPrimary"
-                android:text="@string/responsavel"/>
+                android:layout_marginTop="15dp"
+                android:text="@string/responsavel"
+                android:textColor="@color/TextPrimary" />
+
             <EditText
                 android:id="@+id/txtNomeRespon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lblRespon"
-                android:textColor="@color/TextPrimary"
-                android:hint="@string/nome_do_responsavel"/>
+                android:hint="@string/nome_do_responsavel"
+                android:textColor="@color/TextPrimary" />
+
             <TextView
                 android:id="@+id/lblTelRespon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_below="@id/txtNomeRespon"
-                android:textColor="@color/TextPrimary"
-                android:text="@string/telefone"/>
+                android:layout_marginTop="15dp"
+                android:text="@string/telefone"
+                android:textColor="@color/TextPrimary" />
+
             <EditText
                 android:id="@+id/txtTelRespon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lblTelRespon"
-                android:textColor="@color/TextPrimary"
-                android:hint="(XX) XXXX-XXXX"/>
+                android:hint="(XX) XXXX-XXXX"
+                android:textColor="@color/TextPrimary" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

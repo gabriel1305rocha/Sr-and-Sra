@@ -58,6 +58,12 @@
     <string name="menuL_info">Sobre</string>
     <string name="sair">Sair</string>
     <string name="action_settings">Configurações</string>
+    <string name="lista_de_presentes">Lista de Presentes</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="excluir">Excluir</string>
+    <string name="voltar">Voltar</string>
 
     <!-- Tela Configurações -->
     <string name="title_configura">Configurações</string>
@@ -186,6 +192,21 @@
     <string name="faltam">Faltam </string>
     <string name="dias"> dias</string>
     <!-- Lista de Tarefas -->
+    <string-array name="tarefas_array" translatable="false">
+        <item>@string/um_ano_antes</item>
+        <item>@string/dez_meses_antes</item>
+        <item>@string/oito_meses_antes</item>
+        <item>@string/seis_meses_antes</item>
+        <item>@string/tres_meses_antes</item>
+        <item>@string/dois_meses_antes</item>
+        <item>@string/um_mes_antes</item>
+        <item>@string/quinze_dias_antes</item>
+        <item>@string/uma_semana_antes</item>
+        <item>@string/dois_dias_antes</item>
+        <item>@string/um_dia_antes</item>
+        <item>@string/o_grande_dia</item>
+        <item>@string/na_volta</item>
+    </string-array>
     <string name="um_ano_antes">Um ano antes</string>
     <string name="dez_meses_antes">Dez meses antes</string>
     <string name="oito_meses_antes">Oito meses antes</string>
@@ -228,6 +249,11 @@
     <string name="telefone">Telefone</string>
     <string name="florista">Florista</string>
 
+    <!-- Convidados -->
+    <string name="tab_Resumo">Resumo</string>
+    <string name="tab_Todos">Todos</string>
+    <string name="tab_Convites">Convites</string>
+
     <!-- Links -->
     <string name="link_manualuser" translatable="false">https://www.google.com.br</string>
     <string name="link_termouso" translatable="false">https://www.google.com.br</string>
@@ -252,11 +278,8 @@
     <!-- if your App ID is 1234567, you should use fb1234567-->
     <string name="fb_login_protocol_scheme" translatable="false">fbAPP_ID</string>
     <string name="we" translatable="false">We</string>
-    <string name="lista_de_presentes">Lista de Presentes</string>
-    <string name="adicionar">Adicionar</string>
-    <string name="pesquisar">Pesquisar</string>
-    <string name="compartilhar">Compartilhar</string>
-    <string name="excluir">Excluir</string>
-    <string name="voltar">Voltar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

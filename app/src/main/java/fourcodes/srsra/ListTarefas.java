@@ -8,7 +8,7 @@ public class ListTarefas {
 
     static int pos;
 
-    static public void ClickListTarefa(int positionClick, Context context){
+    static public void ClickListTarefa(int positionClick, Context context) {
         pos = positionClick;
         context.startActivity(new Intent(context, Tarefas.class));
 

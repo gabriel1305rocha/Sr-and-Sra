@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="fourcodes.srsra.Configura"
-    tools:showIn="@layout/app_bar_configura">
+    android:layout_height="match_parent">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/title_Configura"
                 style="@style/Title1"
@@ -23,34 +20,37 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:text="Configurações"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <RelativeLayout
                 android:id="@+id/LatNotificacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/title_Configura"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="14dp"
-                android:layout_marginBottom="20dp">
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lblNotificacao"
+                    style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Title2"
                     android:text="Notificações" />
+
                 <Switch
                     android:id="@+id/swtNotificacao"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:checked="false"
-                    />
+                    android:layout_alignParentRight="true"
+                    android:checked="false" />
+
                 <TextView
                     android:id="@+id/lblSubNotificacao"
                     style="@style/Body2"
@@ -66,34 +66,36 @@
                 android:id="@+id/latWifi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/LatNotificacao"
+                android:layout_alignEnd="@id/LatNotificacao"
                 android:layout_alignLeft="@id/LatNotificacao"
-                android:layout_alignStart="@id/LatNotificacao"
                 android:layout_alignRight="@id/LatNotificacao"
-                android:layout_alignEnd="@id/LatNotificacao">
+                android:layout_alignStart="@id/LatNotificacao"
+                android:layout_below="@id/LatNotificacao"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lblWifi"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sicronizar somente via Wifi" />
+
                 <Switch
                     android:id="@+id/swtWifi"
+                    style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Title2"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    />
+                    android:layout_alignParentRight="true" />
+
                 <TextView
                     android:id="@+id/lblSubWifi"
+                    style="@style/Body2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@id/lblWifi"
                     android:layout_alignStart="@id/lblWifi"
                     android:layout_below="@+id/lblWifi"
-                    style="@style/Body2"
                     android:text="Seus dados serão sicronizados ao se conectar a qualquer rede." />
             </RelativeLayout>
 
@@ -101,12 +103,13 @@
                 android:id="@+id/latLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/latWifi"
+                android:layout_alignEnd="@id/LatNotificacao"
                 android:layout_alignLeft="@id/LatNotificacao"
-                android:layout_alignStart="@id/LatNotificacao"
                 android:layout_alignRight="@id/LatNotificacao"
-                android:layout_alignEnd="@id/LatNotificacao">
+                android:layout_alignStart="@id/LatNotificacao"
+                android:layout_below="@id/latWifi"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lblLogin"
                     style="@style/Title2"
@@ -114,6 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="Fazer login com outra conta." />
+
                 <TextView
                     android:id="@+id/lblSubLogin"
                     style="@style/Body2"
@@ -129,39 +133,41 @@
                 android:id="@+id/latAlSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/latLogin"
+                android:layout_alignEnd="@id/LatNotificacao"
                 android:layout_alignLeft="@id/LatNotificacao"
-                android:layout_alignStart="@id/LatNotificacao"
                 android:layout_alignRight="@id/LatNotificacao"
-                android:layout_alignEnd="@id/LatNotificacao">
+                android:layout_alignStart="@id/LatNotificacao"
+                android:layout_below="@id/latLogin"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lblAlSenha"
+                    style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Title2"
-                    android:text="Alterar senha"
-                    android:layout_marginTop="19dp" />
+                    android:layout_marginTop="19dp"
+                    android:text="Alterar senha" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/latSair"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/latAlSenha"
+                android:layout_alignEnd="@id/LatNotificacao"
                 android:layout_alignLeft="@id/LatNotificacao"
-                android:layout_alignStart="@id/LatNotificacao"
                 android:layout_alignRight="@id/LatNotificacao"
-                android:layout_alignEnd="@id/LatNotificacao">
+                android:layout_alignStart="@id/LatNotificacao"
+                android:layout_below="@id/latAlSenha"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lblSair"
                     style="@style/Title2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
                     android:clickable="true"
-                    android:text="Sair"
-                    android:layout_marginTop="22dp" />
+                    android:text="Sair" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

@@ -14,28 +14,26 @@ import android.widget.SpinnerAdapter;
 
 import static fourcodes.srsra.Volta.VoltaTela;
 
-public class AddPadrinho extends AppCompatActivity {
+public class AddTarefa extends AppCompatActivity {
 
     Context context = this;
     Button btnSalvar;
     Button btnCancelar;
+    Spinner spinCategoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_padrinho);
+        setContentView(R.layout.activity_add_tarefa);
 
         FindViews();
         setOnClicks();
-
-        Spinner spinConvi = (Spinner) findViewById(R.id.spinConvidou);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.convidou,android.R.layout.simple_spinner_dropdown_item);
-        spinConvi.setAdapter(adapter);
     }
 
     private void FindViews() {
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnCancelar = (Button) findViewById(R.id.btnCancel);
+        spinCategoria = (Spinner) findViewById(R.id.spinCategoria);
     }
     private void setOnClicks(){
         btnSalvar.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +48,10 @@ public class AddPadrinho extends AppCompatActivity {
                 Voltar();
             }
         });
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.tarefas_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinCategoria.setAdapter(adapter);
     }
     @Override
     public void onBackPressed() {
@@ -57,8 +59,7 @@ public class AddPadrinho extends AppCompatActivity {
     }
     private void Salvar(){}
     private void Voltar(){
-        if(VoltaTela(context, 3)){
-            finish();
-        }
+        startActivity(new Intent(this, Tarefas.class));
+        finish();
     }
 }

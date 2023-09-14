@@ -6,18 +6,19 @@ package fourcodes.srsra;
 
 public class TarefasDataModel {
 
-    String tarefa ="";
+    String tarefa = "";
     boolean concluida;
 
-    public TarefasDataModel(String tarefa, boolean concluida){
+    public TarefasDataModel(String tarefa, boolean concluida) {
         this.tarefa = tarefa;
         this.concluida = concluida;
     }
 
-    public String getTarefa(){
+    public String getTarefa() {
         return tarefa;
     }
-    public boolean getConcluida(){
+
+    public boolean getConcluida() {
         return concluida;
     }
 }

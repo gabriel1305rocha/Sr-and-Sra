@@ -13,4 +13,9 @@
         <item name="android:textColorPrimary">@color/TextPrimary</item>
         <item name="android:textColorPrimaryInverse">@color/white</item>
     </style>
+
+    <style name="menuStyle" parent="SrTheme.NoActionBar">
+        <item name="android:textColor">@color/TextMenu</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
 </resources>

@@ -19,19 +19,23 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 
 
-
 public class FragDesItem extends Fragment {
 
     static ArrayList<ItemDataModel> ItemsdataModels = new ArrayList<>();
-    ListView listView;
-    private static CustomListItemsAdapter adapter;
     static Button filtro;
+    private static CustomListItemsAdapter adapter;
+    ListView listView;
     View Fview;
+
+    static protected void Pesquisa(String conteudo) {
+        filtro.setText(conteudo);
+        filtro.setVisibility(View.VISIBLE);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Fview=inflater.inflate(R.layout.fragment_des_item, container, false);
+        Fview = inflater.inflate(R.layout.fragment_des_item, container, false);
 
         // Botão Filtro
         filtro = (Button) Fview.findViewById(R.id.btnPesquisa);
@@ -62,22 +66,22 @@ public class FragDesItem extends Fragment {
         return Fview;
     }
 
-    public void AtualizaListaItem(){
+    public void AtualizaListaItem() {
         ListView listView = (ListView) Fview.findViewById(R.id.lista_items);
 
-        adapter= new CustomListItemsAdapter(ItemsdataModels,Fview.getContext());
+        adapter = new CustomListItemsAdapter(ItemsdataModels, Fview.getContext());
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                ItemDataModel dataModel= ItemsdataModels.get(position);
+                ItemDataModel dataModel = ItemsdataModels.get(position);
 
                 Snackbar snackbar;
-                snackbar = Snackbar.make(view, getString(R.string.data_inicial)+": "+dataModel.getDataInicial()+"        -"+dataModel.getName()+"\n"
-                                +getString(R.string.data_termino)+": "+dataModel.getDataTermino()
-                        ,Snackbar.LENGTH_LONG).setAction("No action", null);
+                snackbar = Snackbar.make(view, getString(R.string.data_inicial) + ": " + dataModel.getDataInicial() + "        -" + dataModel.getName() + "\n"
+                                + getString(R.string.data_termino) + ": " + dataModel.getDataTermino()
+                        , Snackbar.LENGTH_LONG).setAction("No action", null);
                 snackbar.setActionTextColor(getResources().getColor(R.color.white));
                 snackbar.show();
             }
@@ -85,8 +89,8 @@ public class FragDesItem extends Fragment {
         listView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-                contextMenu.add(Menu.NONE,1,Menu.NONE,getString(R.string.editar));
-                contextMenu.add(Menu.NONE,2,Menu.NONE,getString(R.string.deletar));
+                contextMenu.add(Menu.NONE, 1, Menu.NONE, getString(R.string.editar));
+                contextMenu.add(Menu.NONE, 2, Menu.NONE, getString(R.string.deletar));
             }
         });
     }
@@ -106,19 +110,16 @@ public class FragDesItem extends Fragment {
         }
         return super.onContextItemSelected(item);
     }
-    protected void Alterar(int position){
-        ItemDataModel dataModel= ItemsdataModels.get(position);
+
+    protected void Alterar(int position) {
+        ItemDataModel dataModel = ItemsdataModels.get(position);
         new EditarItem(position, Fview.getContext(),
                 dataModel.getName(), dataModel.getDesc(), dataModel.getPreco(),
-                dataModel.getPaga(),dataModel.getTotal());
-    }
-    protected void Deletar(int position){
-        ItemsdataModels.remove(position);
-        adapter.notifyDataSetChanged();
+                dataModel.getPaga(), dataModel.getTotal());
     }
 
-    static protected void Pesquisa(String conteudo){
-        filtro.setText(conteudo);
-        filtro.setVisibility(View.VISIBLE);
+    protected void Deletar(int position) {
+        ItemsdataModels.remove(position);
+        adapter.notifyDataSetChanged();
     }
 }

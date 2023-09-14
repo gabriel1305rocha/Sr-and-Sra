@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"
-        android:visible="false"/>
-
-    <item
-        android:id="@+id/nav_sair"
-        android:title="@string/sair"
-        android:visible="false"/>
+    <item android:id="@+id/action_add_padrinho"
+        android:orderInCategory="1"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_add_for"
+        android:orderInCategory="2"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_add_dama"
+        android:orderInCategory="3"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_add_conv"
+        android:orderInCategory="4"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_pesquisa_item"
+        android:orderInCategory="5"
+        android:icon="@drawable/ic_lupa"
+        android:title="@string/pesquisar"
+        app:showAsAction="always"/>
+    <item android:id="@+id/action_add"
+        android:orderInCategory="6"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_add_presente"
+        android:orderInCategory="7"
+        android:title="@string/adicionar"
+        android:icon="@drawable/ic_menu_add"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_compartilhar"
+        android:orderInCategory="8"
+        android:title="@string/compartilhar"
+        android:icon="@drawable/ic_menu_compartilha"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_pesquisa_forn"
+        android:orderInCategory="9"
+        android:icon="@drawable/ic_lupa"
+        android:title="@string/pesquisar"
+        app:showAsAction="always"/>/>
 </menu>

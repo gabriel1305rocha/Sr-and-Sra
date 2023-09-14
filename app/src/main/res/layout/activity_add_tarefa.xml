@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fourcodes.srsra.AddTarefa">
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/ButtomCancel"/>
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style="@style/ButtomSalvar" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttons">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Title2"
+                android:gravity="center_horizontal"
+                android:text="Dados da tarefa"/>
+            <EditText
+                android:id="@+id/txtTarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titulo"
+                android:layout_marginTop="20dp"
+                style="@style/textStyle"
+                android:inputType="textAutoCorrect"
+                android:hint="   Descrição da tarefa"/>
+            <TextView
+                android:id="@+id/lblCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTarefa"
+                android:layout_marginTop="15dp"
+                style="@style/textStyle"
+                android:text="Categoria"/>
+            <Spinner
+                android:id="@+id/spinCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCategoria"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@color/BackColor"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -19,21 +19,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                style="@style/ButtomAddItem"
-                android:drawableLeft="@drawable/ic_cancel_red"
-                android:drawableStart="@drawable/ic_cancel_red"
-                android:onClick="CancelNewItem"
-                android:text="@string/cancelar"/>
+                style="@style/ButtomCancel"/>
             <Button
                 android:id="@+id/btnSalvar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                style="@style/ButtomAddItem"
-                android:drawableLeft="@drawable/ic_check_green"
-                android:drawableStart="@drawable/ic_check_green"
-                android:onClick="ConfirmNewItem"
-                android:text="@string/salvar"/>
+                style="@style/ButtomSalvar" />
 
         </LinearLayout>
         <EditText

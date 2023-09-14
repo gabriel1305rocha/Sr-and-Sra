@@ -1,72 +1,43 @@
 package fourcodes.srsra;
 
 import android.content.Context;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implements View.OnClickListener{
+public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implements View.OnClickListener {
 
-    private ArrayList<ItemDataModel> dataSet;
     Context mContext;
-
-    // View lookup cache
-    private static class ViewHolder {
-        TextView txtName;
-        TextView txtDesc;
-        TextView txtPreco;
-        TextView txtParPaga;
-        TextView txtParTotal;
-        CheckBox compl;
-    }
-
+    private ArrayList<ItemDataModel> dataSet;
+    private int lastPosition = -1;
 
 
     public CustomListItemsAdapter(ArrayList<ItemDataModel> data, Context context) {
         super(context, R.layout.list_items, data);
         this.dataSet = data;
-        this.mContext=context;
+        this.mContext = context;
 
     }
-
 
     @Override
     public void onClick(View v) {
 
+        int position = (Integer) v.getTag();
+        Object object = getItem(position);
+        ItemDataModel dataModel = (ItemDataModel) object;
 
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        ItemDataModel dataModel=(ItemDataModel)object;
-
-
-
-
-        switch (v.getId())
-        {
-
+        switch (v.getId()) {
             case R.id.item_box:
-
                 /*Snackbar.make(v, "Release date " +dataModel.getFeature(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();*/
-
                 break;
-
-
         }
-
-
     }
-
-    private int lastPosition = -1;
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -79,7 +50,6 @@ public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implemen
 
         if (convertView == null) {
 
-
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.list_items, parent, false);
@@ -90,18 +60,17 @@ public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implemen
             viewHolder.txtParTotal = (TextView) convertView.findViewById(R.id.parcelTotal);
             viewHolder.compl = (CheckBox) convertView.findViewById(R.id.item_box);
 
-            result=convertView;
+            result = convertView;
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
+            result = convertView;
         }
 
         //Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.fadein : R.anim.fadeout);
         //result.startAnimation(animation);
         lastPosition = position;
-
 
         viewHolder.txtName.setText(dataModel.getName());
         viewHolder.txtDesc.setText(dataModel.getDesc());
@@ -114,5 +83,14 @@ public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implemen
         return convertView;
     }
 
+    // View lookup cache
+    private static class ViewHolder {
+        TextView txtName;
+        TextView txtDesc;
+        TextView txtPreco;
+        TextView txtParPaga;
+        TextView txtParTotal;
+        CheckBox compl;
+    }
 
 }

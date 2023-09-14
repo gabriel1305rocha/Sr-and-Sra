@@ -1,16 +1,19 @@
 package fourcodes.srsra;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 
+import static fourcodes.srsra.Volta.VoltaTela;
+
 public class Manual_Usuario extends AppCompatActivity {
 
+    Context context = this;
     private WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +25,7 @@ public class Manual_Usuario extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_back_arrow);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Manual_Usuario.this, Sobre.class));
-                finish();
+                Voltar();
             }
         });
         webView = (WebView) findViewById(R.id.webViewManual);
@@ -36,7 +38,12 @@ public class Manual_Usuario extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, Sobre.class));
-        finish();
+        Voltar();
+    }
+
+    private void Voltar() {
+        if (VoltaTela(context, 9)) {
+            finish();
+        }
     }
 }

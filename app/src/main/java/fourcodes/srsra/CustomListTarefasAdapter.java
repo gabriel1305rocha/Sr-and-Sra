@@ -2,8 +2,6 @@ package fourcodes.srsra;
 
 
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,36 +12,28 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> implements View.OnClickListener{
+public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> implements View.OnClickListener {
 
-    private ArrayList<TarefasDataModel> dataSet;
     Context mContext;
-
-    // View lookup cache
-    private static class ViewHolder {
-        TextView txtTarefa;
-        CheckBox chkBox;
-    }
-
+    private ArrayList<TarefasDataModel> dataSet;
+    private int lastPosition = -1;
 
 
     public CustomListTarefasAdapter(ArrayList<TarefasDataModel> data, Context context) {
         super(context, R.layout.list_tarefa_layout, data);
         this.dataSet = data;
-        this.mContext=context;
+        this.mContext = context;
 
     }
-
 
     @Override
     public void onClick(View v) {
 
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        TarefasDataModel dataModel=(TarefasDataModel)object;
+        int position = (Integer) v.getTag();
+        Object object = getItem(position);
+        TarefasDataModel dataModel = (TarefasDataModel) object;
 
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.caixa:
 
                 /*Snackbar.make(v, "Release date " +dataModel.getFeature(), Snackbar.LENGTH_LONG)
@@ -52,10 +42,7 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
                 break;
         }
 
-
     }
-
-    private int lastPosition = -1;
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -75,34 +62,33 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
             viewHolder.txtTarefa = (TextView) convertView.findViewById(R.id.nome);
             viewHolder.chkBox = (CheckBox) convertView.findViewById(R.id.caixa);
 
-            result=convertView;
+            result = convertView;
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (CustomListTarefasAdapter.ViewHolder) convertView.getTag();
-            result=convertView;
+            result = convertView;
         }
 
         lastPosition = position;
 
-
         viewHolder.txtTarefa.setText(dataModel.getTarefa());
         viewHolder.chkBox.setChecked(dataModel.getConcluida());
-        if(viewHolder.chkBox.isChecked()){
-            viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() |   Paint.STRIKE_THRU_TEXT_FLAG);
-        }else{
-            viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
+        if (viewHolder.chkBox.isChecked()) {
+            viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        } else {
+            viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
         }
         viewHolder.chkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int colorDefault = viewHolder.txtTarefa.getResources().getColor(R.color.TextPrimary);
                 int colorMark = viewHolder.txtTarefa.getResources().getColor(R.color.TextMark);
-                if(viewHolder.chkBox.isChecked()){
-                    viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() |   Paint.STRIKE_THRU_TEXT_FLAG);
+                if (viewHolder.chkBox.isChecked()) {
+                    viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     viewHolder.txtTarefa.setTextColor(colorMark);
-                }else{
-                    viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
+                } else {
+                    viewHolder.txtTarefa.setPaintFlags(viewHolder.txtTarefa.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
                     viewHolder.txtTarefa.setTextColor(colorDefault);
                 }
             }
@@ -111,5 +97,10 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
         return convertView;
     }
 
+    // View lookup cache
+    private static class ViewHolder {
+        TextView txtTarefa;
+        CheckBox chkBox;
+    }
 
 }

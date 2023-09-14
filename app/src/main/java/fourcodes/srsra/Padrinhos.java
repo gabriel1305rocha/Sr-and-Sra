@@ -1,81 +1,20 @@
 package fourcodes.srsra;
 
-import android.content.Intent;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+public class Padrinhos extends Fragment {
 
-import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuNav;
-import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
-
-public class Padrinhos extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_padrinhos);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_padrinhos);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        this.setTitle(R.string.title_padrinhos);
-
-    }
-
+    View Fview;
 
     @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_padrinhos);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            //super.onBackPressed();
-            startActivity(new Intent(this, MenuLateral.class));
-            finish();
-        }
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_padrinho, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (ClickMenuOpt(item, this)){
-            finish();
-        }else {
-            return false;
-        }
+        Fview = inflater.inflate(R.layout.content_padrinhos, container, false);
 
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        if(ClickMenuNav(item, this)){
-            finish();
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_padrinhos);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+        return Fview;
     }
 }

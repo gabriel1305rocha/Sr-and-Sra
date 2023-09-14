@@ -1,14 +1,29 @@
 package fourcodes.srsra;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 
-public class Contagem extends AppCompatActivity {
+public class Contagem extends Fragment {
+
+    View Fview;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contagem);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        Fview = inflater.inflate(R.layout.activity_contagem, container, false);
+        return Fview;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String link = bundle.getString("url");
+        }
     }
 }

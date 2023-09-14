@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 
 public class FragDesGeral extends Fragment {
 
+    View Fview;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_des_geral, container, false);
+        Fview = inflater.inflate(R.layout.fragment_des_geral, container, false);
+        return Fview;
     }
 }

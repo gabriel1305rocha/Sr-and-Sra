@@ -12,23 +12,17 @@
 
         <Button
             android:id="@+id/btnCancel"
-            style="@style/ButtomAddItem"
+            style="@style/ButtomCancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_cancel_red"
-            android:drawableStart="@drawable/ic_cancel_red"
-            android:text="@string/cancelar" />
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/btnSalvar"
-            style="@style/ButtomAddItem"
+            style="@style/ButtomSalvar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_check_green"
-            android:drawableStart="@drawable/ic_check_green"
-            android:text="@string/salvar" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <ScrollView

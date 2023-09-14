@@ -1,9 +1,9 @@
 package fourcodes.srsra;
 
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,11 +17,13 @@ import static fourcodes.srsra.FuncoesMenuLateral.ClickMenuOpt;
 import static fourcodes.srsra.ListTarefas.pos;
 import static fourcodes.srsra.TarefaCriaLista.CriaLista;
 import static fourcodes.srsra.TarefaCriaLista.titulo;
+import static fourcodes.srsra.Volta.VoltaTela;
 
 public class Tarefas extends AppCompatActivity {
 
-    ArrayList<TarefasDataModel> dataModels;
     private static CustomListTarefasAdapter adapter;
+    ArrayList<TarefasDataModel> dataModels;
+    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,7 @@ public class Tarefas extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_back_arrow);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Tarefas.this, Checklist.class));
-                finish();
+                Voltar();
             }
         });
 
@@ -50,10 +51,14 @@ public class Tarefas extends AppCompatActivity {
         Titulo.setText(titulo);
     }
 
-    @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, Checklist.class));
-        finish();
+        Voltar();
+    }
+
+    private void Voltar() {
+        if (VoltaTela(context, 2)) {
+            finish();
+        }
     }
 
     @Override
@@ -64,7 +69,7 @@ public class Tarefas extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (ClickMenuOpt(item, this)){
+        if (ClickMenuOpt(item, this)) {
             finish();
         } else {
             return false;

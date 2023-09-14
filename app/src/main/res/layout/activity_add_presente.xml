@@ -10,26 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal">
-
         <Button
             android:id="@+id/btnCancel"
-            style="@style/ButtomAddItem"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_cancel_red"
-            android:drawableStart="@drawable/ic_cancel_red"
-            android:text="@string/cancelar" />
-
+            style="@style/ButtomCancel"/>
         <Button
             android:id="@+id/btnSalvar"
-            style="@style/ButtomAddItem"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_check_green"
-            android:drawableStart="@drawable/ic_check_green"
-            android:text="@string/salvar" />
+            style="@style/ButtomSalvar" />
     </LinearLayout>
 
     <ScrollView

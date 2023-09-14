@@ -1,67 +1,54 @@
 package fourcodes.srsra;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import static fourcodes.srsra.Volta.VoltaTela;
 
 public class addFornecedor extends AppCompatActivity {
+
+    Context context = this;
+    Button btnSalvar;
+    Button btnCancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_fornecedor);
+        FindViews();
+        setOnClicks();
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(this, Fornecedor.class));
-        finish();
+    private void FindViews() {
+        btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        btnCancelar = (Button) findViewById(R.id.btnCancel);
     }
-}
-/*
-package fourcodes.srsra;
-
-        import android.content.Intent;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.support.v7.widget.Toolbar;
-        import android.view.View;
-
-public class addFornecedor extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_fornecedor);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        toolbar.canShowOverflowMenu();
-        toolbar.setNavigationIcon(R.drawable.ic_back_arrow);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(addFornecedor.this, Fornecedor.class));
-                finish();
+    private void setOnClicks(){
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Salvar();Voltar();
             }
         });
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_tarefa, menu);
-        return true;
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Voltar();
+            }
+        });
     }
-
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (ClickMenuOpt(item, this)){
+    public void onBackPressed() {
+        Voltar();
+    }
+    private void Salvar(){}
+    private void Voltar(){
+        if(VoltaTela(context, 5)){
             finish();
-        } else {
-            return false;
         }
-        return super.onOptionsItemSelected(item);
     }
 }
-    }
-}
-*/

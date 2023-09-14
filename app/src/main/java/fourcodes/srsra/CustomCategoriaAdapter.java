@@ -16,56 +16,55 @@ import java.util.ArrayList;
 
 public class CustomCategoriaAdapter extends ArrayAdapter<CategoriaDataModel> {
 
-        private ArrayList<CategoriaDataModel> dataSet;
-        Context mContext;
-
-        // View lookup cache
-        private static class ViewHolder {
-            TextView txtCategoria;
-            ImageView imgCategoria;
-        }
+    Context mContext;
+    private ArrayList<CategoriaDataModel> dataSet;
+    private int lastPosition = -1;
 
     public CustomCategoriaAdapter(ArrayList<CategoriaDataModel> data, Context context) {
-            super(context, R.layout.list_categoria_layout, data);
-            this.dataSet = data;
-            this.mContext=context;
-
-        }
-
-        private int lastPosition = -1;
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            final CategoriaDataModel dataModel = getItem(position);
-            final CustomCategoriaAdapter.ViewHolder viewHolder;
-
-            final View result;
-
-            if (convertView == null) {
-
-
-                viewHolder = new CustomCategoriaAdapter.ViewHolder();
-                LayoutInflater inflater = LayoutInflater.from(getContext());
-                convertView = inflater.inflate(R.layout.list_categoria_layout, parent, false);
-                viewHolder.txtCategoria = (TextView) convertView.findViewById(R.id.nome);
-                viewHolder.imgCategoria = (ImageView) convertView.findViewById(R.id.image);
-
-                result=convertView;
-
-                convertView.setTag(viewHolder);
-            } else {
-                viewHolder = (CustomCategoriaAdapter.ViewHolder) convertView.getTag();
-                result=convertView;
-            }
-
-            lastPosition = position;
-
-            viewHolder.txtCategoria.setText(dataModel.getCategoria());
-            viewHolder.imgCategoria.setImageResource(dataModel.getImagen());
-
-            // Return the completed view to render on screen
-            return convertView;
-        }
-
+        super(context, R.layout.list_categoria_layout, data);
+        this.dataSet = data;
+        this.mContext = context;
 
     }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        final CategoriaDataModel dataModel = getItem(position);
+        final CustomCategoriaAdapter.ViewHolder viewHolder;
+
+        final View result;
+
+        if (convertView == null) {
+
+
+            viewHolder = new CustomCategoriaAdapter.ViewHolder();
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            convertView = inflater.inflate(R.layout.list_categoria_layout, parent, false);
+            viewHolder.txtCategoria = (TextView) convertView.findViewById(R.id.nome);
+            viewHolder.imgCategoria = (ImageView) convertView.findViewById(R.id.image);
+
+            result = convertView;
+
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (CustomCategoriaAdapter.ViewHolder) convertView.getTag();
+            result = convertView;
+        }
+
+        lastPosition = position;
+
+        viewHolder.txtCategoria.setText(dataModel.getCategoria());
+        viewHolder.imgCategoria.setImageResource(dataModel.getImagen());
+
+        // Return the completed view to render on screen
+        return convertView;
+    }
+
+    // View lookup cache
+    private static class ViewHolder {
+        TextView txtCategoria;
+        ImageView imgCategoria;
+    }
+
+
+}

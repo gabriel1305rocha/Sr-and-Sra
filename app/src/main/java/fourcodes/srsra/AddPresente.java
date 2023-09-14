@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -20,6 +19,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import static fourcodes.srsra.Categorias.Categoria;
+import static fourcodes.srsra.Volta.VoltaTela;
 
 public class AddPresente extends AppCompatActivity {
 
@@ -118,8 +118,9 @@ public class AddPresente extends AppCompatActivity {
     }
     private void Salvar(){}
     private void Voltar(){
-        startActivity(new Intent(this, ListaPresente.class));
-        finish();
+        if(VoltaTela(context, 7)){
+            finish();
+        }
     }
 
 }

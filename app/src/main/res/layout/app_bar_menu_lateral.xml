@@ -15,11 +15,22 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
             style="@style/Toolbar"
             app:popupTheme="@style/SrTheme.PopupOverlay" />
 
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            style="@style/TabLayout"
+            app:tabSelectedTextColor="@color/BackColor"
+            app:tabIndicatorColor="@color/BackColor"
+            app:tabIndicatorHeight="5dp"/>
+
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/activity_contagem" />
+    <include layout="@layout/content_menu_lateral" />
 
 </android.support.design.widget.CoordinatorLayout>

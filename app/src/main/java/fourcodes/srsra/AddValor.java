@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -26,12 +25,13 @@ import java.util.Locale;
 
 import static fourcodes.srsra.EditarItem.*;
 import static fourcodes.srsra.FragDesItem.ItemsdataModels;
+import static fourcodes.srsra.Volta.VoltaTela;
 
 
 public class AddValor extends Activity {
 
     String textDialog = "0";
-    final Context context = this;
+    Context context = this;
     static boolean edit;
 
     Spinner spinDia;
@@ -39,6 +39,8 @@ public class AddValor extends Activity {
     EditText txtNome;
     EditText txtValor;
     EditText txtAnota;
+    Button btnSalvar;
+    Button btnCancelar;
     Button txtParce;
     Button txtParcePaga;
     Button btnData;
@@ -58,6 +60,7 @@ public class AddValor extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_valor);
         FindViews();
+        setOnClicks();
         SpinnersAdapters();
         ButtonsParcelas();
 
@@ -126,6 +129,23 @@ public class AddValor extends Activity {
         txtDataInicio.setInputType(InputType.TYPE_NULL);
         txtDataTermi = (EditText) findViewById(R.id.txtDataTermi);
         txtDataTermi.setInputType(InputType.TYPE_NULL);
+
+        btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        btnCancelar = (Button) findViewById(R.id.btnCancel);
+    }
+    private void setOnClicks(){
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Salvar();Voltar();
+            }
+        });
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Voltar();
+            }
+        });
     }
     private void SpinnersAdapters(){
         ArrayAdapter<CharSequence> adapterDia = ArrayAdapter.createFromResource(this,
@@ -219,23 +239,22 @@ public class AddValor extends Activity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, Despesas.class));
-        finish();
+        Voltar();
     }
 
-    public void ConfirmNewItem(View view) {
+    public void Salvar() {
 
         if(edit)
             Editou(posi);
         else
             Adicionou();
 
-        startActivity(new Intent(this, Despesas.class));
-        finish();
+        Voltar();
     }
-    public void CancelNewItem(View view) {
-        startActivity(new Intent(this, Despesas.class));
-        finish();
+    public void Voltar() {
+        if(VoltaTela(context, 1)){
+            finish();
+        }
     }
     // Define Numero nos campos das Parcelas
     public void InsertDialogText(boolean paga){
