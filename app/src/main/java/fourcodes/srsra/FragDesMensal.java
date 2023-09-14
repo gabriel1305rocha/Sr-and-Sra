@@ -16,8 +16,8 @@ import static fourcodes.srsra.FragDesItem.ItemsdataModels;
 
 public class FragDesMensal extends Fragment {
 
-    private static CustomListItemsAdapter adapter;
-    ArrayList<ItemDataModel> dataModels = ItemsdataModels;
+    private static CustomAdapterListItems adapter;
+    ArrayList<DataModelItem> dataModels = ItemsdataModels;
     int[] Meses = {R.string.janeiro, R.string.fervereiro, R.string.marco, R.string.abril,
             R.string.maio, R.string.junho, R.string.julho, R.string.agosto,
             R.string.setembro, R.string.outubro, R.string.novembro, R.string.dezembro};
@@ -84,11 +84,11 @@ public class FragDesMensal extends Fragment {
     private void AtualizaListaItem() {
         ListView listView = (ListView) Fview.findViewById(R.id.list_despMes);
 
-        //***** ItemDataModel(String name, String desc, String preco, String categoria, String paga, String total) ******//
-        //dataModels.add(new ItemDataModel("Vestido", "Branco com véu", "1000,00","Roupa","1","12"));
-        //dataModels.add(new ItemDataModel("Bolo", "Bolo festa", "250,00","Comida","3","5"));
+        //***** DataModelItem(String name, String desc, String preco, String categoria, String paga, String total) ******//
+        //dataModels.add(new DataModelItem("Vestido", "Branco com véu", "1000,00","Roupa","1","12"));
+        //dataModels.add(new DataModelItem("Bolo", "Bolo festa", "250,00","Comida","3","5"));
 
-        adapter = new CustomListItemsAdapter(dataModels, Fview.getContext());
+        adapter = new CustomAdapterListItems(dataModels, Fview.getContext());
 
         listView.setAdapter(adapter);
     }

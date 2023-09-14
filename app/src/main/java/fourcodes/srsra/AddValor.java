@@ -325,9 +325,9 @@ public class AddValor extends Activity {
         txtParcePaga.setText(paga);
     }
     private void Editou(int position){
-        ItemsdataModels.set(position, new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
+        ItemsdataModels.set(position, new DataModelItem(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
     }
     private void Adicionou(){
-        ItemsdataModels.add(new ItemDataModel(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
+        ItemsdataModels.add(new DataModelItem(pegarTextos()[0],pegarTextos()[1],pegarTextos()[2],pegarTextos()[3],pegarTextos()[4],pegarTextos()[5],pegarTextos()[6],pegarTextos()[7]));
     }
 }

@@ -24,8 +24,9 @@
         android:fitsSystemWindows="true"
         style="@style/MenuLateral"
         app:menu="@menu/activity_menu_lateral_drawer"
-        app:itemIconTint="@color/TextMenu"
-        app:itemTextAppearance="@style/menuStyle"
+        app:itemIconTint="@color/text_menu_color"
+        app:itemTextColor="@color/text_menu_color"
+        app:itemBackground="@drawable/back_menu_color"
         />
     <!--app:headerLayout="@layout/nav_header_menu_lateral"-->
 

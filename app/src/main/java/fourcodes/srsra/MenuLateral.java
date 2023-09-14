@@ -220,7 +220,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
                 tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Item));
                 tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-                final DesPageAdapter adapter = new DesPageAdapter
+                final PageAdapterDes adapter = new PageAdapterDes
                         (getSupportFragmentManager(), tabLayout.getTabCount());
                 viewPager.setAdapter(adapter);
                 viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -253,7 +253,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
                 tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_Convites));
                 tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-                final ConvPageAdapter ConvAdapter = new ConvPageAdapter
+                final PageAdapterConv ConvAdapter = new PageAdapterConv
                         (getSupportFragmentManager(), tabLayout.getTabCount());
                 viewPager.setAdapter(ConvAdapter);
                 viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -280,7 +280,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
                 tabLayout.addTab(tabLayout.newTab().setText("Fornecedores"));
                 tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-                final FornPageAdapter ForAdapter = new FornPageAdapter
+                final PageAdapterForn ForAdapter = new PageAdapterForn
                         (getSupportFragmentManager(), tabLayout.getTabCount());
                 viewPager.setAdapter(ForAdapter);
                 viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -342,6 +342,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
         menu.getItem(5).setVisible(false);
         menu.getItem(6).setVisible(false);
         menu.getItem(7).setVisible(false);
+        menu.getItem(8).setVisible(false);
         return true;
     }
 
@@ -363,6 +364,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
 
         item.setChecked(true);
         Option = true;
+        //onNavigationItemSelected(navigationView.getMenu().getItem(0));
 
         //Check to see which item was being clicked and perform appropriate action
         switch (item.getItemId()) {

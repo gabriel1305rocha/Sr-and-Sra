@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FragResumo.OnFragmentInteractionListener} interface
+ * {@link FragConvResumo.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FragResumo#newInstance} factory method to
+ * Use the {@link FragConvResumo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragResumo extends Fragment {
+public class FragConvResumo extends Fragment {
     View Fview;
 
     @Override

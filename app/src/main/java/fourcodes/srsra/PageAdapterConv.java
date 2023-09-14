@@ -4,10 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class DesPageAdapter extends FragmentStatePagerAdapter {
+public class PageAdapterConv extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
-    public DesPageAdapter(FragmentManager fm, int NumOfTabs) {
+    public PageAdapterConv(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -17,13 +17,13 @@ public class DesPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                FragDesGeral tab1 = new FragDesGeral();
+                FragConvResumo tab1 = new FragConvResumo();
                 return tab1;
             case 1:
-                FragDesMensal tab2 = new FragDesMensal();
+                FragConvTodos tab2 = new FragConvTodos();
                 return tab2;
             case 2:
-                FragDesItem tab3 = new FragDesItem();
+                FragConvConvites tab3 = new FragConvConvites();
                 return tab3;
             default:
                 return null;
@@ -34,5 +34,5 @@ public class DesPageAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return mNumOfTabs;
     }
-}
 
+}

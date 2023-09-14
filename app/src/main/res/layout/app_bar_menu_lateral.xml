@@ -25,8 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar"
             style="@style/TabLayout"
-            app:tabSelectedTextColor="@color/BackColor"
-            app:tabIndicatorColor="@color/BackColor"
+            app:tabSelectedTextColor="@color/colorSelect"
+            app:tabIndicatorColor="@color/colorSelect"
             app:tabIndicatorHeight="5dp"/>
 
     </android.support.design.widget.AppBarLayout>

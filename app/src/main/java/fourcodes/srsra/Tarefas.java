@@ -21,8 +21,8 @@ import static fourcodes.srsra.Volta.VoltaTela;
 
 public class Tarefas extends AppCompatActivity {
 
-    private static CustomListTarefasAdapter adapter;
-    ArrayList<TarefasDataModel> dataModels;
+    private static CustomAdapterListTarefas adapter;
+    ArrayList<DataModelTarefas> dataModels;
     Context context = this;
 
     @Override

@@ -4,7 +4,7 @@ package fourcodes.srsra;
  * Created by Felipe on 24/03/2017.
  */
 
-public class ItemDataModel {
+public class DataModelItem {
 
     String name;
     String desc;
@@ -15,7 +15,7 @@ public class ItemDataModel {
     String dataTermino;
     String diaVenci;
 
-    public ItemDataModel(String name, String desc, String preco, String paga, String total, String dataInicial, String dataTermino, String diaVenci) {
+    public DataModelItem(String name, String desc, String preco, String paga, String total, String dataInicial, String dataTermino, String diaVenci) {
         this.name = name;
         this.desc = desc;
         this.preco = preco;

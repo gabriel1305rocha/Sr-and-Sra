@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragConvites extends Fragment {
+public class FragConvConvites extends Fragment {
     View Fview;
 
     @Override

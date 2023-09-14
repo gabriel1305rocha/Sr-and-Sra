@@ -69,7 +69,7 @@
         <activity android:name=".AddPadrinho" />
         <activity android:name=".AddPresente" />
         <activity android:name=".AddConvidado" />
-        <activity android:name=".AddTarefa"></activity>
+        <activity android:name=".AddTarefa" />
     </application>
 
 </manifest>

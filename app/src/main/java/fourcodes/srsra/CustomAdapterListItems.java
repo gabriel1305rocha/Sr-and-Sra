@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implements View.OnClickListener {
+public class CustomAdapterListItems extends ArrayAdapter<DataModelItem> implements View.OnClickListener {
 
     Context mContext;
-    private ArrayList<ItemDataModel> dataSet;
+    private ArrayList<DataModelItem> dataSet;
     private int lastPosition = -1;
 
 
-    public CustomListItemsAdapter(ArrayList<ItemDataModel> data, Context context) {
+    public CustomAdapterListItems(ArrayList<DataModelItem> data, Context context) {
         super(context, R.layout.list_items, data);
         this.dataSet = data;
         this.mContext = context;
@@ -29,7 +29,7 @@ public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implemen
 
         int position = (Integer) v.getTag();
         Object object = getItem(position);
-        ItemDataModel dataModel = (ItemDataModel) object;
+        DataModelItem dataModel = (DataModelItem) object;
 
         switch (v.getId()) {
             case R.id.item_box:
@@ -42,7 +42,7 @@ public class CustomListItemsAdapter extends ArrayAdapter<ItemDataModel> implemen
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        ItemDataModel dataModel = getItem(position);
+        DataModelItem dataModel = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         ViewHolder viewHolder; // view lookup cache stored in tag
 

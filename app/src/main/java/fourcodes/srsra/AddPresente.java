@@ -89,7 +89,7 @@ public class AddPresente extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                final CustomCategoriaAdapter categoria = Categoria(context);
+                final CustomAdapterCategoria categoria = Categoria(context);
 
                 builder.setTitle("Escolha a categoria");
                 builder.setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {

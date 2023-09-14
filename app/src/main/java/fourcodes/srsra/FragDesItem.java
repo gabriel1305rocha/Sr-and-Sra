@@ -21,9 +21,9 @@ import java.util.ArrayList;
 
 public class FragDesItem extends Fragment {
 
-    static ArrayList<ItemDataModel> ItemsdataModels = new ArrayList<>();
+    static ArrayList<DataModelItem> ItemsdataModels = new ArrayList<>();
     static Button filtro;
-    private static CustomListItemsAdapter adapter;
+    private static CustomAdapterListItems adapter;
     ListView listView;
     View Fview;
 
@@ -69,14 +69,14 @@ public class FragDesItem extends Fragment {
     public void AtualizaListaItem() {
         ListView listView = (ListView) Fview.findViewById(R.id.lista_items);
 
-        adapter = new CustomListItemsAdapter(ItemsdataModels, Fview.getContext());
+        adapter = new CustomAdapterListItems(ItemsdataModels, Fview.getContext());
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                ItemDataModel dataModel = ItemsdataModels.get(position);
+                DataModelItem dataModel = ItemsdataModels.get(position);
 
                 Snackbar snackbar;
                 snackbar = Snackbar.make(view, getString(R.string.data_inicial) + ": " + dataModel.getDataInicial() + "        -" + dataModel.getName() + "\n"
@@ -112,7 +112,7 @@ public class FragDesItem extends Fragment {
     }
 
     protected void Alterar(int position) {
-        ItemDataModel dataModel = ItemsdataModels.get(position);
+        DataModelItem dataModel = ItemsdataModels.get(position);
         new EditarItem(position, Fview.getContext(),
                 dataModel.getName(), dataModel.getDesc(), dataModel.getPreco(),
                 dataModel.getPaga(), dataModel.getTotal());

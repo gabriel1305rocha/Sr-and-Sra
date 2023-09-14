@@ -4,22 +4,20 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-/**
- * Created by Felipe on 01/04/2017.
- */
+
 
 public class Categorias {
-    static ArrayList<CategoriaDataModel> dataModels;
-    private static CustomCategoriaAdapter adapter;
+    static ArrayList<DataModelCategoria> dataModels;
+    private static CustomAdapterCategoria adapter;
 
-    static public CustomCategoriaAdapter Categoria(Context context){
+    static public CustomAdapterCategoria Categoria(Context context){
 
         dataModels= new ArrayList<>();
-        dataModels.add(new CategoriaDataModel("Eletroeletrônicos", R.drawable.ic_cancel_red));
-        dataModels.add(new CategoriaDataModel("Móveis", R.drawable.ic_edit));
-        dataModels.add(new CategoriaDataModel("Cama, Mesa & Banho", R.drawable.ic_edit));
+        dataModels.add(new DataModelCategoria("Eletroeletrônicos", R.drawable.ic_cancel_red));
+        dataModels.add(new DataModelCategoria("Móveis", R.drawable.ic_edit));
+        dataModels.add(new DataModelCategoria("Cama, Mesa & Banho", R.drawable.ic_edit));
 
-        adapter = new CustomCategoriaAdapter(dataModels, context);
+        adapter = new CustomAdapterCategoria(dataModels, context);
 
         return adapter;
     }

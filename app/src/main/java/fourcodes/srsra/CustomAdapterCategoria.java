@@ -10,17 +10,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Felipe on 01/04/2017.
- */
-
-public class CustomCategoriaAdapter extends ArrayAdapter<CategoriaDataModel> {
+public class CustomAdapterCategoria extends ArrayAdapter<DataModelCategoria> {
 
     Context mContext;
-    private ArrayList<CategoriaDataModel> dataSet;
+    private ArrayList<DataModelCategoria> dataSet;
     private int lastPosition = -1;
 
-    public CustomCategoriaAdapter(ArrayList<CategoriaDataModel> data, Context context) {
+    public CustomAdapterCategoria(ArrayList<DataModelCategoria> data, Context context) {
         super(context, R.layout.list_categoria_layout, data);
         this.dataSet = data;
         this.mContext = context;
@@ -29,15 +25,15 @@ public class CustomCategoriaAdapter extends ArrayAdapter<CategoriaDataModel> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final CategoriaDataModel dataModel = getItem(position);
-        final CustomCategoriaAdapter.ViewHolder viewHolder;
+        final DataModelCategoria dataModel = getItem(position);
+        final CustomAdapterCategoria.ViewHolder viewHolder;
 
         final View result;
 
         if (convertView == null) {
 
 
-            viewHolder = new CustomCategoriaAdapter.ViewHolder();
+            viewHolder = new CustomAdapterCategoria.ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.list_categoria_layout, parent, false);
             viewHolder.txtCategoria = (TextView) convertView.findViewById(R.id.nome);
@@ -47,7 +43,7 @@ public class CustomCategoriaAdapter extends ArrayAdapter<CategoriaDataModel> {
 
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (CustomCategoriaAdapter.ViewHolder) convertView.getTag();
+            viewHolder = (CustomAdapterCategoria.ViewHolder) convertView.getTag();
             result = convertView;
         }
 

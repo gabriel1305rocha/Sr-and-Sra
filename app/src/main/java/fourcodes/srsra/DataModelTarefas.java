@@ -4,12 +4,12 @@ package fourcodes.srsra;
  * Created by Felipe on 25/03/2017.
  */
 
-public class TarefasDataModel {
+public class DataModelTarefas {
 
     String tarefa = "";
     boolean concluida;
 
-    public TarefasDataModel(String tarefa, boolean concluida) {
+    public DataModelTarefas(String tarefa, boolean concluida) {
         this.tarefa = tarefa;
         this.concluida = concluida;
     }

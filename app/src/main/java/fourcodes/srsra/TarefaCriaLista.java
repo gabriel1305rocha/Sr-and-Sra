@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class TarefaCriaLista {
     public static String titulo = "";
-    static ArrayList<TarefasDataModel> dataModels;
-    private static CustomListTarefasAdapter adapter;
+    static ArrayList<DataModelTarefas> dataModels;
+    private static CustomAdapterListTarefas adapter;
     private static String[] tarefaT = {"Um ano Antes", "Dez meses antes", "Oito meses antes", "Seis meses antes", "Três meses antes", "Dois meses antes", "Um mês antes", "Quinze dias antes", "Uma semana Antes", "Dois dias antes", "Um dia antes", "O grande dia!", "Na volta da Lua de MEl"};
     private static String[] tarefa1 = {"Escolha a data do casamento", "Defina Orçamento", "Decida as características da cerimônia. Observação: o horário define o estilo", "Defina a quantidade de convidados", "Escolha o local da cerimônia e festa", "Se for contratar serviço de um cerimonial,esta é a hora certa de escolher o profissional", "Decida onde vocês vão morar e , se for necessario,comece a procurar um lugar", "Comece a preparar seu enxoval", "Contrate o Buffet", "Comece a pesquisar a música da igreja e da festa"};
     private static String[] tarefa2 = {"Comece a preparar a lista de convidados", "Faça pesquisas de locais para lua de mel", "Visite lojas e estilistas e procure modelos de vestidos", "Neste peíodo, é aconselhável que sejam feitos todos os exames de saúde", "Escolha o profissional que vai fazer a maquiagem e cabelos e reserve a data", "Contrate o DJ, a banda ou músico(s) e defina a(s) música(s) da sua cerimônia"};
@@ -26,7 +26,7 @@ public class TarefaCriaLista {
 
     private static boolean[] tarefaVer = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
 
-    static public CustomListTarefasAdapter CriaLista(int position, Context context) {
+    static public CustomAdapterListTarefas CriaLista(int position, Context context) {
         String[][] tarefas = new String[13][];
         tarefas[0] = tarefa1;
         tarefas[1] = tarefa2;
@@ -47,9 +47,9 @@ public class TarefaCriaLista {
 
         dataModels = new ArrayList<>();
         for (int i = 0; i < tarefas[position].length && i < tarefaVer.length; i++) {
-            dataModels.add(new TarefasDataModel(tarefas[position][i], tarefaVer[i]));
+            dataModels.add(new DataModelTarefas(tarefas[position][i], tarefaVer[i]));
         }
-        adapter = new CustomListTarefasAdapter(dataModels, context);
+        adapter = new CustomAdapterListTarefas(dataModels, context);
 
         return adapter;
     }

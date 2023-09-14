@@ -4,10 +4,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class ConvPageAdapter extends FragmentStatePagerAdapter {
+/**
+ * Created by Felipe on 06/04/2017.
+ */
+
+public class PageAdapterForn extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
-    public ConvPageAdapter(FragmentManager fm, int NumOfTabs) {
+    public PageAdapterForn(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -17,14 +21,11 @@ public class ConvPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                FragResumo tab1 = new FragResumo();
+                FragMeuFornecedor tab1 = new FragMeuFornecedor();
                 return tab1;
             case 1:
-                FragTodos tab2 = new FragTodos();
+                FragFornecedor tab2 = new FragFornecedor();
                 return tab2;
-            case 2:
-                FragConvites tab3 = new FragConvites();
-                return tab3;
             default:
                 return null;
         }
@@ -34,5 +35,4 @@ public class ConvPageAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return mNumOfTabs;
     }
-
 }

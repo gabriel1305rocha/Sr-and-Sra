@@ -4,14 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-/**
- * Created by Felipe on 06/04/2017.
- */
-
-public class FornPageAdapter extends FragmentStatePagerAdapter {
+public class PageAdapterDes extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
-    public FornPageAdapter(FragmentManager fm, int NumOfTabs) {
+    public PageAdapterDes(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }
@@ -21,11 +17,14 @@ public class FornPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                FragMeuFornecedor tab1 = new FragMeuFornecedor();
+                FragDesGeral tab1 = new FragDesGeral();
                 return tab1;
             case 1:
-                FragFornecedor tab2 = new FragFornecedor();
+                FragDesMensal tab2 = new FragDesMensal();
                 return tab2;
+            case 2:
+                FragDesItem tab3 = new FragDesItem();
+                return tab3;
             default:
                 return null;
         }
@@ -36,3 +35,4 @@ public class FornPageAdapter extends FragmentStatePagerAdapter {
         return mNumOfTabs;
     }
 }
+

@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> implements View.OnClickListener {
+public class CustomAdapterListTarefas extends ArrayAdapter<DataModelTarefas> implements View.OnClickListener {
 
     Context mContext;
-    private ArrayList<TarefasDataModel> dataSet;
+    private ArrayList<DataModelTarefas> dataSet;
     private int lastPosition = -1;
 
 
-    public CustomListTarefasAdapter(ArrayList<TarefasDataModel> data, Context context) {
+    public CustomAdapterListTarefas(ArrayList<DataModelTarefas> data, Context context) {
         super(context, R.layout.list_tarefa_layout, data);
         this.dataSet = data;
         this.mContext = context;
@@ -31,7 +31,7 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
 
         int position = (Integer) v.getTag();
         Object object = getItem(position);
-        TarefasDataModel dataModel = (TarefasDataModel) object;
+        DataModelTarefas dataModel = (DataModelTarefas) object;
 
         switch (v.getId()) {
             case R.id.caixa:
@@ -47,16 +47,16 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        final TarefasDataModel dataModel = getItem(position);
+        final DataModelTarefas dataModel = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
-        final CustomListTarefasAdapter.ViewHolder viewHolder; // view lookup cache stored in tag
+        final CustomAdapterListTarefas.ViewHolder viewHolder; // view lookup cache stored in tag
 
         final View result;
 
         if (convertView == null) {
 
 
-            viewHolder = new CustomListTarefasAdapter.ViewHolder();
+            viewHolder = new CustomAdapterListTarefas.ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.list_tarefa_layout, parent, false);
             viewHolder.txtTarefa = (TextView) convertView.findViewById(R.id.nome);
@@ -66,7 +66,7 @@ public class CustomListTarefasAdapter extends ArrayAdapter<TarefasDataModel> imp
 
             convertView.setTag(viewHolder);
         } else {
-            viewHolder = (CustomListTarefasAdapter.ViewHolder) convertView.getTag();
+            viewHolder = (CustomAdapterListTarefas.ViewHolder) convertView.getTag();
             result = convertView;
         }
 
